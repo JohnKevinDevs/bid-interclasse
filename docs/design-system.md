@@ -79,3 +79,7 @@ Diretrizes:
 - `StatCard`
 - `Badge`
 - `StatusBadge`
+- `MediaFrame`
+- `AthleteCard`
+- `TeamCard`
+- `SportCard`

@@ -1,6 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { Badge } from "@/components/ui/Badge";
-import { Card } from "@/components/ui/Card";
+import { SportCard } from "@/components/sports/SportCard";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { PageHero } from "@/components/ui/PageHero";
 import { StatCard } from "@/components/ui/StatCard";
@@ -19,7 +18,7 @@ export default function EptModalidadesPage() {
       <PageHero
         eyebrow="BID EPT"
         title="Modalidades"
-        description="Panorama das modalidades da EPT com leitura rapida de divisao, equipes inscritas e atletas vinculados."
+        description="Catalogo esportivo das modalidades da EPT com imagem, categoria, divisao e indicadores de participacao."
       >
         <StatCard
           dark
@@ -30,41 +29,16 @@ export default function EptModalidadesPage() {
       </PageHero>
 
       <Container className="py-10 sm:py-12">
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {divisionSports.length > 0 ? (
             divisionSports.map((sport) => (
-              <Card key={sport.id} className="h-full">
-                <div className="mb-5 flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs font-semibold uppercase text-primary">
-                      Modalidade
-                    </p>
-                    <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
-                      {sport.name}
-                    </h2>
-                  </div>
-                  <Badge tone="accent">{formatDivisionLabel(sport.division)}</Badge>
-                </div>
-
-                <div className="grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-lg bg-slate-50 p-4">
-                    <p className="text-xs font-semibold uppercase text-slate-500">
-                      Times
-                    </p>
-                    <p className="mt-2 text-3xl font-semibold text-foreground">
-                      {getTeamCountForSport(sport.id, "ept")}
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-slate-50 p-4">
-                    <p className="text-xs font-semibold uppercase text-slate-500">
-                      Atletas
-                    </p>
-                    <p className="mt-2 text-3xl font-semibold text-foreground">
-                      {getAthleteCountForSport(sport.id, "ept")}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              <SportCard
+                key={sport.id}
+                sport={sport}
+                divisionLabel={formatDivisionLabel(sport.division)}
+                teamCount={getTeamCountForSport(sport.id, "ept")}
+                athleteCount={getAthleteCountForSport(sport.id, "ept")}
+              />
             ))
           ) : (
             <EmptyState

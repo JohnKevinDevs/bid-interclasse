@@ -99,6 +99,18 @@ Escopo da fase:
 - Sincronizacao da documentacao de modelagem com o estado real do codigo.
 - Manutencao da arquitetura front-end only, sem backend, upload ou novas dependencias.
 
+## Fase 7
+
+Status: concluida.
+
+Escopo da fase:
+
+- Redesign dos cards de atletas com foto/placeholder, bio curta, posicao, time, modalidades e status.
+- Redesign dos cards de times com imagem/placeholder, descricao, cor de apoio, modalidades, contagem e elenco resumido.
+- Redesign dos cards de modalidades com imagem/placeholder, descricao, categoria, divisao e indicadores de times/atletas.
+- Criacao dos componentes reutilizaveis `AthleteCard`, `TeamCard`, `SportCard` e `MediaFrame`.
+- Aplicacao dos novos cards nas listagens ECI e EPT sem criar paginas de detalhe.
+
 ## Proxima Fase Planejada
 
-Fase 7: redesign das listagens para consumir os novos campos visuais e editoriais.
+Fase 8: regulamentos e Sobre oficiais com uso dos metadados editoriais e melhor organizacao institucional.
