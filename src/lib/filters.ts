@@ -1,4 +1,4 @@
-import type { Athlete, Division, Team } from "@/types/interclasse";
+import type { Athlete, Division, Sport, Team } from "@/types/interclasse";
 
 export function filterAthletesByDivision(
   athletes: Athlete[],
@@ -9,4 +9,10 @@ export function filterAthletesByDivision(
 
 export function filterTeamsByDivision(teams: Team[], division: Division) {
   return teams.filter((team) => team.division === division);
+}
+
+export function filterSportsByDivision(sports: Sport[], division: Division) {
+  return sports.filter(
+    (sport) => sport.division === division || sport.division === "ambos",
+  );
 }

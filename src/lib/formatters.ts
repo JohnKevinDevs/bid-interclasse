@@ -1,5 +1,5 @@
-import type { Division } from "@/types/interclasse";
+import type { SharedDivision } from "@/types/interclasse";
 
-export function formatDivisionLabel(division: Division) {
-  return division.toUpperCase();
+export function formatDivisionLabel(division: SharedDivision) {
+  return division === "ambos" ? "ECI e EPT" : division.toUpperCase();
 }
