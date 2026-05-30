@@ -1,0 +1,9 @@
+[
+  {
+    "id": "reg-geral",
+    "title": "Regulamento Geral",
+    "division": "ambos",
+    "content": "Conteudo inicial de exemplo para validar a estrutura do portal.",
+    "order": 1
+  }
+]

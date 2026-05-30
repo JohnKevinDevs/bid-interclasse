@@ -1,0 +1,22 @@
+[
+  {
+    "id": "ath-ana-silva",
+    "name": "Ana Silva",
+    "division": "eci",
+    "className": "1A",
+    "course": "Ensino Medio",
+    "teamId": "team-eci-futsal-a",
+    "sports": ["sport-futsal"],
+    "status": "ativo"
+  },
+  {
+    "id": "ath-bruno-costa",
+    "name": "Bruno Costa",
+    "division": "ept",
+    "className": "2INFO",
+    "course": "Informatica",
+    "teamId": "team-ept-volei-a",
+    "sports": ["sport-volei"],
+    "status": "ativo"
+  }
+]

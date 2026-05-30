@@ -1,0 +1,16 @@
+[
+  {
+    "id": "team-eci-futsal-a",
+    "name": "ECI Futsal A",
+    "division": "eci",
+    "sportIds": ["sport-futsal"],
+    "athleteIds": ["ath-ana-silva"]
+  },
+  {
+    "id": "team-ept-volei-a",
+    "name": "EPT Volei A",
+    "division": "ept",
+    "sportIds": ["sport-volei"],
+    "athleteIds": ["ath-bruno-costa"]
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "sport-futsal",
+    "name": "Futsal",
+    "division": "ambos"
+  },
+  {
+    "id": "sport-volei",
+    "name": "Volei",
+    "division": "ambos"
+  }
+]
