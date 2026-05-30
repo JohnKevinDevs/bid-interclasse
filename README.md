@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BID Interclasse CEAP
 
-## Getting Started
+BID Interclasse CEAP e o portal oficial do Interclasse CEAP e da FAC para exibicao publica de atletas, equipes, modalidades, regulamentos e informacoes institucionais.
 
-First, run the development server:
+## Objetivo
+
+Centralizar as informacoes essenciais do Interclasse em uma experiencia publica, organizada e responsiva, facilitando a consulta por estudantes, equipes, organizacao e comunidade escolar.
+
+## Tecnologias
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Dados locais em JSON
+
+## Estrutura Basica
+
+```txt
+src/
+  app/
+  components/
+  data/
+  lib/
+  types/
+docs/
+```
+
+## Como Executar Localmente
+
+Instale as dependencias:
+
+```bash
+npm install
+```
+
+Execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+No Windows PowerShell, caso `npm` esteja bloqueado pela policy local, use:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm.cmd run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Valide o projeto:
 
-## Learn More
+```bash
+npm.cmd run lint
+npm.cmd run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Escopo Da Versao Atual
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Front-end apenas
+- Dados em JSON local
+- Sem backend
+- Sem banco de dados
+- Sem autenticacao
+- Preparado para deploy futuro na Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Documentacao Do Projeto
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Regras para IA e fluxo permanente: `AGENTS.md`
+- Estado atual: `docs/current-state.md`
+- Arquitetura: `docs/architecture.md`
+- Fluxo Codex: `docs/codex-workflow.md`
+- Roadmap: `docs/roadmap.md`
+- Design system: `docs/design-system.md`
+- Modelagem de dados: `docs/data-model.md`
