@@ -37,9 +37,25 @@ Nao implementar sem aprovacao explicita:
 - Trabalhar em etapas pequenas.
 - Rodar lint e build antes de finalizar uma etapa.
 - Apresentar resumo do que foi alterado.
-- Nunca executar commit sem autorizacao explicita.
-- Nunca executar push sem autorizacao explicita.
+- Criar commit automaticamente ao concluir uma tarefa comum validada.
+- Executar push automaticamente para `origin/main` ao concluir uma tarefa comum validada e sem conflitos.
 - Nao realizar grandes refatoracoes sem alinhamento.
+- Manter `docs/current-state.md` e `docs/roadmap.md` sincronizados com o estado real do codigo.
+
+## Quando Pedir Confirmacao
+
+Solicitar confirmacao apenas quando houver:
+
+- mudanca arquitetural
+- instalacao de novas dependencias
+- alteracao de stack
+- refatoracao grande
+- remocao de funcionalidades
+- mudanca de escopo
+- criacao de backend
+- banco de dados
+- autenticacao
+- integracoes externas
 
 ## Uso Da Documentacao
 
