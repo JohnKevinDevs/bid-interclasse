@@ -1,39 +1,71 @@
 import { Container } from "@/components/layout/Container";
-import { Card } from "@/components/ui/Card";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { DivisionHero } from "@/components/ui/DivisionHero";
+import { QuickAccessCard } from "@/components/ui/QuickAccessCard";
+import { StatCard } from "@/components/ui/StatCard";
+import {
+  getAthletesByDivision,
+  getSportsByDivision,
+  getTeamsByDivision,
+} from "@/lib/data";
 
 export default function EciPage() {
+  const athleteCount = getAthletesByDivision("eci").length;
+  const teamCount = getTeamsByDivision("eci").length;
+  const sportCount = getSportsByDivision("eci").length;
+
   return (
     <main>
-      <Container className="py-12 sm:py-16">
-        <SectionTitle
-          eyebrow="Divisao"
-          title="Interclasse ECI"
-          description="Espaco da divisao ECI para consulta objetiva de atletas, equipes e modalidades vinculadas ao nucleo."
-        />
-
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          <Card href="/eci/atletas">
-            <h2 className="text-xl font-semibold text-foreground">Atletas</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-700">
-              Participantes da ECI com turma, curso, modalidades e situacao.
-            </p>
-          </Card>
-          <Card href="/eci/times">
-            <h2 className="text-xl font-semibold text-foreground">Times</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-700">
-              Equipes proprias da ECI com atletas e modalidades vinculadas.
-            </p>
-          </Card>
-          <Card href="/eci/modalidades">
-            <h2 className="text-xl font-semibold text-foreground">
-              Modalidades
-            </h2>
-            <p className="mt-3 text-sm leading-6 text-slate-700">
-              Modalidades disponiveis para a ECI e seu panorama competitivo.
-            </p>
-          </Card>
+      <DivisionHero
+        division="ECI"
+        title="Interclasse ECI"
+        description="Central publica da divisao ECI: atletas, equipes e modalidades em um fluxo de consulta rapido, organizado e com leitura de BID esportivo."
+      >
+        <div className="grid gap-3 sm:grid-cols-3">
+          <StatCard label="Atletas" value={athleteCount} description="No BID ECI" />
+          <StatCard label="Times" value={teamCount} description="Equipes ECI" />
+          <StatCard label="Modalidades" value={sportCount} description="Disponiveis" />
         </div>
+      </DivisionHero>
+
+      <Container className="py-10 sm:py-12">
+        <div className="grid gap-4 lg:grid-cols-3">
+          <QuickAccessCard
+            href="/eci/atletas"
+            eyebrow="BID ECI"
+            title="Atletas"
+            description="Participantes da ECI com turma, curso, modalidades e situacao de cadastro."
+            meta="Consultar atletas"
+          />
+          <QuickAccessCard
+            href="/eci/times"
+            eyebrow="BID ECI"
+            title="Times"
+            description="Equipes proprias da divisao com atletas vinculados e modalidades de disputa."
+            meta="Consultar times"
+          />
+          <QuickAccessCard
+            href="/eci/modalidades"
+            eyebrow="BID ECI"
+            title="Modalidades"
+            description="Panorama das modalidades disponiveis e suas relacoes com times e atletas."
+            meta="Consultar modalidades"
+          />
+        </div>
+
+        <section className="mt-8 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+          <p className="text-sm font-semibold uppercase text-primary">
+            Identidade da divisao
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground">
+            ECI no Interclasse CEAP
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-700">
+            A divisao ECI reune seus atletas, equipes e modalidades em uma base
+            publica de consulta. O objetivo e facilitar a transparencia do
+            evento e fortalecer a representacao de cada turma dentro da
+            competicao.
+          </p>
+        </section>
       </Container>
     </main>
   );

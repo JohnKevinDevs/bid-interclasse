@@ -1,7 +1,9 @@
 import { Container } from "@/components/layout/Container";
+import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { PageHero } from "@/components/ui/PageHero";
+import { StatCard } from "@/components/ui/StatCard";
 import {
   getAthleteNamesByIds,
   getSportNamesByIds,
@@ -13,36 +15,49 @@ export default function EptTimesPage() {
 
   return (
     <main>
-      <Container className="py-12 sm:py-16">
-        <SectionTitle
-          eyebrow="EPT"
-          title="Times"
-          description="Equipes da EPT com suas modalidades vinculadas e composicao inicial de atletas."
+      <PageHero
+        eyebrow="BID EPT"
+        title="Times"
+        description="Equipes da divisao EPT com modalidades vinculadas e composicao inicial de atletas."
+      >
+        <StatCard
+          dark
+          label="Times EPT"
+          value={divisionTeams.length}
+          description="Equipes cadastradas."
         />
+      </PageHero>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <Container className="py-10 sm:py-12">
+        <div className="grid gap-4 lg:grid-cols-2">
           {divisionTeams.length > 0 ? (
             divisionTeams.map((team) => (
-              <Card key={team.id} className="h-full">
-                <h2 className="text-xl font-semibold text-foreground">
-                  {team.name}
-                </h2>
-                <div className="mt-4 flex flex-wrap gap-2">
+              <Card key={team.id} className="h-full overflow-hidden">
+                <div className="-mx-5 -mt-5 mb-5 bg-slate-900 p-5 text-white">
+                  <p className="text-xs font-semibold uppercase text-accent">
+                    Equipe EPT
+                  </p>
+                  <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+                    {team.name}
+                  </h2>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
                   {getSportNamesByIds(team.sportIds).map((sportName) => (
-                    <span
-                      key={sportName}
-                      className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase text-slate-700"
-                    >
+                    <Badge key={sportName} tone="primary">
                       {sportName}
-                    </span>
+                    </Badge>
                   ))}
                 </div>
-                <p className="mt-4 text-sm font-medium text-slate-900">
-                  {team.athleteIds.length} atleta(s) vinculado(s)
-                </p>
-                <p className="mt-2 text-sm leading-6 text-slate-700">
-                  {getAthleteNamesByIds(team.athleteIds).join(", ")}
-                </p>
+
+                <div className="mt-5 rounded-lg bg-slate-50 p-4">
+                  <p className="text-sm font-semibold text-slate-900">
+                    {team.athleteIds.length} atleta(s) vinculado(s)
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">
+                    {getAthleteNamesByIds(team.athleteIds).join(", ")}
+                  </p>
+                </div>
               </Card>
             ))
           ) : (

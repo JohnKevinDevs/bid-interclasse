@@ -74,6 +74,19 @@ Direcao consolidada:
 
 O BID Interclasse CEAP deve evoluir como portal publico de consulta e transparencia do Interclasse CEAP, organizado por ECI e EPT, reunindo atletas, times, modalidades e regulamentos oficiais com aparencia de BID esportivo moderno.
 
+## Fase 5
+
+Status: concluida.
+
+Escopo da fase:
+
+- Redesign estrutural da Home com hero mais forte, CTAs e estatisticas do BID.
+- Revisao visual do Header e Footer.
+- Transformacao das paginas ECI e EPT em centrais de divisao.
+- Melhoria visual das listagens de atletas, times e modalidades.
+- Criacao de componentes reutilizaveis para hero, estatisticas, acessos rapidos e badges.
+- Manutencao da modelagem atual, sem novos campos em tipos ou JSONs.
+
 ## Proxima Fase Planejada
 
-Fase 5: redesign estrutural e visual do portal.
+Fase 6: enriquecimento dos modelos e dados com campos opcionais para imagens, descricoes e metadados editoriais.

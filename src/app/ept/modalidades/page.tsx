@@ -1,7 +1,9 @@
 import { Container } from "@/components/layout/Container";
+import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { PageHero } from "@/components/ui/PageHero";
+import { StatCard } from "@/components/ui/StatCard";
 import {
   getAthleteCountForSport,
   getSportsByDivision,
@@ -14,33 +16,50 @@ export default function EptModalidadesPage() {
 
   return (
     <main>
-      <Container className="py-12 sm:py-16">
-        <SectionTitle
-          eyebrow="EPT"
-          title="Modalidades"
-          description="Panorama das modalidades da EPT, com divisao, equipes inscritas e atletas vinculados."
+      <PageHero
+        eyebrow="BID EPT"
+        title="Modalidades"
+        description="Panorama das modalidades da EPT com leitura rapida de divisao, equipes inscritas e atletas vinculados."
+      >
+        <StatCard
+          dark
+          label="Modalidades EPT"
+          value={divisionSports.length}
+          description="Disponiveis para consulta."
         />
+      </PageHero>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <Container className="py-10 sm:py-12">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {divisionSports.length > 0 ? (
             divisionSports.map((sport) => (
               <Card key={sport.id} className="h-full">
-                <h2 className="text-xl font-semibold text-foreground">
-                  {sport.name}
-                </h2>
-                <p className="mt-3 text-sm text-slate-700">
-                  Divisao: {formatDivisionLabel(sport.division)}
-                </p>
-                <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-lg bg-slate-50 p-3">
-                    <p className="text-slate-500">Times</p>
-                    <p className="mt-1 text-lg font-semibold text-foreground">
+                <div className="mb-5 flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase text-primary">
+                      Modalidade
+                    </p>
+                    <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
+                      {sport.name}
+                    </h2>
+                  </div>
+                  <Badge tone="accent">{formatDivisionLabel(sport.division)}</Badge>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div className="rounded-lg bg-slate-50 p-4">
+                    <p className="text-xs font-semibold uppercase text-slate-500">
+                      Times
+                    </p>
+                    <p className="mt-2 text-3xl font-semibold text-foreground">
                       {getTeamCountForSport(sport.id, "ept")}
                     </p>
                   </div>
-                  <div className="rounded-lg bg-slate-50 p-3">
-                    <p className="text-slate-500">Atletas</p>
-                    <p className="mt-1 text-lg font-semibold text-foreground">
+                  <div className="rounded-lg bg-slate-50 p-4">
+                    <p className="text-xs font-semibold uppercase text-slate-500">
+                      Atletas
+                    </p>
+                    <p className="mt-2 text-3xl font-semibold text-foreground">
                       {getAthleteCountForSport(sport.id, "ept")}
                     </p>
                   </div>

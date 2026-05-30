@@ -73,3 +73,9 @@ Diretrizes:
 - `Card`
 - `SectionTitle`
 - `EmptyState`
+- `PageHero`
+- `DivisionHero`
+- `QuickAccessCard`
+- `StatCard`
+- `Badge`
+- `StatusBadge`

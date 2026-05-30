@@ -1,39 +1,70 @@
 import { Container } from "@/components/layout/Container";
-import { Card } from "@/components/ui/Card";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { DivisionHero } from "@/components/ui/DivisionHero";
+import { QuickAccessCard } from "@/components/ui/QuickAccessCard";
+import { StatCard } from "@/components/ui/StatCard";
+import {
+  getAthletesByDivision,
+  getSportsByDivision,
+  getTeamsByDivision,
+} from "@/lib/data";
 
 export default function EptPage() {
+  const athleteCount = getAthletesByDivision("ept").length;
+  const teamCount = getTeamsByDivision("ept").length;
+  const sportCount = getSportsByDivision("ept").length;
+
   return (
     <main>
-      <Container className="py-12 sm:py-16">
-        <SectionTitle
-          eyebrow="Divisao"
-          title="Interclasse EPT"
-          description="Espaco da divisao EPT para consulta objetiva de atletas, equipes e modalidades vinculadas ao nucleo."
-        />
-
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          <Card href="/ept/atletas">
-            <h2 className="text-xl font-semibold text-foreground">Atletas</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-700">
-              Participantes da EPT com turma, curso, modalidades e situacao.
-            </p>
-          </Card>
-          <Card href="/ept/times">
-            <h2 className="text-xl font-semibold text-foreground">Times</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-700">
-              Equipes proprias da EPT com atletas e modalidades vinculadas.
-            </p>
-          </Card>
-          <Card href="/ept/modalidades">
-            <h2 className="text-xl font-semibold text-foreground">
-              Modalidades
-            </h2>
-            <p className="mt-3 text-sm leading-6 text-slate-700">
-              Modalidades disponiveis para a EPT e seu panorama competitivo.
-            </p>
-          </Card>
+      <DivisionHero
+        division="EPT"
+        title="Interclasse EPT"
+        description="Central publica da divisao EPT: atletas, equipes e modalidades do nucleo tecnico em uma experiencia de consulta clara, densa e oficial."
+      >
+        <div className="grid gap-3 sm:grid-cols-3">
+          <StatCard label="Atletas" value={athleteCount} description="No BID EPT" />
+          <StatCard label="Times" value={teamCount} description="Equipes EPT" />
+          <StatCard label="Modalidades" value={sportCount} description="Disponiveis" />
         </div>
+      </DivisionHero>
+
+      <Container className="py-10 sm:py-12">
+        <div className="grid gap-4 lg:grid-cols-3">
+          <QuickAccessCard
+            href="/ept/atletas"
+            eyebrow="BID EPT"
+            title="Atletas"
+            description="Participantes da EPT com turma, curso, modalidades e situacao de cadastro."
+            meta="Consultar atletas"
+          />
+          <QuickAccessCard
+            href="/ept/times"
+            eyebrow="BID EPT"
+            title="Times"
+            description="Equipes proprias da divisao com atletas vinculados e modalidades de disputa."
+            meta="Consultar times"
+          />
+          <QuickAccessCard
+            href="/ept/modalidades"
+            eyebrow="BID EPT"
+            title="Modalidades"
+            description="Panorama das modalidades disponiveis e suas relacoes com times e atletas."
+            meta="Consultar modalidades"
+          />
+        </div>
+
+        <section className="mt-8 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+          <p className="text-sm font-semibold uppercase text-primary">
+            Identidade da divisao
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground">
+            EPT no Interclasse CEAP
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-700">
+            A divisao EPT representa o nucleo tecnico dentro do Interclasse,
+            reunindo equipes, atletas e modalidades em uma base publica
+            organizada para consulta e acompanhamento institucional.
+          </p>
+        </section>
       </Container>
     </main>
   );

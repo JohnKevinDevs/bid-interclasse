@@ -1,7 +1,10 @@
 import { Container } from "@/components/layout/Container";
+import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+import { PageHero } from "@/components/ui/PageHero";
+import { StatCard } from "@/components/ui/StatCard";
+import { StatusBadge } from "@/components/ui/StatusBadge";
 import {
   getAthletesByDivision,
   getSportsForAthlete,
@@ -13,39 +16,63 @@ export default function EciAtletasPage() {
 
   return (
     <main>
-      <Container className="py-12 sm:py-16">
-        <SectionTitle
-          eyebrow="ECI"
-          title="Atletas"
-          description="Relacao publica de atletas da ECI, com identificacao academica, modalidades e status de participacao."
+      <PageHero
+        eyebrow="BID ECI"
+        title="Atletas"
+        description="Relacao publica dos atletas da ECI com turma, curso, modalidades e vinculo de equipe."
+      >
+        <StatCard
+          dark
+          label="Atletas ECI"
+          value={divisionAthletes.length}
+          description="Registros ativos na base local."
         />
+      </PageHero>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <Container className="py-10 sm:py-12">
+        <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase text-primary">
+              Consulta publica
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
+              Elenco cadastrado
+            </h2>
+          </div>
+          <p className="text-sm text-slate-600">
+            Dados locais organizados por divisao e equipe.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {divisionAthletes.length > 0 ? (
             divisionAthletes.map((athlete) => (
-              <Card key={athlete.id} className="h-full">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h2 className="text-xl font-semibold text-foreground">
-                      {athlete.name}
-                    </h2>
-                    <p className="mt-1 text-sm text-slate-500">{athlete.className}</p>
+              <Card key={athlete.id} className="h-full overflow-hidden">
+                <div className="-mx-5 -mt-5 mb-5 bg-slate-900 p-5 text-white">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-xs font-semibold uppercase text-accent">
+                        Atleta ECI
+                      </p>
+                      <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+                        {athlete.name}
+                      </h2>
+                    </div>
+                    <StatusBadge status={athlete.status} />
                   </div>
-                  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase text-slate-700">
-                    {athlete.status}
-                  </span>
                 </div>
 
-                <dl className="mt-4 space-y-3 text-sm text-slate-700">
-                  {athlete.course ? (
-                    <div>
-                      <dt className="font-medium text-slate-900">Curso</dt>
-                      <dd className="mt-1">{athlete.course}</dd>
-                    </div>
-                  ) : null}
+                <div className="flex flex-wrap gap-2">
+                  <Badge tone="primary">{athlete.className}</Badge>
+                  {athlete.course ? <Badge>{athlete.course}</Badge> : null}
+                </div>
+
+                <dl className="mt-5 space-y-4 text-sm text-slate-700">
                   <div>
                     <dt className="font-medium text-slate-900">Modalidades</dt>
-                    <dd className="mt-1">{getSportsForAthlete(athlete).join(", ")}</dd>
+                    <dd className="mt-1">
+                      {getSportsForAthlete(athlete).join(", ")}
+                    </dd>
                   </div>
                   <div>
                     <dt className="font-medium text-slate-900">Time</dt>
