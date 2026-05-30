@@ -1,9 +1,51 @@
 [
   {
     "id": "reg-geral",
-    "title": "Regulamento Geral",
+    "title": "Interclasse CEAP 2026",
     "division": "ambos",
-    "content": "Conteudo inicial de exemplo para validar a estrutura do portal.",
+    "content": "Documento oficial do evento com apresentacao da FAC, calendario, espirito competitivo, modalidades e diretrizes gerais do Interclasse CEAP 2026.",
     "order": 1
+  },
+  {
+    "id": "reg-basquete",
+    "title": "Regulamento de Basquete 3x3",
+    "division": "ambos",
+    "content": "Regras para inscricao, formato de grupos e mata-mata, duracao das partidas e organizacao da modalidade de basquete 3x3 para ECI e EPT.",
+    "order": 2
+  },
+  {
+    "id": "reg-fut7-eci",
+    "title": "Regulamento de FUT7 ECI",
+    "division": "eci",
+    "content": "Normas da divisao ECI para equipes de ate 10 jogadores, partidas em dois tempos de 8 minutos e formato competitivo por grupos e eliminatorias.",
+    "order": 3
+  },
+  {
+    "id": "reg-fut7-ept",
+    "title": "Regulamento de FUT7 EPT",
+    "division": "ept",
+    "content": "Normas da divisao EPT para equipes de ate 10 jogadores, substituicoes livres e partidas em dois tempos de 8 minutos.",
+    "order": 4
+  },
+  {
+    "id": "reg-tenis",
+    "title": "Regulamento de Tenis",
+    "division": "ambos",
+    "content": "Diretrizes da modalidade individual, com grupos, mata-mata e partidas em melhor de 3 sets, incluindo tie-break em 6 a 6.",
+    "order": 5
+  },
+  {
+    "id": "reg-volei",
+    "title": "Regulamento de Volei",
+    "division": "ambos",
+    "content": "Regras para equipes, quantidade de atletas inscritos, formato melhor de 3 sets e criterios de pontuacao para o torneio de volei.",
+    "order": 6
+  },
+  {
+    "id": "reg-xadrez",
+    "title": "Regulamento de Xadrez",
+    "division": "ambos",
+    "content": "Orientacoes da modalidade individual com fase de grupos, mata-mata e referencia tecnica para tabuleiro, pecas e estrutura da competicao.",
+    "order": 7
   }
 ]

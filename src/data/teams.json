@@ -4,13 +4,27 @@
     "name": "ECI Futsal A",
     "division": "eci",
     "sportIds": ["sport-futsal"],
-    "athleteIds": ["ath-ana-silva"]
+    "athleteIds": ["ath-ana-silva", "ath-lucas-almeida"]
+  },
+  {
+    "id": "team-eci-xadrez",
+    "name": "ECI Xadrez",
+    "division": "eci",
+    "sportIds": ["sport-xadrez"],
+    "athleteIds": ["ath-marina-rocha"]
   },
   {
     "id": "team-ept-volei-a",
     "name": "EPT Volei A",
     "division": "ept",
     "sportIds": ["sport-volei"],
-    "athleteIds": ["ath-bruno-costa"]
+    "athleteIds": ["ath-bruno-costa", "ath-carla-mendes"]
+  },
+  {
+    "id": "team-ept-handebol",
+    "name": "EPT Handebol",
+    "division": "ept",
+    "sportIds": ["sport-handebol"],
+    "athleteIds": ["ath-diego-santos"]
   }
 ]

@@ -16,3 +16,7 @@ export function filterSportsByDivision(sports: Sport[], division: Division) {
     (sport) => sport.division === division || sport.division === "ambos",
   );
 }
+
+export function filterAthletesByTeam(athletes: Athlete[], teamId: string) {
+  return athletes.filter((athlete) => athlete.teamId === teamId);
+}

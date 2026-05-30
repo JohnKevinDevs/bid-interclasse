@@ -10,6 +10,26 @@
     "status": "ativo"
   },
   {
+    "id": "ath-lucas-almeida",
+    "name": "Lucas Almeida",
+    "division": "eci",
+    "className": "2B",
+    "course": "Ensino Medio",
+    "teamId": "team-eci-futsal-a",
+    "sports": ["sport-futsal", "sport-xadrez"],
+    "status": "ativo"
+  },
+  {
+    "id": "ath-marina-rocha",
+    "name": "Marina Rocha",
+    "division": "eci",
+    "className": "3A",
+    "course": "Ensino Medio",
+    "teamId": "team-eci-xadrez",
+    "sports": ["sport-xadrez"],
+    "status": "inativo"
+  },
+  {
     "id": "ath-bruno-costa",
     "name": "Bruno Costa",
     "division": "ept",
@@ -17,6 +37,26 @@
     "course": "Informatica",
     "teamId": "team-ept-volei-a",
     "sports": ["sport-volei"],
+    "status": "ativo"
+  },
+  {
+    "id": "ath-carla-mendes",
+    "name": "Carla Mendes",
+    "division": "ept",
+    "className": "3ADM",
+    "course": "Administracao",
+    "teamId": "team-ept-volei-a",
+    "sports": ["sport-volei"],
+    "status": "ativo"
+  },
+  {
+    "id": "ath-diego-santos",
+    "name": "Diego Santos",
+    "division": "ept",
+    "className": "1LOG",
+    "course": "Logistica",
+    "teamId": "team-ept-handebol",
+    "sports": ["sport-handebol"],
     "status": "ativo"
   }
 ]

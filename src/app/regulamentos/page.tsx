@@ -12,8 +12,31 @@ export default function RegulamentosPage() {
         <SectionTitle
           eyebrow="Documentos"
           title="Regulamentos"
-          description="Consulta aos regulamentos cadastrados para orientar a participacao no Interclasse CEAP/FAC."
+          description="Consulta oficial aos documentos do Interclasse CEAP 2026, com orientacoes por modalidade e referencia institucional para atletas, equipes e organizacao."
         />
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-[1.4fr_0.8fr]">
+          <Card>
+            <h2 className="text-xl font-semibold text-foreground">
+              Como usar esta pagina
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-slate-700">
+              Os regulamentos listados aqui servem como base de consulta publica
+              para entender formato de disputa, inscricoes, tempo de jogo e
+              regras gerais de cada modalidade. Em caso de duvida operacional,
+              a orientacao oficial da organizacao deve prevalecer.
+            </p>
+          </Card>
+          <Card>
+            <h2 className="text-xl font-semibold text-foreground">
+              Abrangencia
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-slate-700">
+              O portal reune documentos gerais do evento e regulamentos
+              especificos para ECI, EPT e modalidades compartilhadas.
+            </p>
+          </Card>
+        </div>
 
         <div className="mt-8 grid gap-4">
           {orderedRegulations.length > 0 ? (
@@ -36,8 +59,8 @@ export default function RegulamentosPage() {
             ))
           ) : (
             <EmptyState
-              title="Nenhum regulamento cadastrado"
-              description="Os regulamentos oficiais serao listados aqui quando forem adicionados aos dados locais."
+              title="Nenhum regulamento disponivel"
+              description="Quando os documentos oficiais forem adicionados ao portal, esta area exibira os regulamentos por modalidade e por divisao."
             />
           )}
         </div>

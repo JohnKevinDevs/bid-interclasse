@@ -8,5 +8,15 @@
     "id": "sport-volei",
     "name": "Volei",
     "division": "ambos"
+  },
+  {
+    "id": "sport-xadrez",
+    "name": "Xadrez",
+    "division": "eci"
+  },
+  {
+    "id": "sport-handebol",
+    "name": "Handebol",
+    "division": "ept"
   }
 ]

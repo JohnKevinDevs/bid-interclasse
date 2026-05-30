@@ -21,7 +21,7 @@ Itens concluidos:
 
 ## Fase 2
 
-Status: em andamento.
+Status: concluida.
 
 Escopo da fase:
 
@@ -31,8 +31,31 @@ Escopo da fase:
 - Rotas de Atletas, Times e Modalidades para ECI e EPT.
 - Consumo simples de JSONs locais.
 
-Observacao: ha alteracoes da Fase 2 no working tree aguardando revisao, commit e push.
+## Fase 3
+
+Status: concluida.
+
+Escopo da fase:
+
+- Refinamento dos JSONs locais.
+- Consistencia entre atletas, times e modalidades.
+- Listagens mais ricas para atletas, times e modalidades em ECI e EPT.
+- Contagens simples de atletas e times por modalidade.
+- Estados vazios mais informativos.
+
+## Fase 4
+
+Status: concluida.
+
+Escopo da fase:
+
+- Refinamento institucional da Home.
+- Melhoria editorial da pagina Sobre.
+- Reorganizacao textual da pagina Regulamentos.
+- Revisao de textos das paginas ECI e EPT.
+- Ajustes de microtexto nas listagens e estados vazios.
+- Refinamentos visuais leves de hierarquia e apresentacao.
 
 ## Proxima Fase Planejada
 
-Fase 3: evoluir listagens de atletas com melhor organizacao visual e dados mais proximos do uso real.
+Fase 5: refinamento visual final, revisao editorial dos dados publicos e preparacao para ampliacao do conteudo oficial do portal.
