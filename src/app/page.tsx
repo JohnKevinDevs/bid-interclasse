@@ -13,7 +13,7 @@ export default function Home() {
       <PageHero
         eyebrow="Portal Oficial do Interclasse CEAP"
         title="BID Interclasse CEAP"
-        description="Consulta publica e oficial do Interclasse CEAP 2026: atletas, equipes, modalidades e regulamentos organizados por ECI e EPT em uma experiencia de BID esportivo moderno."
+        description="Consulta publica e oficial do Interclasse CEAP 2026: atletas, equipes, modalidades e regulamentos organizados por ECI e EPT com linguagem de portal esportivo institucional."
       >
         <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-xl">
           <p className="text-xs font-semibold uppercase text-accent">
@@ -23,9 +23,9 @@ export default function Home() {
             Uma escola. Grandes talentos. Um legado.
           </p>
           <p className="mt-4 text-sm leading-6 text-white/75">
-            A FAC transforma energia estudantil em identidade, pertencimento e
-            competicao saudavel. O BID organiza essa cultura para consulta
-            rapida, publica e confiavel.
+            A FAC conecta esporte, identidade estudantil e organizacao. O BID
+            transforma essa cultura em uma base publica de consulta, memoria e
+            transparencia para o Interclasse.
           </p>
         </div>
       </PageHero>
@@ -104,11 +104,11 @@ export default function Home() {
                   Transparencia
                 </p>
                 <h2 className="mt-3 text-xl font-semibold text-foreground">
-                  Dados publicos do evento
+                  Dados publicos e confiaveis
                 </h2>
                 <p className="mt-3 text-sm leading-6 text-slate-700">
                   O BID concentra informacoes essenciais para consulta rapida,
-                  reduzindo ruído e deixando a competicao mais organizada.
+                  reduzindo ruido e deixando a competicao mais organizada.
                 </p>
               </Card>
             </div>

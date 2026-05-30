@@ -111,6 +111,18 @@ Escopo da fase:
 - Criacao dos componentes reutilizaveis `AthleteCard`, `TeamCard`, `SportCard` e `MediaFrame`.
 - Aplicacao dos novos cards nas listagens ECI e EPT sem criar paginas de detalhe.
 
+## Fase 8
+
+Status: concluida.
+
+Escopo da fase:
+
+- Reformulacao da pagina de regulamentos com hero institucional, agrupamento por ECI, EPT e ambos, cards de documento e badges de status.
+- Criacao de orientacoes para consulta dos regulamentos e aviso institucional sobre prevalencia do documento oficial.
+- Reformulacao da pagina Sobre com narrativa mais forte sobre Interclasse CEAP, FAC, papel do BID e valores do projeto.
+- Criacao dos componentes reutilizaveis `RegulationCard`, `RegulationStatusBadge`, `InstitutionalBlock` e `ValueCard`.
+- Ajustes pontuais de texto na Home para reforcar FAC, Interclasse, transparencia e consulta publica.
+
 ## Proxima Fase Planejada
 
-Fase 8: regulamentos e Sobre oficiais com uso dos metadados editoriais e melhor organizacao institucional.
+Fase 9: revisao UX/UI e mobile para validar responsividade, densidade visual e consistencia final do portal.

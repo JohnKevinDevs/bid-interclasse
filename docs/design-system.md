@@ -83,3 +83,7 @@ Diretrizes:
 - `AthleteCard`
 - `TeamCard`
 - `SportCard`
+- `RegulationCard`
+- `RegulationStatusBadge`
+- `InstitutionalBlock`
+- `ValueCard`

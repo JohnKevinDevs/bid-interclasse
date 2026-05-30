@@ -9,7 +9,7 @@
 - Fase 5: redesign estrutural e visual. Status: concluida.
 - Fase 6: enriquecimento dos modelos e dados. Status: concluida.
 - Fase 7: redesign das listagens. Status: concluida.
-- Fase 8: regulamentos e Sobre oficiais. Status: planejada.
+- Fase 8: regulamentos e Sobre oficiais. Status: concluida.
 - Fase 9: revisao UX/UI e mobile. Status: planejada.
 
 ## Nova Frente De Reformulacao
