@@ -25,8 +25,8 @@ export function SportCard({
       />
 
       <div className="grid gap-5 p-5">
-        <div className="flex items-start justify-between gap-4">
-          <div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div className="min-w-0">
             <p className="text-xs font-semibold uppercase text-primary">
               Modalidade
             </p>

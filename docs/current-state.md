@@ -123,6 +123,19 @@ Escopo da fase:
 - Criacao dos componentes reutilizaveis `RegulationCard`, `RegulationStatusBadge`, `InstitutionalBlock` e `ValueCard`.
 - Ajustes pontuais de texto na Home para reforcar FAC, Interclasse, transparencia e consulta publica.
 
+## Fase 9
+
+Status: concluida.
+
+Escopo da fase:
+
+- Revisao de responsividade em Home, centrais ECI/EPT, listagens, Regulamentos e Sobre.
+- Ajustes de espacamento, hierarquia e densidade visual em heros, cards, containers e listagens.
+- Melhoria do Header, Navbar e MobileMenu com foco em toque, clareza e acessibilidade basica.
+- Inclusao de foco visivel global para navegacao por teclado.
+- Padronizacao dos cabecalhos de listagem com o componente `ListHeader`.
+- Verificacao local das 11 rotas principais em desktop, tablet e mobile, sem overflow horizontal e sem imagens sem texto alternativo.
+
 ## Proxima Fase Planejada
 
-Fase 9: revisao UX/UI e mobile para validar responsividade, densidade visual e consistencia final do portal.
+Fase 10: SEO, metadata e preparacao para deploy.

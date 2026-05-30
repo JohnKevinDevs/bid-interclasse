@@ -27,8 +27,8 @@ export function AthleteCard({
       />
 
       <div className="grid gap-5 p-5">
-        <div className="flex items-start justify-between gap-4">
-          <div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div className="min-w-0">
             <p className="text-xs font-semibold uppercase text-primary">
               Atleta {divisionLabel}
             </p>
@@ -43,7 +43,7 @@ export function AthleteCard({
           <p className="text-sm leading-6 text-slate-700">{athlete.shortBio}</p>
         ) : null}
 
-        <div className="grid gap-3 text-sm sm:grid-cols-2">
+        <div className="grid gap-3 text-sm min-[420px]:grid-cols-2">
           <div className="rounded-lg bg-slate-50 p-3">
             <p className="text-xs font-semibold uppercase text-slate-500">Turma</p>
             <p className="mt-1 font-semibold text-foreground">{athlete.className}</p>

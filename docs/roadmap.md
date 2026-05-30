@@ -10,7 +10,8 @@
 - Fase 6: enriquecimento dos modelos e dados. Status: concluida.
 - Fase 7: redesign das listagens. Status: concluida.
 - Fase 8: regulamentos e Sobre oficiais. Status: concluida.
-- Fase 9: revisao UX/UI e mobile. Status: planejada.
+- Fase 9: revisao UX/UI e mobile. Status: concluida.
+- Fase 10: SEO, metadata e preparacao para deploy. Status: planejada.
 
 ## Nova Frente De Reformulacao
 
@@ -23,6 +24,7 @@ Prioridades da nova frente:
 - Enriquecer atletas, times e modalidades com imagens, descricoes e metadados.
 - Redesenhar listagens para reduzir sensacao de vazio.
 - Melhorar hierarquia, densidade visual e responsividade.
+- Preparar SEO, metadata e configuracoes finais para deploy futuro.
 - Manter a V1 front-end only com dados locais em JSON.
 
 ## Observacoes

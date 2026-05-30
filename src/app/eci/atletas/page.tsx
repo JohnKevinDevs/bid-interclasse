@@ -1,6 +1,7 @@
 import { AthleteCard } from "@/components/athletes/AthleteCard";
 import { Container } from "@/components/layout/Container";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { ListHeader } from "@/components/ui/ListHeader";
 import { PageHero } from "@/components/ui/PageHero";
 import { StatCard } from "@/components/ui/StatCard";
 import {
@@ -28,19 +29,12 @@ export default function EciAtletasPage() {
       </PageHero>
 
       <Container className="py-10 sm:py-12">
-        <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase text-primary">
-              Catalogo publico
-            </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
-              Elenco cadastrado
-            </h2>
-          </div>
-          <p className="text-sm text-slate-600">
-            Cards enriquecidos com dados locais do BID.
-          </p>
-        </div>
+        <ListHeader
+          eyebrow="Catalogo publico"
+          title="Elenco cadastrado"
+          description="Cards enriquecidos com dados locais do BID, organizados para consulta rapida em mobile e desktop."
+          meta={`${divisionAthletes.length} atletas`}
+        />
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {divisionAthletes.length > 0 ? (

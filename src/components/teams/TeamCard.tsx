@@ -59,7 +59,9 @@ export function TeamCard({
             {team.athleteIds.length} atleta(s)
           </p>
           <p className="mt-2 text-sm leading-6 text-slate-700">
-            {athleteNames.join(", ")}
+            {athleteNames.length > 0
+              ? athleteNames.join(", ")
+              : "Elenco ainda nao vinculado."}
           </p>
         </div>
       </div>

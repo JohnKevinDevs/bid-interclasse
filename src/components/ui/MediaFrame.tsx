@@ -23,7 +23,7 @@ export function MediaFrame({
         src={src ?? "/images/sports/placeholder-sport.svg"}
         alt={alt}
         fill
-        sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+        sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, calc(100vw - 2rem)"
         className="object-cover"
       />
     </div>

@@ -80,6 +80,7 @@ Diretrizes:
 - `Badge`
 - `StatusBadge`
 - `MediaFrame`
+- `ListHeader`
 - `AthleteCard`
 - `TeamCard`
 - `SportCard`

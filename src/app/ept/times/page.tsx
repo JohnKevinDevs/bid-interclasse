@@ -1,6 +1,7 @@
 import { Container } from "@/components/layout/Container";
 import { TeamCard } from "@/components/teams/TeamCard";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { ListHeader } from "@/components/ui/ListHeader";
 import { PageHero } from "@/components/ui/PageHero";
 import { StatCard } from "@/components/ui/StatCard";
 import {
@@ -28,6 +29,13 @@ export default function EptTimesPage() {
       </PageHero>
 
       <Container className="py-10 sm:py-12">
+        <ListHeader
+          eyebrow="Equipes cadastradas"
+          title="Times da divisao EPT"
+          description="Cada card resume identidade, modalidades vinculadas e elenco para leitura direta do BID."
+          meta={`${divisionTeams.length} times`}
+        />
+
         <div className="grid gap-5 lg:grid-cols-2">
           {divisionTeams.length > 0 ? (
             divisionTeams.map((team) => (
