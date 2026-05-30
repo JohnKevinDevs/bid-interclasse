@@ -2,21 +2,33 @@
   {
     "id": "sport-futsal",
     "name": "Futsal",
-    "division": "ambos"
+    "division": "ambos",
+    "description": "Modalidade coletiva de alta intensidade, com equipes representando suas turmas em disputas rapidas.",
+    "imageUrl": "/images/sports/placeholder-sport.svg",
+    "category": "coletivo"
   },
   {
     "id": "sport-volei",
     "name": "Volei",
-    "division": "ambos"
+    "division": "ambos",
+    "description": "Modalidade coletiva que valoriza comunicacao, posicionamento e trabalho em equipe.",
+    "imageUrl": "/images/sports/placeholder-sport.svg",
+    "category": "coletivo"
   },
   {
     "id": "sport-xadrez",
     "name": "Xadrez",
-    "division": "eci"
+    "division": "eci",
+    "description": "Modalidade individual de estrategia, concentracao e tomada de decisao.",
+    "imageUrl": "/images/sports/placeholder-sport.svg",
+    "category": "individual"
   },
   {
     "id": "sport-handebol",
     "name": "Handebol",
-    "division": "ept"
+    "division": "ept",
+    "description": "Modalidade coletiva de movimentacao intensa, transicao rapida e finalizacao.",
+    "imageUrl": "/images/sports/placeholder-sport.svg",
+    "category": "coletivo"
   }
 ]

@@ -26,16 +26,17 @@ export interface Athlete {
   teamId?: string;
   sports: string[];
   status: "ativo" | "inativo";
+  photoUrl?: string;
+  shortBio?: string;
+  position?: string;
 }
 ```
 
-Campos opcionais planejados:
+Campos opcionais ativos:
 
-```ts
-photoUrl?: string;
-shortBio?: string;
-position?: string;
-```
+- `photoUrl`: caminho publico para foto ou placeholder do atleta.
+- `shortBio`: resumo institucional curto para cards e futuras paginas ricas.
+- `position`: posicao, funcao ou papel esportivo quando fizer sentido.
 
 ## Team
 
@@ -46,16 +47,17 @@ export interface Team {
   division: Division;
   sportIds: string[];
   athleteIds: string[];
+  description?: string;
+  imageUrl?: string;
+  color?: string;
 }
 ```
 
-Campos opcionais planejados:
+Campos opcionais ativos:
 
-```ts
-description?: string;
-imageUrl?: string;
-color?: string;
-```
+- `description`: resumo editorial do time.
+- `imageUrl`: caminho publico para imagem ou placeholder do time.
+- `color`: cor de apoio para identidade visual do time.
 
 ## Sport
 
@@ -64,16 +66,17 @@ export interface Sport {
   id: string;
   name: string;
   division: SharedDivision;
+  description?: string;
+  imageUrl?: string;
+  category?: string;
 }
 ```
 
-Campos opcionais planejados:
+Campos opcionais ativos:
 
-```ts
-description?: string;
-imageUrl?: string;
-category?: string;
-```
+- `description`: resumo da modalidade.
+- `imageUrl`: caminho publico para imagem ou placeholder da modalidade.
+- `category`: categoria editorial, como `coletivo`, `individual` ou `recreativo`.
 
 ## Regulation
 
@@ -84,19 +87,21 @@ export interface Regulation {
   division: SharedDivision;
   content: string;
   order: number;
+  description?: string;
+  status?: "disponivel" | "em_revisao" | "em_breve";
 }
 ```
 
-Campos opcionais planejados:
+Campos opcionais ativos:
 
-```ts
-description?: string;
-status?: "disponivel" | "em_revisao" | "em_breve";
-```
+- `description`: resumo curto para apresentacao em cards.
+- `status`: estado editorial do documento, com valores `disponivel`, `em_revisao` ou `em_breve`.
 
-## Observacao Sobre Evolucao
+## Placeholders Publicos
 
-Os campos planejados ainda nao devem ser aplicados aos tipos ou JSONs sem uma fase propria de implementacao. A proxima etapa de modelagem deve atualizar `src/types/interclasse.ts`, os JSONs locais e as telas consumidoras em conjunto.
+- `public/images/athletes/placeholder-athlete.svg`
+- `public/images/teams/placeholder-team.svg`
+- `public/images/sports/placeholder-sport.svg`
 
 ## Arquivos JSON
 

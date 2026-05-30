@@ -4,6 +4,8 @@ export type SharedDivision = Division | "ambos";
 
 export type AthleteStatus = "ativo" | "inativo";
 
+export type RegulationStatus = "disponivel" | "em_revisao" | "em_breve";
+
 export interface Athlete {
   id: string;
   name: string;
@@ -13,6 +15,9 @@ export interface Athlete {
   teamId?: string;
   sports: string[];
   status: AthleteStatus;
+  photoUrl?: string;
+  shortBio?: string;
+  position?: string;
 }
 
 export interface Team {
@@ -21,12 +26,18 @@ export interface Team {
   division: Division;
   sportIds: string[];
   athleteIds: string[];
+  description?: string;
+  imageUrl?: string;
+  color?: string;
 }
 
 export interface Sport {
   id: string;
   name: string;
   division: SharedDivision;
+  description?: string;
+  imageUrl?: string;
+  category?: string;
 }
 
 export interface Regulation {
@@ -35,4 +46,6 @@ export interface Regulation {
   division: SharedDivision;
   content: string;
   order: number;
+  description?: string;
+  status?: RegulationStatus;
 }

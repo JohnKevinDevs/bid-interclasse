@@ -87,6 +87,18 @@ Escopo da fase:
 - Criacao de componentes reutilizaveis para hero, estatisticas, acessos rapidos e badges.
 - Manutencao da modelagem atual, sem novos campos em tipos ou JSONs.
 
+## Fase 6
+
+Status: concluida.
+
+Escopo da fase:
+
+- Enriquecimento dos tipos `Athlete`, `Team`, `Sport` e `Regulation` com campos opcionais.
+- Atualizacao dos JSONs locais com fotos/placeholders, descricoes e metadados editoriais.
+- Criacao de placeholders SVG publicos para atletas, times e modalidades.
+- Sincronizacao da documentacao de modelagem com o estado real do codigo.
+- Manutencao da arquitetura front-end only, sem backend, upload ou novas dependencias.
+
 ## Proxima Fase Planejada
 
-Fase 6: enriquecimento dos modelos e dados com campos opcionais para imagens, descricoes e metadados editoriais.
+Fase 7: redesign das listagens para consumir os novos campos visuais e editoriais.

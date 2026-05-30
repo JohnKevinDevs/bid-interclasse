@@ -7,7 +7,7 @@
 - Fase 3: refinamento de dados e listagens. Status: concluida.
 - Fase 4: refinamento institucional e conteudo textual. Status: concluida.
 - Fase 5: redesign estrutural e visual. Status: concluida.
-- Fase 6: enriquecimento dos modelos e dados. Status: planejada.
+- Fase 6: enriquecimento dos modelos e dados. Status: concluida.
 - Fase 7: redesign das listagens. Status: planejada.
 - Fase 8: regulamentos e Sobre oficiais. Status: planejada.
 - Fase 9: revisao UX/UI e mobile. Status: planejada.

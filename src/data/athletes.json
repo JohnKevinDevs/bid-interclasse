@@ -7,7 +7,10 @@
     "course": "Ensino Medio",
     "teamId": "team-eci-futsal-a",
     "sports": ["sport-futsal"],
-    "status": "ativo"
+    "status": "ativo",
+    "photoUrl": "/images/athletes/placeholder-athlete.svg",
+    "shortBio": "Atleta da ECI cadastrada para representar sua turma no Interclasse CEAP.",
+    "position": "Linha"
   },
   {
     "id": "ath-lucas-almeida",
@@ -17,7 +20,10 @@
     "course": "Ensino Medio",
     "teamId": "team-eci-futsal-a",
     "sports": ["sport-futsal", "sport-xadrez"],
-    "status": "ativo"
+    "status": "ativo",
+    "photoUrl": "/images/athletes/placeholder-athlete.svg",
+    "shortBio": "Participante da ECI com presenca em modalidades coletivas e individuais.",
+    "position": "Linha"
   },
   {
     "id": "ath-marina-rocha",
@@ -27,7 +33,10 @@
     "course": "Ensino Medio",
     "teamId": "team-eci-xadrez",
     "sports": ["sport-xadrez"],
-    "status": "inativo"
+    "status": "inativo",
+    "photoUrl": "/images/athletes/placeholder-athlete.svg",
+    "shortBio": "Representante da ECI em modalidade de estrategia e concentracao.",
+    "position": "Enxadrista"
   },
   {
     "id": "ath-bruno-costa",
@@ -37,7 +46,10 @@
     "course": "Informatica",
     "teamId": "team-ept-volei-a",
     "sports": ["sport-volei"],
-    "status": "ativo"
+    "status": "ativo",
+    "photoUrl": "/images/athletes/placeholder-athlete.svg",
+    "shortBio": "Atleta da EPT vinculado ao volei e ao espirito competitivo da turma.",
+    "position": "Ponta"
   },
   {
     "id": "ath-carla-mendes",
@@ -47,7 +59,10 @@
     "course": "Administracao",
     "teamId": "team-ept-volei-a",
     "sports": ["sport-volei"],
-    "status": "ativo"
+    "status": "ativo",
+    "photoUrl": "/images/athletes/placeholder-athlete.svg",
+    "shortBio": "Participante da EPT cadastrada para fortalecer a equipe de volei.",
+    "position": "Levantadora"
   },
   {
     "id": "ath-diego-santos",
@@ -57,6 +72,9 @@
     "course": "Logistica",
     "teamId": "team-ept-handebol",
     "sports": ["sport-handebol"],
-    "status": "ativo"
+    "status": "ativo",
+    "photoUrl": "/images/athletes/placeholder-athlete.svg",
+    "shortBio": "Atleta da EPT inscrito em modalidade coletiva de ritmo intenso.",
+    "position": "Armador"
   }
 ]

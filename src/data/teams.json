@@ -4,27 +4,39 @@
     "name": "ECI Futsal A",
     "division": "eci",
     "sportIds": ["sport-futsal"],
-    "athleteIds": ["ath-ana-silva", "ath-lucas-almeida"]
+    "athleteIds": ["ath-ana-silva", "ath-lucas-almeida"],
+    "description": "Equipe da ECI voltada ao FUT7, reunindo atletas da turma em uma disputa de ritmo coletivo.",
+    "imageUrl": "/images/teams/placeholder-team.svg",
+    "color": "#006b5f"
   },
   {
     "id": "team-eci-xadrez",
     "name": "ECI Xadrez",
     "division": "eci",
     "sportIds": ["sport-xadrez"],
-    "athleteIds": ["ath-marina-rocha"]
+    "athleteIds": ["ath-marina-rocha"],
+    "description": "Equipe da ECI dedicada ao xadrez, modalidade individual de estrategia e leitura de jogo.",
+    "imageUrl": "/images/teams/placeholder-team.svg",
+    "color": "#d79a10"
   },
   {
     "id": "team-ept-volei-a",
     "name": "EPT Volei A",
     "division": "ept",
     "sportIds": ["sport-volei"],
-    "athleteIds": ["ath-bruno-costa", "ath-carla-mendes"]
+    "athleteIds": ["ath-bruno-costa", "ath-carla-mendes"],
+    "description": "Equipe da EPT formada para representar o nucleo tecnico no volei do Interclasse.",
+    "imageUrl": "/images/teams/placeholder-team.svg",
+    "color": "#112031"
   },
   {
     "id": "team-ept-handebol",
     "name": "EPT Handebol",
     "division": "ept",
     "sportIds": ["sport-handebol"],
-    "athleteIds": ["ath-diego-santos"]
+    "athleteIds": ["ath-diego-santos"],
+    "description": "Equipe da EPT para a modalidade handebol, com foco em intensidade, colaboracao e disputa saudavel.",
+    "imageUrl": "/images/teams/placeholder-team.svg",
+    "color": "#006b5f"
   }
 ]
