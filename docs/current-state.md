@@ -56,6 +56,24 @@ Escopo da fase:
 - Ajustes de microtexto nas listagens e estados vazios.
 - Refinamentos visuais leves de hierarquia e apresentacao.
 
+## Auditoria Manual Do Produto
+
+Status: registrada como nova direcao de desenvolvimento.
+
+Principais conclusoes:
+
+- A Home atual ainda esta generica e precisa de mais impacto visual.
+- Os textos sobre FAC e Interclasse precisam de mais presenca editorial.
+- As paginas de atletas, times e modalidades ainda parecem listagens basicas.
+- Atletas, times e modalidades devem passar a trabalhar com imagens ou fotos.
+- Times e modalidades precisam de descricoes proprias.
+- As paginas tem espacos livres demais e precisam de maior densidade visual.
+- O portal deve parecer mais um BID esportivo oficial e menos um scaffold institucional.
+
+Direcao consolidada:
+
+O BID Interclasse CEAP deve evoluir como portal publico de consulta e transparencia do Interclasse CEAP, organizado por ECI e EPT, reunindo atletas, times, modalidades e regulamentos oficiais com aparencia de BID esportivo moderno.
+
 ## Proxima Fase Planejada
 
-Fase 5: refinamento visual final, revisao editorial dos dados publicos e preparacao para ampliacao do conteudo oficial do portal.
+Fase 5: redesign estrutural e visual do portal.
