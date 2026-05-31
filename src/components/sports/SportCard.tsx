@@ -24,22 +24,18 @@ export function SportCard({
         className="rounded-b-none border-0"
       />
 
-      <div className="grid gap-5 p-5">
+      <div className="grid gap-4 p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase text-primary">
               Modalidade
             </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
+            <h2 className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               {sport.name}
             </h2>
           </div>
           <Badge tone="accent">{divisionLabel}</Badge>
         </div>
-
-        {sport.description ? (
-          <p className="text-sm leading-6 text-slate-700">{sport.description}</p>
-        ) : null}
 
         <div className="flex flex-wrap gap-2">
           {sport.category ? <Badge tone="primary">{sport.category}</Badge> : null}

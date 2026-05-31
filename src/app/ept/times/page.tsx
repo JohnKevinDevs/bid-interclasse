@@ -18,7 +18,7 @@ export default function EptTimesPage() {
       <PageHero
         eyebrow="BID EPT"
         title="Times"
-        description="Catalogo das equipes da EPT com imagem, descricao, modalidades e elenco resumido."
+        description="Times cadastrados na divisao EPT."
       >
         <StatCard
           dark
@@ -30,9 +30,9 @@ export default function EptTimesPage() {
 
       <Container className="py-10 sm:py-12">
         <ListHeader
-          eyebrow="Equipes cadastradas"
-          title="Times da divisao EPT"
-          description="Cada card resume identidade, modalidades vinculadas e elenco para leitura direta do BID."
+          eyebrow="Consulta"
+          title="Times EPT"
+          description="Equipes, modalidades e quantidade de atletas."
           meta={`${divisionTeams.length} times`}
         />
 
@@ -50,7 +50,7 @@ export default function EptTimesPage() {
           ) : (
             <EmptyState
               title="Nenhum time listado"
-              description="Quando a base da EPT receber equipes, esta pagina exibira imagem, modalidades e atletas vinculados."
+              description="Quando houver cadastro, os times aparecem aqui."
             />
           )}
         </div>

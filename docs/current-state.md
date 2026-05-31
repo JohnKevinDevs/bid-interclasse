@@ -169,8 +169,8 @@ Situacao para publicacao:
 
 ## Refinamentos Recentes
 
-- A Home foi reestruturada com maior densidade editorial, bloco de credibilidade e fluxo de consulta mais direto.
-- As paginas `ECI` e `EPT` evoluiram de roteadores simples para centrais completas de consulta com resumo, estatisticas e previews de atletas, times e modalidades.
+- A Home e as centrais `ECI`/`EPT` foram simplificadas para priorizar o essencial: divisao, numeros principais e caminhos de consulta.
+- Cards, listagens, Sobre e Regulamentos foram enxugados para reduzir excesso de texto e manter o BID mais bonito, direto e oficial.
 
 ## Proxima Fase Planejada
 

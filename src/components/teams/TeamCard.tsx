@@ -12,7 +12,6 @@ interface TeamCardProps {
 
 export function TeamCard({
   team,
-  athleteNames,
   sportNames,
   divisionLabel,
 }: TeamCardProps) {
@@ -29,19 +28,15 @@ export function TeamCard({
         />
       </div>
 
-      <div className="grid gap-5 p-5">
+      <div className="grid gap-4 p-5">
         <div>
           <p className="text-xs font-semibold uppercase text-primary">
             Equipe {divisionLabel}
           </p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
+          <h2 className="mt-2 text-xl font-semibold tracking-tight text-foreground">
             {team.name}
           </h2>
         </div>
-
-        {team.description ? (
-          <p className="text-sm leading-6 text-slate-700">{team.description}</p>
-        ) : null}
 
         <div className="flex flex-wrap gap-2">
           {sportNames.map((sportName) => (
@@ -51,18 +46,12 @@ export function TeamCard({
           ))}
         </div>
 
-        <div className="rounded-lg bg-slate-50 p-4">
-          <p className="text-xs font-semibold uppercase text-slate-500">
-            Elenco vinculado
-          </p>
+        <div className="rounded-lg bg-slate-50 p-4 text-sm">
+          <p className="text-xs font-semibold uppercase text-slate-500">Elenco</p>
           <p className="mt-1 text-2xl font-semibold text-foreground">
-            {team.athleteIds.length} atleta(s)
+            {team.athleteIds.length}
           </p>
-          <p className="mt-2 text-sm leading-6 text-slate-700">
-            {athleteNames.length > 0
-              ? athleteNames.join(", ")
-              : "Elenco ainda nao vinculado."}
-          </p>
+          <p className="mt-1 text-slate-600">atleta(s) vinculado(s)</p>
         </div>
       </div>
     </Card>

@@ -26,52 +26,25 @@ export function AthleteCard({
         className="rounded-b-none border-0"
       />
 
-      <div className="grid gap-5 p-5">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+      <div className="grid gap-4 p-5">
+        <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase text-primary">
               Atleta {divisionLabel}
             </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
+            <h2 className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               {athlete.name}
             </h2>
           </div>
           <StatusBadge status={athlete.status} />
         </div>
 
-        {athlete.shortBio ? (
-          <p className="text-sm leading-6 text-slate-700">{athlete.shortBio}</p>
-        ) : null}
-
-        <div className="grid gap-3 text-sm min-[420px]:grid-cols-2">
-          <div className="rounded-lg bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Turma</p>
-            <p className="mt-1 font-semibold text-foreground">{athlete.className}</p>
-          </div>
-          {athlete.course ? (
-            <div className="rounded-lg bg-slate-50 p-3">
-              <p className="text-xs font-semibold uppercase text-slate-500">
-                Curso
-              </p>
-              <p className="mt-1 font-semibold text-foreground">{athlete.course}</p>
-            </div>
-          ) : null}
-          {athlete.position ? (
-            <div className="rounded-lg bg-slate-50 p-3">
-              <p className="text-xs font-semibold uppercase text-slate-500">
-                Posicao
-              </p>
-              <p className="mt-1 font-semibold text-foreground">
-                {athlete.position}
-              </p>
-            </div>
-          ) : null}
-          <div className="rounded-lg bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Time</p>
-            <p className="mt-1 font-semibold text-foreground">
-              {teamName ?? "Nao vinculado"}
-            </p>
-          </div>
+        <div className="rounded-lg bg-slate-50 p-3 text-sm">
+          <p className="font-semibold text-foreground">{athlete.className}</p>
+          <p className="mt-1 text-slate-600">
+            {athlete.course ? `${athlete.course} - ` : ""}
+            {teamName ?? "Sem time"}
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-2">

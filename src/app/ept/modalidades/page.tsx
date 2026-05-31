@@ -19,7 +19,7 @@ export default function EptModalidadesPage() {
       <PageHero
         eyebrow="BID EPT"
         title="Modalidades"
-        description="Catalogo esportivo das modalidades da EPT com imagem, categoria, divisao e indicadores de participacao."
+        description="Modalidades disponiveis para a divisao EPT."
       >
         <StatCard
           dark
@@ -31,9 +31,9 @@ export default function EptModalidadesPage() {
 
       <Container className="py-10 sm:py-12">
         <ListHeader
-          eyebrow="Mapa esportivo"
-          title="Modalidades da divisao EPT"
-          description="Resumo visual das modalidades disponiveis, com categoria, abrangencia e indicadores de participacao."
+          eyebrow="Consulta"
+          title="Modalidades EPT"
+          description="Disputas, categoria e participacao."
           meta={`${divisionSports.length} modalidades`}
         />
 
@@ -51,7 +51,7 @@ export default function EptModalidadesPage() {
           ) : (
             <EmptyState
               title="Nenhuma modalidade listada"
-              description="Quando a EPT receber modalidades cadastradas, esta area mostrara divisao, equipes inscritas e atletas vinculados."
+              description="Quando houver cadastro, as modalidades aparecem aqui."
             />
           )}
         </div>

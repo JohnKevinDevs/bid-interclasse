@@ -19,7 +19,7 @@ export default function EciModalidadesPage() {
       <PageHero
         eyebrow="BID ECI"
         title="Modalidades"
-        description="Catalogo esportivo das modalidades da ECI com imagem, categoria, divisao e indicadores de participacao."
+        description="Modalidades disponiveis para a divisao ECI."
       >
         <StatCard
           dark
@@ -31,9 +31,9 @@ export default function EciModalidadesPage() {
 
       <Container className="py-10 sm:py-12">
         <ListHeader
-          eyebrow="Mapa esportivo"
-          title="Modalidades da divisao ECI"
-          description="Resumo visual das modalidades disponiveis, com categoria, abrangencia e indicadores de participacao."
+          eyebrow="Consulta"
+          title="Modalidades ECI"
+          description="Disputas, categoria e participacao."
           meta={`${divisionSports.length} modalidades`}
         />
 
@@ -51,7 +51,7 @@ export default function EciModalidadesPage() {
           ) : (
             <EmptyState
               title="Nenhuma modalidade listada"
-              description="Quando a ECI receber modalidades cadastradas, esta area mostrara divisao, equipes inscritas e atletas vinculados."
+              description="Quando houver cadastro, as modalidades aparecem aqui."
             />
           )}
         </div>

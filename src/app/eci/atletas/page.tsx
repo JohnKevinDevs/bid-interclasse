@@ -18,21 +18,21 @@ export default function EciAtletasPage() {
       <PageHero
         eyebrow="BID ECI"
         title="Atletas"
-        description="Catalogo visual dos atletas da ECI com foto, turma, curso, posicao, modalidades e equipe vinculada."
+        description="Atletas cadastrados na divisao ECI."
       >
         <StatCard
           dark
           label="Atletas ECI"
           value={divisionAthletes.length}
-          description="Registros ativos na base local."
+          description="Registros no BID."
         />
       </PageHero>
 
       <Container className="py-10 sm:py-12">
         <ListHeader
-          eyebrow="Catalogo publico"
-          title="Elenco cadastrado"
-          description="Cards enriquecidos com dados locais do BID, organizados para consulta rapida em mobile e desktop."
+          eyebrow="Consulta"
+          title="Elenco ECI"
+          description="Nome, turma, time, modalidades e status."
           meta={`${divisionAthletes.length} atletas`}
         />
 
@@ -50,7 +50,7 @@ export default function EciAtletasPage() {
           ) : (
             <EmptyState
               title="Nenhum atleta listado"
-              description="Quando a base da ECI receber atletas, esta pagina exibira foto, turma, modalidades e situacao de cada participante."
+              description="Quando houver cadastro, os atletas aparecem aqui."
             />
           )}
         </div>

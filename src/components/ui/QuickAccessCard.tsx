@@ -18,7 +18,7 @@ export function QuickAccessCard({
   return (
     <Link
       href={href}
-      className="group grid rounded-lg border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary hover:shadow-lg focus-visible:outline-accent sm:min-h-48"
+      className="group grid rounded-lg border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary hover:shadow-lg focus-visible:outline-accent"
     >
       <div>
         <p className="text-xs font-semibold uppercase text-primary">{eyebrow}</p>

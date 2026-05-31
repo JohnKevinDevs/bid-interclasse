@@ -18,21 +18,21 @@ export default function EptAtletasPage() {
       <PageHero
         eyebrow="BID EPT"
         title="Atletas"
-        description="Catalogo visual dos atletas da EPT com foto, turma, curso, posicao, modalidades e equipe vinculada."
+        description="Atletas cadastrados na divisao EPT."
       >
         <StatCard
           dark
           label="Atletas EPT"
           value={divisionAthletes.length}
-          description="Registros ativos na base local."
+          description="Registros no BID."
         />
       </PageHero>
 
       <Container className="py-10 sm:py-12">
         <ListHeader
-          eyebrow="Catalogo publico"
-          title="Elenco cadastrado"
-          description="Cards enriquecidos com dados locais do BID, organizados para consulta rapida em mobile e desktop."
+          eyebrow="Consulta"
+          title="Elenco EPT"
+          description="Nome, turma, time, modalidades e status."
           meta={`${divisionAthletes.length} atletas`}
         />
 
@@ -50,7 +50,7 @@ export default function EptAtletasPage() {
           ) : (
             <EmptyState
               title="Nenhum atleta listado"
-              description="Quando a base da EPT receber atletas, esta pagina exibira foto, turma, modalidades e situacao de cada participante."
+              description="Quando houver cadastro, os atletas aparecem aqui."
             />
           )}
         </div>

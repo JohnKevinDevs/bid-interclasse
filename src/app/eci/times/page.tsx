@@ -18,7 +18,7 @@ export default function EciTimesPage() {
       <PageHero
         eyebrow="BID ECI"
         title="Times"
-        description="Catalogo das equipes da ECI com imagem, descricao, modalidades e elenco resumido."
+        description="Times cadastrados na divisao ECI."
       >
         <StatCard
           dark
@@ -30,9 +30,9 @@ export default function EciTimesPage() {
 
       <Container className="py-10 sm:py-12">
         <ListHeader
-          eyebrow="Equipes cadastradas"
-          title="Times da divisao ECI"
-          description="Cada card resume identidade, modalidades vinculadas e elenco para leitura direta do BID."
+          eyebrow="Consulta"
+          title="Times ECI"
+          description="Equipes, modalidades e quantidade de atletas."
           meta={`${divisionTeams.length} times`}
         />
 
@@ -50,7 +50,7 @@ export default function EciTimesPage() {
           ) : (
             <EmptyState
               title="Nenhum time listado"
-              description="Quando a base da ECI receber equipes, esta pagina exibira imagem, modalidades e atletas vinculados."
+              description="Quando houver cadastro, os times aparecem aqui."
             />
           )}
         </div>

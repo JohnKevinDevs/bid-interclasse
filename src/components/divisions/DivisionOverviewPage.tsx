@@ -1,16 +1,12 @@
 import Link from "next/link";
-import { AthleteCard } from "@/components/athletes/AthleteCard";
+import type { ReactNode } from "react";
 import { Container } from "@/components/layout/Container";
-import { SportCard } from "@/components/sports/SportCard";
-import { TeamCard } from "@/components/teams/TeamCard";
-import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 import { DivisionHero } from "@/components/ui/DivisionHero";
-import { ListHeader } from "@/components/ui/ListHeader";
 import { QuickAccessCard } from "@/components/ui/QuickAccessCard";
 import { StatCard } from "@/components/ui/StatCard";
 import {
   getAthleteCountForSport,
-  getAthleteNamesByIds,
   getAthletesByDivision,
   getSportNamesByIds,
   getSportsByDivision,
@@ -25,44 +21,21 @@ interface DivisionOverviewPageProps {
   division: Division;
   title: string;
   description: string;
-  overviewTitle: string;
-  overviewDescription: string;
-  identityTitle: string;
-  identityDescription: string;
-  closingTitle: string;
-  closingDescription: string;
+  summary: string;
 }
 
 export function DivisionOverviewPage({
   division,
   title,
   description,
-  overviewTitle,
-  overviewDescription,
-  identityTitle,
-  identityDescription,
-  closingTitle,
-  closingDescription,
+  summary,
 }: DivisionOverviewPageProps) {
   const divisionLabel = division.toUpperCase();
   const athletes = getAthletesByDivision(division);
   const teams = getTeamsByDivision(division);
   const sports = getSportsByDivision(division);
-
-  const activeAthleteCount = athletes.filter(
-    (athlete) => athlete.status === "ativo",
-  ).length;
-  const classCount = new Set(athletes.map((athlete) => athlete.className)).size;
-  const courseCount = new Set(
-    athletes
-      .map((athlete) => athlete.course)
-      .filter((course): course is string => Boolean(course)),
-  ).size;
-  const exclusiveSportCount = sports.filter(
-    (sport) => sport.division === division,
-  ).length;
   const athletePreview = athletes.slice(0, 3);
-  const teamPreview = teams.slice(0, 2);
+  const teamPreview = teams.slice(0, 3);
   const sportPreview = sports.slice(0, 3);
 
   return (
@@ -72,272 +45,178 @@ export function DivisionOverviewPage({
         title={title}
         description={description}
       >
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-3 sm:grid-cols-3">
           <StatCard
             label="Atletas"
             value={athletes.length}
-            description={`Base publica ${divisionLabel}`}
+            description={`BID ${divisionLabel}`}
           />
-          <StatCard
-            label="Times"
-            value={teams.length}
-            description={`Equipes da divisao ${divisionLabel}`}
-          />
+          <StatCard label="Times" value={teams.length} description="Equipes" />
           <StatCard
             label="Modalidades"
             value={sports.length}
-            description="Consultas esportivas disponiveis"
-          />
-          <StatCard
-            label="Turmas"
-            value={classCount}
-            description="Representacoes cadastradas"
+            description="Disputas"
           />
         </div>
       </DivisionHero>
 
-      <Container className="py-10 sm:py-12">
-        <div className="grid gap-6 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
-          <article className="rounded-lg bg-foreground p-6 text-white shadow-xl sm:p-8">
-            <p className="text-xs font-semibold uppercase text-accent">
-              Resumo da divisao
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              {overviewTitle}
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-white/75">
-              {overviewDescription}
-            </p>
-
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-lg border border-white/10 bg-white/10 p-4">
-                <p className="text-xs font-semibold uppercase text-white/70">
-                  Atletas ativos
-                </p>
-                <p className="mt-2 text-3xl font-semibold">
-                  {activeAthleteCount}
-                </p>
-              </div>
-              <div className="rounded-lg border border-white/10 bg-white/10 p-4">
-                <p className="text-xs font-semibold uppercase text-white/70">
-                  Cursos mapeados
-                </p>
-                <p className="mt-2 text-3xl font-semibold">{courseCount}</p>
-              </div>
-              <div className="rounded-lg border border-white/10 bg-white/10 p-4">
-                <p className="text-xs font-semibold uppercase text-white/70">
-                  Modalidades proprias
-                </p>
-                <p className="mt-2 text-3xl font-semibold">
-                  {exclusiveSportCount}
-                </p>
-              </div>
-              <div className="rounded-lg border border-white/10 bg-white/10 p-4">
-                <p className="text-xs font-semibold uppercase text-white/70">
-                  Fluxo principal
-                </p>
-                <p className="mt-2 text-sm leading-6 text-white/80">
-                  Elenco, equipes e modalidades da divisao em leitura rapida.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
-            <QuickAccessCard
-              href={`/${division}/atletas`}
-              eyebrow={`BID ${divisionLabel}`}
-              title="Atletas"
-              description={`Veja o elenco da ${divisionLabel} com turma, curso, equipe, modalidades e situacao de cadastro.`}
-              meta="Abrir atletas"
-            />
-            <QuickAccessCard
-              href={`/${division}/times`}
-              eyebrow={`BID ${divisionLabel}`}
-              title="Times"
-              description={`Consulte as equipes da ${divisionLabel} com elenco vinculado e modalidades de disputa.`}
-              meta="Abrir times"
-            />
-            <QuickAccessCard
-              href={`/${division}/modalidades`}
-              eyebrow={`BID ${divisionLabel}`}
-              title="Modalidades"
-              description={`Confira a base esportiva da ${divisionLabel} com categorias e relacoes de consulta.`}
-              meta="Abrir modalidades"
-            />
-            <Card className="h-full">
-              <p className="text-xs font-semibold uppercase text-primary">
-                Como usar a central
-              </p>
-              <div className="mt-4 grid gap-4">
-                <div>
-                  <p className="text-sm font-semibold text-foreground">
-                    01. Leia o panorama
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-slate-700">
-                    Comece pelos previews para entender a composicao geral da
-                    divisao.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">
-                    02. Abra a listagem certa
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-slate-700">
-                    Use os atalhos para consultar o tipo de dado que interessa
-                    no momento.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">
-                    03. Navegue com contexto
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-slate-700">
-                    A central antecipa os principais nomes e modalidades antes
-                    da consulta completa.
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </Container>
-
-      <section className="border-y border-slate-200 bg-white">
-        <Container className="py-10 sm:py-12">
-          <ListHeader
-            eyebrow={`Atletas ${divisionLabel}`}
-            title="Preview do elenco da divisao"
-            description={`Antes de abrir a listagem completa, a central destaca parte dos atletas cadastrados na ${divisionLabel} com seus principais vinculos esportivos.`}
-            meta={`${athletePreview.length} de ${athletes.length} registro(s)`}
+      <Container className="py-8 sm:py-10">
+        <section className="grid gap-4 lg:grid-cols-3">
+          <QuickAccessCard
+            href={`/${division}/atletas`}
+            eyebrow={`BID ${divisionLabel}`}
+            title="Atletas"
+            description="Nome, turma, time, modalidades e status."
+            meta="Consultar"
           />
-          <div className="grid gap-4 xl:grid-cols-3">
-            {athletePreview.map((athlete) => (
-              <AthleteCard
-                key={athlete.id}
-                athlete={athlete}
-                sportNames={getSportsForAthlete(athlete)}
-                teamName={getTeamById(athlete.teamId)?.name}
-                divisionLabel={divisionLabel}
-              />
-            ))}
-          </div>
-          <div className="mt-5 flex justify-end">
-            <Link
-              href={`/${division}/atletas`}
-              className="text-sm font-semibold uppercase text-primary transition hover:text-primary-strong"
-            >
-              Ver listagem completa de atletas
-            </Link>
-          </div>
-        </Container>
-      </section>
+          <QuickAccessCard
+            href={`/${division}/times`}
+            eyebrow={`BID ${divisionLabel}`}
+            title="Times"
+            description="Equipes cadastradas e modalidades vinculadas."
+            meta="Consultar"
+          />
+          <QuickAccessCard
+            href={`/${division}/modalidades`}
+            eyebrow={`BID ${divisionLabel}`}
+            title="Modalidades"
+            description="Disputas disponiveis para a divisao."
+            meta="Consultar"
+          />
+        </section>
 
-      <Container className="py-10 sm:py-12">
-        <div className="grid gap-8 xl:grid-cols-2">
-          <section>
-            <ListHeader
-              eyebrow={`Times ${divisionLabel}`}
-              title="Equipes em evidencia"
-              description={`A central tambem antecipa as equipes da ${divisionLabel} com suas modalidades vinculadas e a composicao atual do elenco.`}
-              meta={`${teamPreview.length} de ${teams.length} equipe(s)`}
-            />
-            <div className="grid gap-4">
-              {teamPreview.map((team) => (
-                <TeamCard
-                  key={team.id}
-                  team={team}
-                  athleteNames={getAthleteNamesByIds(team.athleteIds)}
-                  sportNames={getSportNamesByIds(team.sportIds)}
-                  divisionLabel={divisionLabel}
-                />
-              ))}
-            </div>
-            <div className="mt-5 flex justify-end">
-              <Link
-                href={`/${division}/times`}
-                className="text-sm font-semibold uppercase text-primary transition hover:text-primary-strong"
-              >
-                Ver listagem completa de times
-              </Link>
-            </div>
-          </section>
-
-          <section>
-            <ListHeader
-              eyebrow={`Modalidades ${divisionLabel}`}
-              title="Panorama esportivo da divisao"
-              description={`Cada modalidade aparece aqui com contagem de atletas e equipes para dar leitura imediata da presenca competitiva da ${divisionLabel}.`}
-              meta={`${sportPreview.length} de ${sports.length} modalidade(s)`}
-            />
-            <div className="grid gap-4">
-              {sportPreview.map((sport) => (
-                <SportCard
-                  key={sport.id}
-                  sport={sport}
-                  divisionLabel={
-                    sport.division === "ambos" ? "ECI e EPT" : divisionLabel
-                  }
-                  teamCount={getTeamCountForSport(sport.id, division)}
-                  athleteCount={getAthleteCountForSport(sport.id, division)}
-                />
-              ))}
-            </div>
-            <div className="mt-5 flex justify-end">
-              <Link
-                href={`/${division}/modalidades`}
-                className="text-sm font-semibold uppercase text-primary transition hover:text-primary-strong"
-              >
-                Ver listagem completa de modalidades
-              </Link>
-            </div>
-          </section>
-        </div>
-      </Container>
-
-      <section className="border-t border-slate-200 bg-white">
-        <Container className="py-10 sm:py-12">
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
-            <article className="rounded-lg border border-primary/20 bg-primary/[0.04] p-6 sm:p-8">
+        <section className="mt-6 rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
               <p className="text-xs font-semibold uppercase text-primary">
-                Fechamento institucional
+                Resumo
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground">
-                {closingTitle}
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
+                O essencial da {divisionLabel}
               </h2>
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-700">
-                {closingDescription}
-              </p>
-            </article>
+              <p className="mt-3 text-sm leading-6 text-slate-700">{summary}</p>
+            </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Card className="h-full">
-                <p className="text-xs font-semibold uppercase text-primary">
-                  Identidade da divisao
-                </p>
-                <h3 className="mt-3 text-xl font-semibold tracking-tight text-foreground">
-                  {identityTitle}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-700">
-                  {identityDescription}
-                </p>
-              </Card>
-              <Card className="h-full">
-                <p className="text-xs font-semibold uppercase text-primary">
-                  Consulta publica
-                </p>
-                <h3 className="mt-3 text-xl font-semibold tracking-tight text-foreground">
-                  Menos vazio, mais contexto
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-700">
-                  A central organiza os principais dados da divisao antes da
-                  navegacao detalhada e reforca o carater oficial do BID.
-                </p>
-              </Card>
+            <div className="grid gap-4 md:grid-cols-3">
+              <PreviewColumn
+                title="Atletas"
+                href={`/${division}/atletas`}
+                emptyText="Nenhum atleta."
+              >
+                {athletePreview.map((athlete) => (
+                  <li key={athlete.id} className="rounded-lg bg-slate-50 p-3">
+                    <p className="font-semibold text-foreground">
+                      {athlete.name}
+                    </p>
+                    <p className="mt-1 text-xs text-slate-600">
+                      {athlete.className} -{" "}
+                      {getTeamById(athlete.teamId)?.name ?? "Sem time"}
+                    </p>
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {getSportsForAthlete(athlete).slice(0, 2).map((sport) => (
+                        <Badge key={sport} tone="primary">
+                          {sport}
+                        </Badge>
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </PreviewColumn>
+
+              <PreviewColumn
+                title="Times"
+                href={`/${division}/times`}
+                emptyText="Nenhum time."
+              >
+                {teamPreview.map((team) => (
+                  <li key={team.id} className="rounded-lg bg-slate-50 p-3">
+                    <p className="font-semibold text-foreground">{team.name}</p>
+                    <p className="mt-1 text-xs text-slate-600">
+                      {team.athleteIds.length} atleta(s)
+                    </p>
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {getSportNamesByIds(team.sportIds).slice(0, 2).map((sport) => (
+                        <Badge key={sport} tone="primary">
+                          {sport}
+                        </Badge>
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </PreviewColumn>
+
+              <PreviewColumn
+                title="Modalidades"
+                href={`/${division}/modalidades`}
+                emptyText="Nenhuma modalidade."
+              >
+                {sportPreview.map((sport) => (
+                  <li key={sport.id} className="rounded-lg bg-slate-50 p-3">
+                    <p className="font-semibold text-foreground">{sport.name}</p>
+                    <p className="mt-1 text-xs text-slate-600">
+                      {getTeamCountForSport(sport.id, division)} time(s) -{" "}
+                      {getAthleteCountForSport(sport.id, division)} atleta(s)
+                    </p>
+                    {sport.category ? (
+                      <div className="mt-2">
+                        <Badge tone="accent">{sport.category}</Badge>
+                      </div>
+                    ) : null}
+                  </li>
+                ))}
+              </PreviewColumn>
             </div>
           </div>
-        </Container>
-      </section>
+        </section>
+
+        <section className="mt-6 rounded-lg bg-foreground p-5 text-white sm:p-6">
+          <p className="text-xs font-semibold uppercase text-accent">
+            BID Interclasse CEAP
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+            Consulta simples, visual e oficial.
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-white/75">
+            A central mostra o que importa primeiro e deixa o detalhe para as
+            listagens.
+          </p>
+        </section>
+      </Container>
     </main>
+  );
+}
+
+interface PreviewColumnProps {
+  title: string;
+  href: string;
+  emptyText: string;
+  children: ReactNode;
+}
+
+function PreviewColumn({
+  title,
+  href,
+  emptyText,
+  children,
+}: PreviewColumnProps) {
+  const hasItems = Array.isArray(children) ? children.length > 0 : Boolean(children);
+
+  return (
+    <div>
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <h3 className="text-sm font-semibold uppercase text-foreground">
+          {title}
+        </h3>
+        <Link
+          href={href}
+          className="text-xs font-semibold uppercase text-primary transition hover:text-primary-strong"
+        >
+          Ver todos
+        </Link>
+      </div>
+      <ul className="grid gap-2 text-sm">
+        {hasItems ? children : <li className="text-slate-500">{emptyText}</li>}
+      </ul>
+    </div>
   );
 }
