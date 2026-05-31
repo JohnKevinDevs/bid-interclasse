@@ -150,6 +150,23 @@ Escopo da fase:
 - Atualizacao do README com comandos, build, deploy na Vercel e uso de `NEXT_PUBLIC_SITE_URL`.
 - Validacao de build, sitemap, robots e manifest sem erros de metadata.
 
+## Fase 11
+
+Status: concluida.
+
+Escopo da fase:
+
+- Auditoria dos JSONs locais de atletas, times, modalidades e regulamentos.
+- Identificacao de dados mockados, imagens placeholders e regulamentos pendentes.
+- Confirmacao de que os vinculos entre atletas, times e modalidades nao possuem IDs quebrados.
+- Criacao do checklist de producao em `docs/production-checklist.md`.
+- Registro de validacoes obrigatorias, checklist Vercel e checklist pos-publicacao.
+
+Situacao para publicacao:
+
+- O projeto esta tecnicamente pronto para deploy.
+- A publicacao oficial ainda depende de dados reais, imagens autorizadas e revisao final dos regulamentos pendentes.
+
 ## Proxima Fase Planejada
 
-Fase 11: revisao final com dados reais e publicacao.
+Fase 12: Deploy Vercel e validacao publica.
