@@ -1,9 +1,25 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { InstitutionalBlock } from "@/components/ui/InstitutionalBlock";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { ValueCard } from "@/components/ui/ValueCard";
+
+export const metadata: Metadata = {
+  title: "Sobre",
+  description:
+    "Conheca o Interclasse CEAP, a FAC e o papel do BID como portal publico de consulta e transparencia.",
+  alternates: {
+    canonical: "/sobre",
+  },
+  openGraph: {
+    title: "Sobre | BID Interclasse CEAP",
+    description:
+      "Entenda o projeto BID Interclasse CEAP, sua relacao com a FAC e seu papel institucional.",
+    url: "/sobre",
+  },
+};
 
 const values = [
   {

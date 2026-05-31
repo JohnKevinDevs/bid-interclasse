@@ -12,6 +12,19 @@ Centralizar as informacoes essenciais do Interclasse em uma experiencia publica,
 - TypeScript
 - Tailwind CSS
 - Dados locais em JSON
+- Deploy planejado na Vercel
+
+## URL Do Projeto
+
+URL futura de producao:
+
+```txt
+https://bid-interclasse-ceap.vercel.app
+```
+
+Enquanto a URL oficial nao for definida, o projeto usa esse endereco como
+placeholder em metadata, sitemap e robots. Para alterar, configure
+`NEXT_PUBLIC_SITE_URL` no ambiente de deploy.
 
 ## Estrutura Basica
 
@@ -52,6 +65,26 @@ npm.cmd run lint
 npm.cmd run build
 ```
 
+Para executar a build localmente:
+
+```bash
+npm.cmd run build
+npm.cmd run start
+```
+
+## Deploy Na Vercel
+
+Fluxo simples recomendado:
+
+1. Conectar o repositorio GitHub `JohnKevinDevs/bid-interclasse` na Vercel.
+2. Manter o framework como Next.js.
+3. Usar os comandos padrao:
+   - Install Command: `npm install`
+   - Build Command: `npm run build`
+   - Output: automatico do Next.js
+4. Configurar `NEXT_PUBLIC_SITE_URL` com a URL final de producao.
+5. Publicar a branch `main`.
+
 ## Escopo Da Versao Atual
 
 - Front-end apenas
@@ -59,7 +92,7 @@ npm.cmd run build
 - Sem backend
 - Sem banco de dados
 - Sem autenticacao
-- Preparado para deploy futuro na Vercel
+- Metadata, sitemap, robots e manifest preparados para deploy na Vercel
 
 ## Documentacao Do Projeto
 

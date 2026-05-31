@@ -136,6 +136,20 @@ Escopo da fase:
 - Padronizacao dos cabecalhos de listagem com o componente `ListHeader`.
 - Verificacao local das 11 rotas principais em desktop, tablet e mobile, sem overflow horizontal e sem imagens sem texto alternativo.
 
+## Fase 10
+
+Status: concluida.
+
+Escopo da fase:
+
+- Revisao e ampliacao da metadata global do App Router.
+- Criacao de metadata especifica para Home, ECI, EPT, Regulamentos e Sobre.
+- Configuracao basica de Open Graph, Twitter Card, canonical, keywords, authors e creator.
+- Criacao de `manifest.ts`, `robots.ts` e `sitemap.ts`.
+- Criacao de icone SVG do app e imagem Open Graph institucional.
+- Atualizacao do README com comandos, build, deploy na Vercel e uso de `NEXT_PUBLIC_SITE_URL`.
+- Validacao de build, sitemap, robots e manifest sem erros de metadata.
+
 ## Proxima Fase Planejada
 
-Fase 10: SEO, metadata e preparacao para deploy.
+Fase 11: revisao final com dados reais e publicacao.

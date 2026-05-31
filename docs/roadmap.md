@@ -11,7 +11,8 @@
 - Fase 7: redesign das listagens. Status: concluida.
 - Fase 8: regulamentos e Sobre oficiais. Status: concluida.
 - Fase 9: revisao UX/UI e mobile. Status: concluida.
-- Fase 10: SEO, metadata e preparacao para deploy. Status: planejada.
+- Fase 10: SEO, metadata e preparacao para deploy. Status: concluida.
+- Fase 11: revisao final com dados reais e publicacao. Status: planejada.
 
 ## Nova Frente De Reformulacao
 
@@ -25,6 +26,7 @@ Prioridades da nova frente:
 - Redesenhar listagens para reduzir sensacao de vazio.
 - Melhorar hierarquia, densidade visual e responsividade.
 - Preparar SEO, metadata e configuracoes finais para deploy futuro.
+- Revisar dados reais, conteudo final e publicacao do portal.
 - Manter a V1 front-end only com dados locais em JSON.
 
 ## Observacoes

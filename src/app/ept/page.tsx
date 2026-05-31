@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { DivisionHero } from "@/components/ui/DivisionHero";
 import { QuickAccessCard } from "@/components/ui/QuickAccessCard";
@@ -7,6 +8,21 @@ import {
   getSportsByDivision,
   getTeamsByDivision,
 } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "Interclasse EPT",
+  description:
+    "Central publica da divisao EPT no BID Interclasse CEAP, com acesso a atletas, times e modalidades.",
+  alternates: {
+    canonical: "/ept",
+  },
+  openGraph: {
+    title: "Interclasse EPT | BID Interclasse CEAP",
+    description:
+      "Consulte atletas, equipes e modalidades da divisao EPT no portal oficial do Interclasse CEAP.",
+    url: "/ept",
+  },
+};
 
 export default function EptPage() {
   const athleteCount = getAthletesByDivision("ept").length;

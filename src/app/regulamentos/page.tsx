@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { RegulationCard } from "@/components/regulations/RegulationCard";
 import { RegulationStatusBadge } from "@/components/regulations/RegulationStatusBadge";
 import { Container } from "@/components/layout/Container";
@@ -7,6 +8,21 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { orderedRegulations } from "@/lib/data";
 import type { Regulation, SharedDivision } from "@/types/interclasse";
+
+export const metadata: Metadata = {
+  title: "Regulamentos",
+  description:
+    "Regulamentos oficiais do Interclasse CEAP, organizados por ECI, EPT e documentos compartilhados.",
+  alternates: {
+    canonical: "/regulamentos",
+  },
+  openGraph: {
+    title: "Regulamentos | BID Interclasse CEAP",
+    description:
+      "Consulte regras, criterios e documentos oficiais do Interclasse CEAP.",
+    url: "/regulamentos",
+  },
+};
 
 const regulationGroups: {
   division: SharedDivision;

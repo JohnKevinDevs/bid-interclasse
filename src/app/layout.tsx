@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ogImage, siteDescription, siteName, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,8 +16,58 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BID Interclasse CEAP",
-  description: "Portal publico do Interclasse CEAP/FAC.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: [
+    "BID Interclasse CEAP",
+    "Interclasse CEAP",
+    "FAC",
+    "Federacao Atletica CEAP",
+    "atletas CEAP",
+    "times CEAP",
+    "modalidades CEAP",
+    "regulamentos Interclasse",
+  ],
+  authors: [{ name: "FAC - Federacao Atletica CEAP" }],
+  creator: "FAC - Federacao Atletica CEAP",
+  publisher: "FAC - Federacao Atletica CEAP",
+  applicationName: siteName,
+  category: "sports",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "/",
+    siteName,
+    title: siteName,
+    description: siteDescription,
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "BID Interclasse CEAP",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description: siteDescription,
+    images: [ogImage],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({

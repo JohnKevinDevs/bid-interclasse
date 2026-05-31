@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
@@ -6,6 +7,23 @@ import { QuickAccessCard } from "@/components/ui/QuickAccessCard";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { StatCard } from "@/components/ui/StatCard";
 import { athletes, sports, teams } from "@/lib/data";
+import { ogImage, siteName } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: siteName,
+  description:
+    "Portal oficial do Interclasse CEAP/FAC para consultar atletas, times, modalidades e regulamentos organizados por ECI e EPT.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteName,
+    description:
+      "Consulte o BID Interclasse CEAP com atletas, equipes, modalidades e regulamentos oficiais.",
+    url: "/",
+    images: [ogImage],
+  },
+};
 
 export default function Home() {
   return (

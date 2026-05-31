@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { DivisionHero } from "@/components/ui/DivisionHero";
 import { QuickAccessCard } from "@/components/ui/QuickAccessCard";
@@ -7,6 +8,21 @@ import {
   getSportsByDivision,
   getTeamsByDivision,
 } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "Interclasse ECI",
+  description:
+    "Central publica da divisao ECI no BID Interclasse CEAP, com acesso a atletas, times e modalidades.",
+  alternates: {
+    canonical: "/eci",
+  },
+  openGraph: {
+    title: "Interclasse ECI | BID Interclasse CEAP",
+    description:
+      "Consulte atletas, equipes e modalidades da divisao ECI no portal oficial do Interclasse CEAP.",
+    url: "/eci",
+  },
+};
 
 export default function EciPage() {
   const athleteCount = getAthletesByDivision("eci").length;
