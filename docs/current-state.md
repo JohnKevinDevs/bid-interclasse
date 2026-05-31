@@ -167,6 +167,11 @@ Situacao para publicacao:
 - O projeto esta tecnicamente pronto para deploy.
 - A publicacao oficial ainda depende de dados reais, imagens autorizadas e revisao final dos regulamentos pendentes.
 
+## Refinamentos Recentes
+
+- A Home foi reestruturada com maior densidade editorial, bloco de credibilidade e fluxo de consulta mais direto.
+- As paginas `ECI` e `EPT` evoluiram de roteadores simples para centrais completas de consulta com resumo, estatisticas e previews de atletas, times e modalidades.
+
 ## Proxima Fase Planejada
 
 Fase 12: Deploy Vercel e validacao publica.
