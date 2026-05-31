@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { RegulationCard } from "@/components/regulations/RegulationCard";
 import { RegulationStatusBadge } from "@/components/regulations/RegulationStatusBadge";
 import { Container } from "@/components/layout/Container";
-import { Card } from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -29,6 +28,9 @@ const regulationGroups: {
   eyebrow: string;
   title: string;
   description: string;
+  accentClassName: string;
+  sectionClassName: string;
+  badgeClassName: string;
 }[] = [
   {
     division: "eci",
@@ -36,6 +38,9 @@ const regulationGroups: {
     title: "Regulamentos ECI",
     description:
       "Documentos especificos da divisao ECI, com regras proprias quando a modalidade exigir separacao operacional.",
+    accentClassName: "bg-primary",
+    sectionClassName: "border-primary/20 bg-primary/[0.03]",
+    badgeClassName: "bg-primary/10 text-primary",
   },
   {
     division: "ept",
@@ -43,6 +48,9 @@ const regulationGroups: {
     title: "Regulamentos EPT",
     description:
       "Documentos especificos da divisao EPT, organizados para orientar equipes, atletas e responsaveis pela divisao.",
+    accentClassName: "bg-foreground",
+    sectionClassName: "border-slate-300 bg-slate-50",
+    badgeClassName: "bg-foreground text-white",
   },
   {
     division: "ambos",
@@ -50,6 +58,9 @@ const regulationGroups: {
     title: "Regulamentos para ECI e EPT",
     description:
       "Documentos gerais ou compartilhados, validos para as duas divisoes do Interclasse CEAP.",
+    accentClassName: "bg-accent",
+    sectionClassName: "border-accent/30 bg-accent/5",
+    badgeClassName: "bg-accent/15 text-[#7a4f00]",
   },
 ];
 
@@ -83,7 +94,7 @@ export default function RegulamentosPage() {
 
       <Container className="py-12">
         <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-          <Card className="bg-slate-950 text-white hover:border-slate-700">
+          <article className="rounded-lg border border-slate-800 bg-foreground p-6 text-white shadow-sm">
             <p className="text-xs font-semibold uppercase text-accent">
               Como consultar os regulamentos
             </p>
@@ -95,8 +106,22 @@ export default function RegulamentosPage() {
               a regra se aplica a ECI, EPT ou ambos, e consulte o documento da
               modalidade antes de orientar atletas ou confirmar equipes.
             </p>
-          </Card>
-          <Card>
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-lg border border-white/10 bg-white/10 p-3">
+                <p className="text-xs font-semibold uppercase text-white/65">01</p>
+                <p className="mt-1 text-sm font-semibold">Geral</p>
+              </div>
+              <div className="rounded-lg border border-white/10 bg-white/10 p-3">
+                <p className="text-xs font-semibold uppercase text-white/65">02</p>
+                <p className="mt-1 text-sm font-semibold">Divisao</p>
+              </div>
+              <div className="rounded-lg border border-white/10 bg-white/10 p-3">
+                <p className="text-xs font-semibold uppercase text-white/65">03</p>
+                <p className="mt-1 text-sm font-semibold">Modalidade</p>
+              </div>
+            </div>
+          </article>
+          <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
             <p className="text-xs font-semibold uppercase text-primary">
               Status dos documentos
             </p>
@@ -109,7 +134,7 @@ export default function RegulamentosPage() {
               O status indica se o conteudo ja pode ser usado como referencia,
               se esta passando por revisao ou se ainda sera publicado.
             </p>
-          </Card>
+          </article>
         </div>
 
         <section className="mt-10">
@@ -124,7 +149,10 @@ export default function RegulamentosPage() {
               const groupRegulations = getRegulationsByDivision(group.division);
 
               return (
-                <section key={group.division}>
+                <section
+                  key={group.division}
+                  className={`rounded-lg border p-5 sm:p-6 ${group.sectionClassName}`}
+                >
                   <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                     <div>
                       <p className="text-xs font-semibold uppercase text-primary">
@@ -137,7 +165,9 @@ export default function RegulamentosPage() {
                         {group.description}
                       </p>
                     </div>
-                    <span className="w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase text-slate-700">
+                    <span
+                      className={`w-fit rounded-full px-3 py-1 text-xs font-semibold uppercase ${group.badgeClassName}`}
+                    >
                       {groupRegulations.length} documento
                       {groupRegulations.length === 1 ? "" : "s"}
                     </span>
@@ -149,6 +179,7 @@ export default function RegulamentosPage() {
                         <RegulationCard
                           key={regulation.id}
                           regulation={regulation}
+                          accentClassName={group.accentClassName}
                         />
                       ))
                     ) : (
