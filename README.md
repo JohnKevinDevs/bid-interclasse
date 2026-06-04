@@ -1,34 +1,43 @@
 # BID Interclasse CEAP
 
-BID Interclasse CEAP e o portal oficial do Interclasse CEAP e da FAC para exibicao publica de atletas, equipes, modalidades, regulamentos e informacoes institucionais.
+BID Interclasse CEAP is a public portal created to organize and present information about the CEAP Interclasse and FAC, including athletes, teams, sports, regulations, and institutional content.
 
-## Objetivo
+The project was designed to centralize scattered information in a cleaner, more accessible, and more structured digital experience for students, teams, organizers, and the school community.
 
-Centralizar as informacoes essenciais do Interclasse em uma experiencia publica, organizada e responsiva, facilitando a consulta por estudantes, equipes, organizacao e comunidade escolar.
+## Project Goal
 
-## Tecnologias
+The goal of this portal is to make the Interclasse experience easier to navigate and understand through a responsive public interface.
+
+It is also an important portfolio project because it shows how technology can support community, organization, culture, and communication in a real context.
+
+## Tech Stack
 
 - Next.js
 - TypeScript
 - Tailwind CSS
-- Dados locais em JSON
-- Deploy planejado na Vercel
+- local JSON data
+- deployment planned for Vercel
 
-## URL Do Projeto
+## Current Scope
 
-URL futura de producao:
+- public frontend only
+- local JSON-based data
+- no backend yet
+- no database yet
+- no authentication yet
+- metadata and deployment structure prepared for production publishing
+
+## Planned Production URL
 
 ```txt
 https://bid-interclasse-ceap.vercel.app
 ```
 
-Enquanto a URL oficial nao for definida, o projeto usa esse endereco como
-placeholder em metadata, sitemap e robots. Para alterar, configure
-`NEXT_PUBLIC_SITE_URL` no ambiente de deploy.
+While the final official URL is not defined, the project uses this address as a deployment placeholder in metadata, sitemap, and robots configuration.
 
-## Estrutura Basica
+## Repository Structure
 
-```txt
+```text
 src/
   app/
   components/
@@ -38,68 +47,45 @@ src/
 docs/
 ```
 
-## Como Executar Localmente
+## Running Locally
 
-Instale as dependencias:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Execute o servidor de desenvolvimento:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-No Windows PowerShell, caso `npm` esteja bloqueado pela policy local, use:
+On Windows PowerShell, if `npm` is blocked by the local policy, use:
 
 ```bash
 npm.cmd run dev
 ```
 
-Valide o projeto:
+Validate the project:
 
 ```bash
 npm.cmd run lint
 npm.cmd run build
 ```
 
-Para executar a build localmente:
+## Why This Project Matters
 
-```bash
-npm.cmd run build
-npm.cmd run start
-```
+BID Interclasse CEAP is relevant in my portfolio because it represents a public-facing product with structure, information design, organization, and execution.
 
-## Deploy Na Vercel
+It reinforces my interest in building systems that combine technology, communication, and real-world context.
 
-Fluxo simples recomendado:
+## Documentation
 
-1. Conectar o repositorio GitHub `JohnKevinDevs/bid-interclasse` na Vercel.
-2. Manter o framework como Next.js.
-3. Usar os comandos padrao:
-   - Install Command: `npm install`
-   - Build Command: `npm run build`
-   - Output: automatico do Next.js
-4. Configurar `NEXT_PUBLIC_SITE_URL` com a URL final de producao.
-5. Publicar a branch `main`.
-
-## Escopo Da Versao Atual
-
-- Front-end apenas
-- Dados em JSON local
-- Sem backend
-- Sem banco de dados
-- Sem autenticacao
-- Metadata, sitemap, robots e manifest preparados para deploy na Vercel
-
-## Documentacao Do Projeto
-
-- Regras para IA e fluxo permanente: `AGENTS.md`
-- Estado atual: `docs/current-state.md`
-- Arquitetura: `docs/architecture.md`
-- Fluxo Codex: `docs/codex-workflow.md`
-- Roadmap: `docs/roadmap.md`
-- Design system: `docs/design-system.md`
-- Modelagem de dados: `docs/data-model.md`
+- `AGENTS.md`
+- `docs/current-state.md`
+- `docs/architecture.md`
+- `docs/codex-workflow.md`
+- `docs/roadmap.md`
+- `docs/design-system.md`
+- `docs/data-model.md`
