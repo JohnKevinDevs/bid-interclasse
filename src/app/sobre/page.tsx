@@ -42,7 +42,7 @@ export default function SobrePage() {
         title="Interclasse, FAC e BID em um so lugar"
         description="O BID Interclasse CEAP existe para deixar a competicao mais clara, bonita e facil de consultar."
       >
-        <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-xl">
+        <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-xl backdrop-blur">
           <p className="text-xs font-semibold uppercase text-accent">
             Essencial
           </p>
@@ -57,8 +57,9 @@ export default function SobrePage() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm"
+              className="relative overflow-hidden rounded-lg border border-slate-200 bg-white p-5 shadow-sm"
             >
+              <span className="absolute inset-x-0 top-0 h-1 bg-primary" />
               <p className="text-xs font-semibold uppercase text-primary">
                 Projeto
               </p>
@@ -76,14 +77,14 @@ export default function SobrePage() {
           <p className="text-xs font-semibold uppercase text-accent">
             Valores
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
             Um portal oficial, simples e confiavel.
           </h2>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-5 grid gap-2 sm:grid-cols-3">
             {values.map((value) => (
               <span
                 key={value}
-                className="rounded-full border border-white/15 px-3 py-1 text-xs font-semibold uppercase text-white/80"
+                className="rounded-lg border border-white/15 bg-white/10 px-4 py-3 text-xs font-semibold uppercase text-white/82"
               >
                 {value}
               </span>

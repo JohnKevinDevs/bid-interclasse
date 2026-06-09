@@ -7,8 +7,7 @@ export function Footer() {
         <div>
           <p className="text-base font-semibold">BID Interclasse CEAP/FAC</p>
           <p className="mt-2 max-w-2xl text-white/70">
-            Portal publico de consulta e transparencia do Interclasse CEAP,
-            organizado por ECI e EPT.
+            Portal publico do Interclasse CEAP, organizado por ECI e EPT.
           </p>
         </div>
         <p className="text-xs font-semibold uppercase text-accent">

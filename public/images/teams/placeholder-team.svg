@@ -1,12 +1,11 @@
-<svg width="960" height="640" viewBox="0 0 960 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Placeholder de time</title>
-  <desc id="desc">Arte esportiva institucional para times sem imagem.</desc>
-  <rect width="960" height="640" fill="#F6F8F7"/>
-  <rect x="52" y="52" width="856" height="536" rx="32" fill="#112031"/>
-  <path d="M52 438L908 228V588H52V438Z" fill="#006B5F"/>
-  <path d="M674 52H820L908 588H762L674 52Z" fill="#D79A10"/>
-  <path d="M480 148L616 226V384L480 462L344 384V226L480 148Z" fill="#F6F8F7"/>
-  <path d="M480 196L574 250V360L480 414L386 360V250L480 196Z" fill="#112031"/>
-  <path d="M480 230L544 267V341L480 378L416 341V267L480 230Z" fill="#D79A10"/>
-  <text x="480" y="560" text-anchor="middle" fill="#F6F8F7" font-family="Arial, sans-serif" font-size="44" font-weight="700">TIME INTERCLASSE</text>
+<svg width="1000" height="625" viewBox="0 0 1000 625" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="625" fill="#112031"/>
+  <path d="M0 0H1000V190L0 430V0Z" fill="#163044"/>
+  <path d="M0 430L1000 190V625H0V430Z" fill="#006B5F"/>
+  <path d="M500 118L690 196V354C690 462 610 533 500 563C390 533 310 462 310 354V196L500 118Z" fill="#F4F7F5" opacity="0.95"/>
+  <path d="M500 175L635 230V354C635 428 581 480 500 506C419 480 365 428 365 354V230L500 175Z" fill="#112031"/>
+  <path d="M430 337H570" stroke="#D79A10" stroke-width="22" stroke-linecap="round"/>
+  <path d="M500 267V407" stroke="#D79A10" stroke-width="22" stroke-linecap="round"/>
+  <path d="M120 88H880" stroke="#D79A10" stroke-width="12" stroke-linecap="round"/>
+  <text x="500" y="580" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.82" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" letter-spacing="4">TIME BID</text>
 </svg>

@@ -42,13 +42,13 @@ export function SportCard({
         </div>
 
         <div className="grid grid-cols-2 gap-3 text-sm">
-          <div className="rounded-lg bg-slate-50 p-4">
+          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-xs font-semibold uppercase text-slate-500">Times</p>
             <p className="mt-2 text-3xl font-semibold text-foreground">
               {teamCount}
             </p>
           </div>
-          <div className="rounded-lg bg-slate-50 p-4">
+          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
             <p className="text-xs font-semibold uppercase text-slate-500">
               Atletas
             </p>

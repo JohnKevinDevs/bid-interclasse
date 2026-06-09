@@ -15,11 +15,13 @@ export function TeamCard({
   sportNames,
   divisionLabel,
 }: TeamCardProps) {
+  const teamColor = team.color ?? "#006b5f";
+
   return (
     <Card className="grid h-full overflow-hidden p-0">
       <div
         className="border-b-4"
-        style={{ borderColor: team.color ?? "#006b5f" }}
+        style={{ borderColor: teamColor }}
       >
         <MediaFrame
           src={team.imageUrl}
@@ -30,9 +32,16 @@ export function TeamCard({
 
       <div className="grid gap-4 p-5">
         <div>
-          <p className="text-xs font-semibold uppercase text-primary">
-            Equipe {divisionLabel}
-          </p>
+          <div className="flex items-center gap-2">
+            <span
+              className="h-3 w-3 rounded-full"
+              style={{ backgroundColor: teamColor }}
+              aria-hidden="true"
+            />
+            <p className="text-xs font-semibold uppercase text-primary">
+              Equipe {divisionLabel}
+            </p>
+          </div>
           <h2 className="mt-2 text-xl font-semibold tracking-tight text-foreground">
             {team.name}
           </h2>
@@ -46,7 +55,7 @@ export function TeamCard({
           ))}
         </div>
 
-        <div className="rounded-lg bg-slate-50 p-4 text-sm">
+        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm">
           <p className="text-xs font-semibold uppercase text-slate-500">Elenco</p>
           <p className="mt-1 text-2xl font-semibold text-foreground">
             {team.athleteIds.length}

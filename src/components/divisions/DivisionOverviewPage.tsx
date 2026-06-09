@@ -85,9 +85,10 @@ export function DivisionOverviewPage({
           />
         </section>
 
-        <section className="mt-6 rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-          <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <div>
+        <section className="mt-6 overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+          <div className="h-1 bg-primary" />
+          <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+            <div className="rounded-lg bg-slate-50 p-4">
               <p className="text-xs font-semibold uppercase text-primary">
                 Resumo
               </p>
@@ -104,7 +105,10 @@ export function DivisionOverviewPage({
                 emptyText="Nenhum atleta."
               >
                 {athletePreview.map((athlete) => (
-                  <li key={athlete.id} className="rounded-lg bg-slate-50 p-3">
+                  <li
+                    key={athlete.id}
+                    className="rounded-lg border border-slate-200 bg-white p-3 shadow-sm"
+                  >
                     <p className="font-semibold text-foreground">
                       {athlete.name}
                     </p>
@@ -113,11 +117,13 @@ export function DivisionOverviewPage({
                       {getTeamById(athlete.teamId)?.name ?? "Sem time"}
                     </p>
                     <div className="mt-2 flex flex-wrap gap-1.5">
-                      {getSportsForAthlete(athlete).slice(0, 2).map((sport) => (
-                        <Badge key={sport} tone="primary">
-                          {sport}
-                        </Badge>
-                      ))}
+                      {getSportsForAthlete(athlete)
+                        .slice(0, 2)
+                        .map((sport) => (
+                          <Badge key={sport} tone="primary">
+                            {sport}
+                          </Badge>
+                        ))}
                     </div>
                   </li>
                 ))}
@@ -129,17 +135,22 @@ export function DivisionOverviewPage({
                 emptyText="Nenhum time."
               >
                 {teamPreview.map((team) => (
-                  <li key={team.id} className="rounded-lg bg-slate-50 p-3">
+                  <li
+                    key={team.id}
+                    className="rounded-lg border border-slate-200 bg-white p-3 shadow-sm"
+                  >
                     <p className="font-semibold text-foreground">{team.name}</p>
                     <p className="mt-1 text-xs text-slate-600">
                       {team.athleteIds.length} atleta(s)
                     </p>
                     <div className="mt-2 flex flex-wrap gap-1.5">
-                      {getSportNamesByIds(team.sportIds).slice(0, 2).map((sport) => (
-                        <Badge key={sport} tone="primary">
-                          {sport}
-                        </Badge>
-                      ))}
+                      {getSportNamesByIds(team.sportIds)
+                        .slice(0, 2)
+                        .map((sport) => (
+                          <Badge key={sport} tone="primary">
+                            {sport}
+                          </Badge>
+                        ))}
                     </div>
                   </li>
                 ))}
@@ -151,7 +162,10 @@ export function DivisionOverviewPage({
                 emptyText="Nenhuma modalidade."
               >
                 {sportPreview.map((sport) => (
-                  <li key={sport.id} className="rounded-lg bg-slate-50 p-3">
+                  <li
+                    key={sport.id}
+                    className="rounded-lg border border-slate-200 bg-white p-3 shadow-sm"
+                  >
                     <p className="font-semibold text-foreground">{sport.name}</p>
                     <p className="mt-1 text-xs text-slate-600">
                       {getTeamCountForSport(sport.id, division)} time(s) -{" "}
@@ -169,18 +183,6 @@ export function DivisionOverviewPage({
           </div>
         </section>
 
-        <section className="mt-6 rounded-lg bg-foreground p-5 text-white sm:p-6">
-          <p className="text-xs font-semibold uppercase text-accent">
-            BID Interclasse CEAP
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-            Consulta simples, visual e oficial.
-          </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-6 text-white/75">
-            A central mostra o que importa primeiro e deixa o detalhe para as
-            listagens.
-          </p>
-        </section>
       </Container>
     </main>
   );

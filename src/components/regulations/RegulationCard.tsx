@@ -13,16 +13,16 @@ export function RegulationCard({
   accentClassName = "bg-primary",
 }: RegulationCardProps) {
   return (
-    <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:border-primary hover:shadow-lg">
-      <div className={`h-1.5 ${accentClassName}`} />
+    <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg">
+      <div className={`h-1 ${accentClassName}`} />
       <div className="p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <Badge tone="muted">{formatDivisionLabel(regulation.division)}</Badge>
           <RegulationStatusBadge status={regulation.status} />
         </div>
 
-        <div className="mt-5">
-          <h3 className="mt-2 text-xl font-semibold text-foreground">
+        <div className="mt-4">
+          <h3 className="text-xl font-semibold text-foreground">
             {regulation.title}
           </h3>
         </div>

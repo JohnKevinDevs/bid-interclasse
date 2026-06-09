@@ -35,8 +35,7 @@ const regulationGroups: {
     division: "eci",
     eyebrow: "Divisao ECI",
     title: "Regulamentos ECI",
-    description:
-      "Regras da divisao ECI.",
+    description: "Regras da divisao ECI.",
     accentClassName: "bg-primary",
     sectionClassName: "border-primary/20 bg-primary/[0.03]",
     badgeClassName: "bg-primary/10 text-primary",
@@ -45,8 +44,7 @@ const regulationGroups: {
     division: "ept",
     eyebrow: "Divisao EPT",
     title: "Regulamentos EPT",
-    description:
-      "Regras da divisao EPT.",
+    description: "Regras da divisao EPT.",
     accentClassName: "bg-foreground",
     sectionClassName: "border-slate-300 bg-slate-50",
     badgeClassName: "bg-foreground text-white",
@@ -55,8 +53,7 @@ const regulationGroups: {
     division: "ambos",
     eyebrow: "Aplicacao geral",
     title: "Regulamentos para ECI e EPT",
-    description:
-      "Regras validas para ECI e EPT.",
+    description: "Regras validas para ECI e EPT.",
     accentClassName: "bg-accent",
     sectionClassName: "border-accent/30 bg-accent/5",
     badgeClassName: "bg-accent/15 text-[#7a4f00]",
@@ -88,7 +85,9 @@ export default function RegulamentosPage() {
       </PageHero>
 
       <Container className="py-8 sm:py-10">
-        <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+        <section className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+          <div className="h-1 bg-primary" />
+          <div className="p-5 sm:p-6">
           <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase text-primary">
@@ -122,7 +121,9 @@ export default function RegulamentosPage() {
                       <h2 className="mt-2 text-2xl font-semibold text-foreground">
                         {group.title}
                       </h2>
-                      <p className="mt-1 text-sm text-slate-700">{group.description}</p>
+                      <p className="mt-1 text-sm text-slate-700">
+                        {group.description}
+                      </p>
                     </div>
                     <span
                       className={`w-fit rounded-full px-3 py-1 text-xs font-semibold uppercase ${group.badgeClassName}`}
@@ -152,9 +153,10 @@ export default function RegulamentosPage() {
               );
             })}
           </div>
+          </div>
         </section>
 
-        <section className="mt-6 rounded-lg border border-accent/30 bg-accent/10 p-5">
+        <section className="mt-6 rounded-lg border border-accent/30 bg-accent/10 p-5 shadow-sm">
           <p className="text-xs font-semibold uppercase text-[#7a4f00]">
             Aviso institucional
           </p>

@@ -39,8 +39,11 @@ export function AthleteCard({
           <StatusBadge status={athlete.status} />
         </div>
 
-        <div className="rounded-lg bg-slate-50 p-3 text-sm">
-          <p className="font-semibold text-foreground">{athlete.className}</p>
+        <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm">
+          <p className="text-xs font-semibold uppercase text-slate-500">Turma</p>
+          <p className="mt-1 font-semibold text-foreground">
+            {athlete.className}
+          </p>
           <p className="mt-1 text-slate-600">
             {athlete.course ? `${athlete.course} - ` : ""}
             {teamName ?? "Sem time"}
@@ -48,7 +51,7 @@ export function AthleteCard({
         </div>
 
         <div className="flex flex-wrap gap-2">
-          {sportNames.map((sportName) => (
+          {sportNames.slice(0, 3).map((sportName) => (
             <Badge key={sportName} tone="primary">
               {sportName}
             </Badge>
