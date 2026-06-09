@@ -6,15 +6,14 @@ import { Container } from "@/components/layout/Container";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
-      <div className="h-1 bg-primary" />
+    <header className="sticky top-0 z-40 border-b border-line bg-white/95 shadow-sm backdrop-blur">
       <Container className="flex min-h-16 items-center justify-between gap-3 py-3">
         <Link
           href="/"
-          className="flex min-w-0 items-center gap-3 rounded-lg focus-visible:outline-accent"
+          className="flex min-w-0 items-center gap-3 rounded-lg focus-visible:outline-blue-light"
           aria-label="Ir para a home do BID Interclasse CEAP"
         >
-          <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-lg bg-foreground shadow-sm">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy shadow-sm ring-1 ring-navy/10">
             <Image
               src="/images/brand/fac-logo-oficial.png"
               alt=""
@@ -25,10 +24,10 @@ export function Header() {
             />
           </span>
           <span className="min-w-0">
-            <span className="block truncate text-sm font-semibold uppercase text-foreground">
+            <span className="bid-display block truncate text-lg leading-none text-ink">
               Interclasse CEAP
             </span>
-            <span className="block text-xs font-medium uppercase text-primary">
+            <span className="bid-kicker mt-1 block truncate text-primary">
               Portal Oficial
             </span>
           </span>

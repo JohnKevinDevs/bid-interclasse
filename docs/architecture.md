@@ -2,7 +2,7 @@
 
 ## Decisoes Permanentes
 
-- O projeto e front-end only na V1.
+- O projeto e front-end only na versao atual.
 - Os dados sao armazenados em arquivos JSON locais dentro de `src/data/`.
 - A aplicacao usa Next.js com App Router em `src/app/`.
 - A tipagem central fica em `src/types/`.

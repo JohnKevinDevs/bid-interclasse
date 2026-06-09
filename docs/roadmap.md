@@ -14,6 +14,8 @@
 - Fase 10: SEO, metadata e preparacao para deploy. Status: concluida.
 - Fase 11: revisao final com dados reais e preparacao de publicacao. Status: concluida.
 - Polimento frontend basico premium. Status: concluido.
+- Redesign basico premium por sprints. Status: em andamento.
+  - Sprint 1: fundacao visual global, tokens, header, menu mobile, footer e heros. Status: concluida.
 - Fase 12: Deploy Vercel e validacao publica. Status: planejada.
 
 ## Nova Frente De Reformulacao
@@ -30,10 +32,10 @@ Prioridades da nova frente:
 - Preparar SEO, metadata e configuracoes finais para deploy futuro.
 - Revisar dados reais, conteudo final e publicacao do portal.
 - Executar deploy na Vercel e validar a URL publica.
-- Manter a V1 front-end only com dados locais em JSON.
+- Manter a versao publica atual front-end only com dados locais em JSON.
 
 ## Observacoes
 
 - O roadmap deve continuar simples e facil de atualizar.
 - Mudancas grandes de escopo precisam ser registradas aqui.
-- Funcionalidades fora da V1 devem permanecer fora ate aprovacao explicita.
+- Funcionalidades fora do escopo publico atual devem permanecer fora ate aprovacao explicita.

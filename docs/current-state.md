@@ -173,7 +173,9 @@ Situacao para publicacao:
 - Cards, listagens, Sobre e Regulamentos foram enxugados para reduzir excesso de texto e manter o BID mais bonito, direto e oficial.
 - O frontend recebeu polimento visual "basico premium", com heros mais fortes, cards mais acabados, placeholders melhores e paginas principais mais profissionais sem adicionar novas funcionalidades.
 - A logo oficial da FAC foi incorporada de forma sutil no Header, Home e Footer, e os regulamentos anexados foram resumidos na base local de regulamentos.
+- O redesign basico premium foi iniciado pela fundacao visual global: tokens navy/blue/orange, Header, Navbar, MobileMenu, Footer, Container, PageHero, DivisionHero e componentes globais de card/stat/badge.
+- A interface passou a evitar linguagem de versao inicial visivel, assumindo direcao de versao publica pronta para uso apos chegada dos dados reais.
 
 ## Proxima Fase Planejada
 
-Fase 12: Deploy Vercel e validacao publica.
+Continuidade do redesign basico premium por sprints, seguida de deploy Vercel e validacao publica.

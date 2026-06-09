@@ -102,15 +102,15 @@ export default function Home() {
             <section className="rounded-lg border border-slate-800 bg-foreground p-6 text-white shadow-sm">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase text-accent">
+                  <p className="bid-kicker text-accent">
                     BID em numeros
                   </p>
-                  <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+                  <h2 className="bid-display mt-2 text-3xl leading-none">
                     Base de consulta
                   </h2>
                 </div>
-                <span className="rounded-full border border-white/15 px-3 py-1 text-xs font-semibold uppercase text-white/70">
-                  V1
+                <span className="bid-kicker rounded-full border border-white/15 px-3 py-1 text-white/70">
+                  Publico
                 </span>
               </div>
               <div className="mt-5 grid grid-cols-2 gap-3">

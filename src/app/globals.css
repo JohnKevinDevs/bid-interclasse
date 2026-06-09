@@ -1,19 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f7f5;
-  --foreground: #112031;
+  --navy: #001b2a;
+  --navy-700: #06222f;
+  --navy-600: #0c2e3d;
+  --blue: #0066ff;
+  --blue-light: #2da8ff;
+  --silver: #c0c0c0;
+  --green: #6cc24a;
+  --purple: #5a3fc0;
+  --orange: #f59d1a;
+  --paper: #f5f8fc;
+  --ink: #0b1f2a;
+  --background: #f5f8fc;
+  --foreground: #0b1f2a;
   --surface: #ffffff;
-  --surface-alt: #e6ece9;
-  --primary: #006b5f;
-  --primary-strong: #064e46;
-  --accent: #d79a10;
-  --line: #d9e2df;
+  --surface-alt: #eef4fb;
+  --primary: #0066ff;
+  --primary-strong: #004fc7;
+  --accent: #f59d1a;
+  --line: #e3eaf2;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-blue-light: var(--blue-light);
+  --color-silver: var(--silver);
+  --color-green: var(--green);
+  --color-purple: var(--purple);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
   --color-surface: var(--surface);
   --color-surface-alt: var(--surface-alt);
   --color-primary: var(--primary);
@@ -34,8 +54,8 @@ html {
 
 body {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(244, 247, 245, 0.94)),
-    radial-gradient(circle at top right, rgba(0, 107, 95, 0.08), transparent 32%),
+    linear-gradient(180deg, rgba(245, 248, 252, 0.92), rgba(245, 248, 252, 1)),
+    radial-gradient(circle at top right, rgba(0, 102, 255, 0.08), transparent 30%),
     var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
@@ -47,11 +67,25 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--blue-light);
   outline-offset: 3px;
 }
 
 ::selection {
-  background: rgba(215, 154, 16, 0.28);
+  background: rgba(45, 168, 255, 0.28);
   color: var(--foreground);
+}
+
+.bid-display {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.bid-kicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }

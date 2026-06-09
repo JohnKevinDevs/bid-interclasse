@@ -9,8 +9,8 @@ interface BadgeProps {
 const toneClasses = {
   primary: "border-primary/15 bg-primary/10 text-primary",
   accent: "border-accent/25 bg-accent/15 text-[#7a4f00]",
-  muted: "border-slate-200 bg-slate-100 text-slate-700",
-  dark: "border-foreground bg-foreground text-white",
+  muted: "border-line bg-surface-alt text-slate-700",
+  dark: "border-navy bg-navy text-white",
 };
 
 export function Badge({
@@ -20,7 +20,7 @@ export function Badge({
 }: BadgeProps) {
   return (
     <span
-      className={`inline-flex w-fit items-center rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-normal ${toneClasses[tone]} ${className}`}
+      className={`bid-kicker inline-flex w-fit items-center rounded-full border px-3 py-1 ${toneClasses[tone]} ${className}`}
     >
       {children}
     </span>
