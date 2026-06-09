@@ -57,6 +57,8 @@ Diretrizes:
 - Menu mobile em painel navy, com itens grandes, CTA largo e area de toque confortavel.
 - Footer institucional com assinatura: "Uma escola. Grandes talentos. Um legado."
 - PageHero e DivisionHero preparados com fundo navy, linhas diagonais sutis e titulos mais fortes.
+- Home com numeros integrados ao hero, CTAs diretos e quatro cards de acesso com presenca de portal oficial.
+- Centrais ECI/EPT com destaque por cor, estatisticas no hero, previa real da divisao e atalhos principais.
 
 ## Evitar
 

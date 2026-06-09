@@ -21,8 +21,8 @@ export default function EciPage() {
     <DivisionOverviewPage
       division="eci"
       title="Interclasse ECI"
-      description="Atletas, times e modalidades da ECI em uma consulta simples e oficial."
-      summary="Veja rapidamente quem participa, quais times existem e quais modalidades fazem parte da divisao."
+      description="Atletas, times e modalidades da divisao ECI em uma consulta simples e oficial."
+      summary="Um recorte rapido da divisao antes de acessar as listas completas."
     />
   );
 }

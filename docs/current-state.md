@@ -175,7 +175,8 @@ Situacao para publicacao:
 - A logo oficial da FAC foi incorporada de forma sutil no Header, Home e Footer, e os regulamentos anexados foram resumidos na base local de regulamentos.
 - O redesign basico premium foi iniciado pela fundacao visual global: tokens navy/blue/orange, Header, Navbar, MobileMenu, Footer, Container, PageHero, DivisionHero e componentes globais de card/stat/badge.
 - A interface passou a evitar linguagem de versao inicial visivel, assumindo direcao de versao publica pronta para uso apos chegada dos dados reais.
+- A Sprint 2 do redesign basico premium reformulou a Home e as centrais `ECI`/`EPT`, integrando numeros no hero, acessos principais mais fortes e previews reais de atleta, time e modalidade por divisao.
 
 ## Proxima Fase Planejada
 
-Continuidade do redesign basico premium por sprints, seguida de deploy Vercel e validacao publica.
+Continuidade do redesign basico premium por sprints, com foco nas listagens de atletas, times e modalidades, seguida de deploy Vercel e validacao publica.

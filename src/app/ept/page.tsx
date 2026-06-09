@@ -21,8 +21,8 @@ export default function EptPage() {
     <DivisionOverviewPage
       division="ept"
       title="Interclasse EPT"
-      description="Atletas, times e modalidades da EPT em uma consulta simples e oficial."
-      summary="Acompanhe a base da EPT com os principais registros da divisao, sem excesso de texto."
+      description="Atletas, times e modalidades da divisao EPT em uma consulta simples e oficial."
+      summary="Um recorte rapido da divisao tecnica antes de acessar as listas completas."
     />
   );
 }

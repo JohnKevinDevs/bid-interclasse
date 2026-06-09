@@ -16,6 +16,8 @@
 - Polimento frontend basico premium. Status: concluido.
 - Redesign basico premium por sprints. Status: em andamento.
   - Sprint 1: fundacao visual global, tokens, header, menu mobile, footer e heros. Status: concluida.
+  - Sprint 2: Home e centrais ECI/EPT com entrada oficial, numeros integrados, cards de acesso e previews reais. Status: concluida.
+  - Sprint 3: listagens de atletas, times e modalidades. Status: planejada.
 - Fase 12: Deploy Vercel e validacao publica. Status: planejada.
 
 ## Nova Frente De Reformulacao

@@ -1,6 +1,6 @@
 # Modelagem De Dados
 
-Os dados da V1 ficam em JSON local dentro de `src/data/` e usam tipos TypeScript em `src/types/interclasse.ts`.
+Os dados da versao publica atual ficam em JSON local dentro de `src/data/` e usam tipos TypeScript em `src/types/interclasse.ts`.
 
 ## Division
 
