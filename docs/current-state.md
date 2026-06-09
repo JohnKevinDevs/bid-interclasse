@@ -178,7 +178,8 @@ Situacao para publicacao:
 - A Sprint 2 do redesign basico premium reformulou a Home e as centrais `ECI`/`EPT`, integrando numeros no hero, acessos principais mais fortes e previews reais de atleta, time e modalidade por divisao.
 - A Sprint 3 redesenhou os cards e listagens de atletas, times e modalidades como catalogo oficial de BID, com placeholders intencionais e fallbacks para dados reais minimos dos formularios.
 - A Sprint 4 refinou `/regulamentos` e `/sobre` com composicao institucional curta, documentos agrupados por aplicacao, cards oficiais de regulamento, assinatura FAC/CEAP e valores escaneaveis.
+- A Sprint 5 concluiu o QA visual do frontend basico premium em todas as rotas principais, incluindo mobile, tablet, desktop, menu mobile, sitemap, robots e manifest.
 
 ## Proxima Fase Planejada
 
-Revisao final de publicacao, dados reais e deploy Vercel.
+Substituicao dos mocks por dados reais e imagens reais, seguida de deploy/preview publico na Vercel.

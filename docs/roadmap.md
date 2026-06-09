@@ -19,7 +19,8 @@
   - Sprint 2: Home e centrais ECI/EPT com entrada oficial, numeros integrados, cards de acesso e previews reais. Status: concluida.
   - Sprint 3: listagens de atletas, times e modalidades com cards resilientes aos dados reais dos formularios. Status: concluida.
   - Sprint 4: Regulamentos e Sobre com composicao institucional premium, curta e escaneavel. Status: concluida.
-- Fase 12: Deploy Vercel e validacao publica. Status: planejada.
+  - Sprint 5: QA visual final, mobile, breakpoints, acessibilidade basica e preparacao para dados reais. Status: concluida.
+- Fase 12: Dados reais, deploy Vercel e validacao publica. Status: planejada.
 
 ## Nova Frente De Reformulacao
 

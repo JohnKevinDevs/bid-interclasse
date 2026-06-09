@@ -25,7 +25,7 @@ export function Navbar() {
             key={item.href}
             href={item.href}
             aria-current={isActive ? "page" : undefined}
-            className={`rounded-lg px-4 py-2 text-sm font-bold transition focus-visible:outline-blue-light ${
+            className={`inline-flex min-h-11 items-center rounded-lg px-4 py-2 text-sm font-bold transition focus-visible:outline-blue-light ${
               isActive
                 ? "bg-primary text-white shadow-sm"
                 : "text-ink hover:bg-surface-alt hover:text-primary"

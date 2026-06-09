@@ -62,6 +62,7 @@ Diretrizes:
 - Cards de atletas, times e modalidades preparados para poucos dados reais, usando placeholders intencionais com monograma, contexto e linhas diagonais.
 - Estados vazios e contadores de zero registros devem parecer informativos, nao erro visual.
 - Paginas institucionais devem ser curtas e escaneaveis: Regulamentos como area oficial de documentos; Sobre como sintese de Interclasse, FAC e BID.
+- Navegacao e CTAs devem manter area de toque confortavel, com alvo minimo proximo de 44px sempre que possivel.
 
 ## Evitar
 

@@ -4,7 +4,7 @@ Este documento registra a auditoria final da Fase 11 para preparar o BID Intercl
 
 ## Estado Tecnico
 
-Status tecnico: pronto para deploy apos validacao final.
+Status tecnico: pronto para receber dados reais e gerar deploy/preview publico apos revisao final do conteudo.
 
 O projeto ja possui:
 
@@ -21,6 +21,8 @@ O projeto ja possui:
 - Robots.
 - Manifest.
 - Build validado.
+- Redesign basico premium concluido.
+- QA visual final validado em mobile, tablet e desktop.
 
 ## Auditoria Dos Dados Locais
 
@@ -122,7 +124,7 @@ Criterio:
 
 - Linguagem oficial.
 - Sem nomes ou exemplos ficticios.
-- Sem promessas de funcionalidades que nao existem na V1.
+- Sem promessas de funcionalidades que nao existem no escopo publico atual.
 - Sem informacoes de placar, tabela, chaveamento ou resultados.
 
 ## Validacoes Antes De Publicar
@@ -146,6 +148,8 @@ Criterio:
 - Conferir metadata no HTML das paginas principais.
 - Conferir responsividade em mobile.
 - Conferir se nao ha dados sensiveis no repositorio.
+- Conferir se nao ha overflow horizontal em mobile, tablet e desktop.
+- Conferir se cards continuam bons com dados reais minimos dos formularios.
 
 ## Checklist Vercel
 
@@ -174,4 +178,4 @@ Criterio:
 
 ## Decisao De Publicacao
 
-O portal esta tecnicamente preparado para publicacao, mas a publicacao oficial deve aguardar a substituicao ou aprovacao dos dados mockados, imagens placeholders e regulamentos pendentes.
+O portal esta tecnicamente preparado para publicacao, mas a publicacao oficial deve aguardar a substituicao ou aprovacao dos dados mockados, imagens placeholders e conteudos finais.
