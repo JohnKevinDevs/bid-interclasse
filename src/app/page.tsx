@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { PageHero } from "@/components/ui/PageHero";
@@ -37,9 +38,19 @@ export default function Home() {
         description="Atletas, times, modalidades e regulamentos do Interclasse CEAP em um portal simples, bonito e oficial."
       >
         <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-xl backdrop-blur">
-          <p className="text-xs font-semibold uppercase text-accent">
-            Consulta oficial
-          </p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/brand/fac-logo-oficial.png"
+              alt="Logo oficial da FAC"
+              width={44}
+              height={44}
+              className="h-11 w-11 rounded-lg object-cover"
+              priority
+            />
+            <p className="text-xs font-semibold uppercase text-accent">
+              Consulta oficial
+            </p>
+          </div>
           <p className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
             Escolha uma divisao e consulte o BID.
           </p>
@@ -52,7 +63,7 @@ export default function Home() {
             </Link>
             <Link
               href="/ept"
-              className="rounded-lg bg-white px-4 py-3 text-sm font-semibold uppercase text-foreground transition hover:bg-slate-100"
+              className="rounded-lg bg-accent px-4 py-3 text-sm font-semibold uppercase text-foreground transition hover:bg-white"
             >
               Entrar EPT
             </Link>
@@ -71,7 +82,7 @@ export default function Home() {
             </Link>
             <Link
               href="/ept"
-              className="rounded-lg bg-foreground px-5 py-4 text-sm font-semibold uppercase text-white transition hover:bg-slate-800"
+              className="rounded-lg bg-accent px-5 py-4 text-sm font-semibold uppercase text-foreground transition hover:bg-[#f0b934]"
             >
               Ver EPT
             </Link>

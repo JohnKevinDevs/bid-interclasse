@@ -96,17 +96,15 @@ Cuidados:
 
 Status atual:
 
-- `disponivel`: 5 regulamentos.
-- `em_revisao`: 1 regulamento.
-- `em_breve`: 1 regulamento.
+- `disponivel`: 7 regulamentos.
+- `em_revisao`: 0 regulamentos.
+- `em_breve`: 0 regulamentos.
 
 Pendencias:
 
-- Confirmar se os resumos em `content` e `description` correspondem aos documentos oficiais.
-- Atualizar status do Regulamento de Tenis, hoje marcado como `em_revisao`.
-- Publicar ou revisar o Regulamento de Xadrez, hoje marcado como `em_breve`.
+- Revisar se os resumos em `content` e `description` estao aprovados para publicacao.
 - Confirmar se o regulamento geral do Interclasse CEAP 2026 esta completo.
-- Confirmar se os regulamentos de Basquete 3x3, FUT7 ECI, FUT7 EPT e Volei estao na versao final.
+- Confirmar se os regulamentos de Basquete 3x3, FUT7 ECI, FUT7 EPT, Tenis, Volei e Xadrez estao na versao final.
 - Garantir que o documento oficial prevaleca sobre qualquer resumo publicado no portal.
 
 ## Textos Pendentes

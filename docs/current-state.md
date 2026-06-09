@@ -172,6 +172,7 @@ Situacao para publicacao:
 - A Home e as centrais `ECI`/`EPT` foram simplificadas para priorizar o essencial: divisao, numeros principais e caminhos de consulta.
 - Cards, listagens, Sobre e Regulamentos foram enxugados para reduzir excesso de texto e manter o BID mais bonito, direto e oficial.
 - O frontend recebeu polimento visual "basico premium", com heros mais fortes, cards mais acabados, placeholders melhores e paginas principais mais profissionais sem adicionar novas funcionalidades.
+- A logo oficial da FAC foi incorporada de forma sutil no Header, Home e Footer, e os regulamentos anexados foram resumidos na base local de regulamentos.
 
 ## Proxima Fase Planejada
 

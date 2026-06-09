@@ -12,54 +12,54 @@
     "id": "reg-basquete",
     "title": "Regulamento de Basquete 3x3",
     "division": "ambos",
-    "content": "Regras para inscricao, formato de grupos e mata-mata, duracao das partidas e organizacao da modalidade de basquete 3x3 para ECI e EPT.",
+    "content": "Basquete 3x3 para ECI e EPT: times de 3 a 6 atletas, partida unica de 10 minutos ou ate 21 pontos, substituicoes ilimitadas em paradas de bola e torneio com fase de grupos seguida de mata-mata. O regulamento tambem define ataque de 12 segundos, criterios de desempate, faltas coletivas e premiacoes individuais.",
     "order": 2,
-    "description": "Regras especificas para inscricao, equipes e disputa do basquete 3x3.",
+    "description": "Basquete 3x3 para ECI e EPT, com times de 3 a 6 atletas, jogos de 10 minutos, ataque de 12 segundos e encerramento aos 21 pontos.",
     "status": "disponivel"
   },
   {
     "id": "reg-fut7-eci",
     "title": "Regulamento de FUT7 ECI",
     "division": "eci",
-    "content": "Normas da divisao ECI para equipes de ate 10 jogadores, partidas em dois tempos de 8 minutos e formato competitivo por grupos e eliminatorias.",
+    "content": "FUT7 ECI com equipes de ate 10 jogadores, 7 em campo, substituicoes ilimitadas e partidas em 2 tempos de 8 minutos. A disputa tem fase de grupos e mata-mata, prorrogacao com gol de ouro, shootout em caso de empate e regras especiais como gol acrobatico valendo 2, lancamento do dado e penalti do presidente.",
     "order": 3,
-    "description": "Regulamento exclusivo da divisao ECI para FUT7.",
+    "description": "FUT7 exclusivo da ECI, com 2 tempos de 8 minutos, shootout, lancamento do dado, gol acrobatico e penalti do presidente.",
     "status": "disponivel"
   },
   {
     "id": "reg-fut7-ept",
     "title": "Regulamento de FUT7 EPT",
     "division": "ept",
-    "content": "Normas da divisao EPT para equipes de ate 10 jogadores, substituicoes livres e partidas em dois tempos de 8 minutos.",
+    "content": "FUT7 EPT com equipes de ate 10 jogadores, 7 em campo, substituicoes ilimitadas e partidas em 2 tempos de 8 minutos. O regulamento define fase de grupos, mata-mata, gol de ouro, shootout, criterios de classificacao, faltas individuais e coletivas, alem de premiacoes e jogo especial para a equipe campea.",
     "order": 4,
-    "description": "Regulamento exclusivo da divisao EPT para FUT7.",
+    "description": "FUT7 exclusivo da EPT, com 2 tempos de 8 minutos, shootout, faltas coletivas a partir da 5a falta e jogo especial para campeoes.",
     "status": "disponivel"
   },
   {
     "id": "reg-tenis",
     "title": "Regulamento de Tenis",
     "division": "ambos",
-    "content": "Diretrizes da modalidade individual, com grupos, mata-mata e partidas em melhor de 3 sets, incluindo tie-break em 6 a 6.",
+    "content": "Tenis para ECI e EPT em formato individual, ou duplas se necessario, com ate 32 participantes por torneio. As partidas sao em melhor de 3 sets, cada set ate 6 games, tie-break em 6 a 6 e limite de 15 minutos por jogador. O regulamento tambem define saque, pontuacao, conduta, criterios de desempate e premiacao.",
     "order": 5,
-    "description": "Regras da modalidade tenis para inscricao, formato e pontuacao.",
-    "status": "em_revisao"
+    "description": "Tenis para ECI e EPT, com ate 32 participantes, melhor de 3 sets, tie-break em 6 a 6 e limite de 15 minutos por jogador.",
+    "status": "disponivel"
   },
   {
     "id": "reg-volei",
     "title": "Regulamento de Volei",
     "division": "ambos",
-    "content": "Regras para equipes, quantidade de atletas inscritos, formato melhor de 3 sets e criterios de pontuacao para o torneio de volei.",
+    "content": "Volei para ECI e EPT com equipes de ate 10 atletas, 6 titulares em quadra e substituicoes ilimitadas respeitando a rotacao. As partidas sao em melhor de 3 sets: dois primeiros ate 25 pontos e set decisivo ate 15, sempre com diferenca minima de 2 pontos. O regulamento tambem define saque, rotacao, tres toques, criterios de desempate e premiacoes.",
     "order": 6,
-    "description": "Regulamento da modalidade volei para equipes e criterios de jogo.",
+    "description": "Volei para ECI e EPT, com equipes de ate 10 atletas, melhor de 3 sets, pontuacao ate 25 e set decisivo ate 15.",
     "status": "disponivel"
   },
   {
     "id": "reg-xadrez",
     "title": "Regulamento de Xadrez",
     "division": "ambos",
-    "content": "Orientacoes da modalidade individual com fase de grupos, mata-mata e referencia tecnica para tabuleiro, pecas e estrutura da competicao.",
+    "content": "Xadrez para ECI e EPT em formato individual, com cada participante representando sua turma. O torneio usa fase de grupos seguida de mata-mata, controle blitz de 15 minutos por jogador e pontuacao de 1 ponto por vitoria, 0,5 por empate e 0 por derrota. O regulamento tambem resume movimentos, regras especiais, criterios de desempate e conduta dos jogadores.",
     "order": 7,
-    "description": "Regras de estrutura, inscricao e disputa da modalidade xadrez.",
-    "status": "em_breve"
+    "description": "Xadrez individual para ECI e EPT, com fase de grupos, mata-mata e partidas de 15 minutos por jogador.",
+    "status": "disponivel"
   }
 ]

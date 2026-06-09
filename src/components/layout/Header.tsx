@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MobileMenu } from "@/components/navigation/MobileMenu";
 import { Navbar } from "@/components/navigation/Navbar";
@@ -13,8 +14,15 @@ export function Header() {
           className="flex min-w-0 items-center gap-3 rounded-lg focus-visible:outline-accent"
           aria-label="Ir para a home do BID Interclasse CEAP"
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-foreground text-sm font-bold text-white shadow-sm">
-            BID
+          <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-lg bg-foreground shadow-sm">
+            <Image
+              src="/images/brand/fac-logo-oficial.png"
+              alt=""
+              width={44}
+              height={44}
+              className="h-full w-full object-cover"
+              aria-hidden="true"
+            />
           </span>
           <span className="min-w-0">
             <span className="block truncate text-sm font-semibold uppercase text-foreground">
