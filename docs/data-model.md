@@ -109,3 +109,30 @@ Campos opcionais ativos:
 - `src/data/teams.json`
 - `src/data/sports.json`
 - `src/data/regulations.json`
+
+## Dados Reais Dos Formularios
+
+Os cards devem continuar bons com poucos dados reais.
+
+Atletas devem funcionar apenas com:
+
+- divisao
+- nome
+- turma
+- modalidades
+- foto ou placeholder
+
+Times devem funcionar apenas com:
+
+- divisao
+- turma ou identificacao do time
+- atletas vinculados
+- curso, quando for representado nos dados disponiveis
+- modalidades
+
+Modalidades devem funcionar apenas com:
+
+- nome
+- divisao
+
+Campos como descricao, foto, cor, bio, posicao, time confirmado e imagem sao complementares. A interface nao deve depender deles para parecer completa.

@@ -32,7 +32,7 @@ export default function EciTimesPage() {
         <ListHeader
           eyebrow="Consulta"
           title="Times ECI"
-          description="Equipes, modalidades e quantidade de atletas."
+          description="Equipes por turma, modalidades e elenco vinculado."
           meta={`${divisionTeams.length} times`}
         />
 
@@ -48,10 +48,12 @@ export default function EciTimesPage() {
               />
             ))
           ) : (
-            <EmptyState
-              title="Nenhum time listado"
-              description="Quando houver cadastro, os times aparecem aqui."
-            />
+            <div className="lg:col-span-2">
+              <EmptyState
+                title="Nenhum time listado"
+                description="Quando houver cadastro real, os times aparecem aqui."
+              />
+            </div>
           )}
         </div>
       </Container>

@@ -33,7 +33,7 @@ export default function EciModalidadesPage() {
         <ListHeader
           eyebrow="Consulta"
           title="Modalidades ECI"
-          description="Disputas, categoria e participacao."
+          description="Modalidades, divisao e registros de participacao."
           meta={`${divisionSports.length} modalidades`}
         />
 
@@ -49,10 +49,12 @@ export default function EciModalidadesPage() {
               />
             ))
           ) : (
-            <EmptyState
-              title="Nenhuma modalidade listada"
-              description="Quando houver cadastro, as modalidades aparecem aqui."
-            />
+            <div className="md:col-span-2 xl:col-span-3">
+              <EmptyState
+                title="Nenhuma modalidade listada"
+                description="Quando houver cadastro real, as modalidades aparecem aqui."
+              />
+            </div>
           )}
         </div>
       </Container>

@@ -7,7 +7,7 @@ interface StatusBadgeProps {
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   return (
-    <Badge tone={status === "ativo" ? "primary" : "muted"}>
+    <Badge tone={status === "ativo" ? "success" : "muted"}>
       {status === "ativo" ? "Ativo" : "Inativo"}
     </Badge>
   );

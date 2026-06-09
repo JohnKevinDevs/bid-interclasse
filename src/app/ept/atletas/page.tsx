@@ -32,7 +32,7 @@ export default function EptAtletasPage() {
         <ListHeader
           eyebrow="Consulta"
           title="Elenco EPT"
-          description="Nome, turma, time, modalidades e status."
+          description="Fichas publicas com nome, turma, divisao e modalidades."
           meta={`${divisionAthletes.length} atletas`}
         />
 
@@ -48,10 +48,12 @@ export default function EptAtletasPage() {
               />
             ))
           ) : (
-            <EmptyState
-              title="Nenhum atleta listado"
-              description="Quando houver cadastro, os atletas aparecem aqui."
-            />
+            <div className="md:col-span-2 xl:col-span-3">
+              <EmptyState
+                title="Nenhum atleta listado"
+                description="Quando houver cadastro real, as fichas dos atletas aparecem aqui."
+              />
+            </div>
           )}
         </div>
       </Container>

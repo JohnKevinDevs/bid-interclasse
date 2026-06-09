@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 interface BadgeProps {
   children: ReactNode;
-  tone?: "primary" | "accent" | "muted" | "dark";
+  tone?: "primary" | "accent" | "muted" | "dark" | "success";
   className?: string;
 }
 
@@ -11,6 +11,7 @@ const toneClasses = {
   accent: "border-accent/25 bg-accent/15 text-[#7a4f00]",
   muted: "border-line bg-surface-alt text-slate-700",
   dark: "border-navy bg-navy text-white",
+  success: "border-green/25 bg-green/15 text-[#2f6f18]",
 };
 
 export function Badge({

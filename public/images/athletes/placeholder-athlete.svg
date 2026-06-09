@@ -1,11 +1,24 @@
-<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="1000" fill="#112031"/>
-  <path d="M0 720L800 480V1000H0V720Z" fill="#006B5F"/>
-  <path d="M0 0H800V260L0 500V0Z" fill="#163044"/>
-  <circle cx="400" cy="365" r="118" fill="#F4F7F5" opacity="0.94"/>
-  <path d="M222 790C246 676 318 610 400 610C482 610 554 676 578 790H222Z" fill="#F4F7F5" opacity="0.94"/>
-  <path d="M116 122H684" stroke="#D79A10" stroke-width="14" stroke-linecap="round"/>
-  <path d="M116 878H684" stroke="#D79A10" stroke-width="14" stroke-linecap="round"/>
-  <path d="M164 168L636 832" stroke="white" stroke-opacity="0.08" stroke-width="28"/>
-  <text x="400" y="918" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.78" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="3">ATLETA BID</text>
+<svg width="1000" height="750" viewBox="0 0 1000 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="750" fill="#001B2A"/>
+  <path d="M0 0H1000V750H0V0Z" fill="url(#bg)"/>
+  <g opacity="0.16">
+    <path d="M-80 760L360 -40" stroke="white"/>
+    <path d="M40 760L480 -40" stroke="white"/>
+    <path d="M160 760L600 -40" stroke="white"/>
+    <path d="M280 760L720 -40" stroke="white"/>
+    <path d="M400 760L840 -40" stroke="white"/>
+    <path d="M520 760L960 -40" stroke="white"/>
+    <path d="M640 760L1080 -40" stroke="white"/>
+  </g>
+  <rect x="46" y="46" width="908" height="658" rx="22" stroke="white" stroke-opacity="0.14" stroke-width="2"/>
+  <text x="72" y="116" fill="#2DA8FF" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="900" letter-spacing="4">ATLETA BID</text>
+  <text x="500" y="425" text-anchor="middle" fill="#FFFFFF" font-family="Impact, Arial Narrow, Arial, sans-serif" font-size="190" font-weight="900">BID</text>
+  <text x="928" y="674" text-anchor="end" fill="#F59D1A" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" letter-spacing="4">FOTO OU MONOGRAMA</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#001B2A"/>
+      <stop offset="0.58" stop-color="#06222F"/>
+      <stop offset="1" stop-color="#0066FF"/>
+    </linearGradient>
+  </defs>
 </svg>

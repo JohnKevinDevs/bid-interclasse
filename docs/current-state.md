@@ -176,7 +176,8 @@ Situacao para publicacao:
 - O redesign basico premium foi iniciado pela fundacao visual global: tokens navy/blue/orange, Header, Navbar, MobileMenu, Footer, Container, PageHero, DivisionHero e componentes globais de card/stat/badge.
 - A interface passou a evitar linguagem de versao inicial visivel, assumindo direcao de versao publica pronta para uso apos chegada dos dados reais.
 - A Sprint 2 do redesign basico premium reformulou a Home e as centrais `ECI`/`EPT`, integrando numeros no hero, acessos principais mais fortes e previews reais de atleta, time e modalidade por divisao.
+- A Sprint 3 redesenhou os cards e listagens de atletas, times e modalidades como catalogo oficial de BID, com placeholders intencionais e fallbacks para dados reais minimos dos formularios.
 
 ## Proxima Fase Planejada
 
-Continuidade do redesign basico premium por sprints, com foco nas listagens de atletas, times e modalidades, seguida de deploy Vercel e validacao publica.
+Continuidade do redesign basico premium por sprints, com foco em Regulamentos, Sobre e revisao final de publicacao.
