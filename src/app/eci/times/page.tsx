@@ -18,7 +18,7 @@ export default function EciTimesPage() {
       <PageHero
         eyebrow="BID ECI"
         title="Times"
-        description="Times cadastrados na divisao ECI."
+        description="Times cadastrados na divisão ECI."
       >
         <StatCard
           dark

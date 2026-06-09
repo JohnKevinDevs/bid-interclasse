@@ -21,8 +21,8 @@ export function Footer() {
               BID Interclasse CEAP/FAC
             </p>
             <p className="mt-3 max-w-2xl text-white/70">
-              Consulta publica do Interclasse CEAP, organizada pela Federacao
-              Atletica CEAP.
+              Consulta pública do Interclasse CEAP, organizada pela Federação
+              Atlética CEAP.
             </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export function Footer() {
             Uma escola. Grandes talentos. Um legado.
           </p>
           <p className="mt-2 text-xs font-semibold uppercase text-white/45">
-            CEAP alem da sala. FAC alem do esporte.
+            CEAP além da sala. FAC além do esporte.
           </p>
         </div>
       </Container>

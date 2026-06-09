@@ -15,7 +15,7 @@
   },
   {
     "id": "time-2info-volei",
-    "name": "2INFO - Volei",
+    "name": "2INFO - Vôlei",
     "division": "ept",
     "sportIds": ["sport-volei"],
     "athleteIds": ["atleta-bruno-costa", "atleta-carla-mendes"]

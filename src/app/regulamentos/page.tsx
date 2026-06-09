@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Regulamentos | BID Interclasse CEAP",
     description:
-      "Consulte regras, criterios e documentos oficiais do Interclasse CEAP.",
+      "Consulte regras, critérios e documentos oficiais do Interclasse CEAP.",
     url: "/regulamentos",
   },
 };
@@ -35,9 +35,9 @@ const regulationGroups: {
   {
     division: "eci",
     code: "ECI",
-    eyebrow: "Divisao ECI",
+    eyebrow: "Divisão ECI",
     title: "Regulamentos ECI",
-    description: "Documentos exclusivos da divisao ECI.",
+    description: "Documentos exclusivos da divisão ECI.",
     accentClassName: "bg-primary",
     codeClassName: "bg-primary text-white",
     sectionClassName: "border-primary/25 bg-primary/[0.03]",
@@ -45,9 +45,9 @@ const regulationGroups: {
   {
     division: "ept",
     code: "EPT",
-    eyebrow: "Divisao EPT",
+    eyebrow: "Divisão EPT",
     title: "Regulamentos EPT",
-    description: "Documentos exclusivos da divisao tecnica.",
+    description: "Documentos exclusivos da divisão técnica.",
     accentClassName: "bg-accent",
     codeClassName: "bg-accent text-ink",
     sectionClassName: "border-accent/30 bg-accent/[0.05]",
@@ -55,9 +55,9 @@ const regulationGroups: {
   {
     division: "ambos",
     code: "G",
-    eyebrow: "Aplicacao geral",
+    eyebrow: "Aplicação geral",
     title: "Regulamentos gerais",
-    description: "Documentos validos para ECI e EPT.",
+    description: "Documentos válidos para ECI e EPT.",
     accentClassName: "bg-navy",
     codeClassName: "bg-navy text-white",
     sectionClassName: "border-line bg-white",
@@ -76,7 +76,7 @@ export default function RegulamentosPage() {
       <PageHero
         eyebrow="Regulamentos oficiais"
         title="Documentos do Interclasse CEAP"
-        description="Regras oficiais por divisao e modalidade. Consulte sempre o documento correspondente antes de participar."
+        description="Regras oficiais por divisão e modalidade. Consulte sempre o documento correspondente antes de participar."
       >
         <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-xl">
           <p className="bid-kicker text-accent">Importante</p>
@@ -89,7 +89,7 @@ export default function RegulamentosPage() {
       <Container className="py-8 sm:py-10">
         <section className="mb-6 flex flex-col gap-4 rounded-lg border border-line bg-surface p-5 shadow-sm sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="bid-kicker text-primary">Consulta por aplicacao</p>
+            <p className="bid-kicker text-primary">Consulta por aplicação</p>
             <h2 className="bid-display mt-2 text-4xl leading-none text-ink">
               Regulamentos
             </h2>
@@ -151,7 +151,7 @@ export default function RegulamentosPage() {
                       <div className="md:col-span-2 xl:col-span-3">
                         <EmptyState
                           title="Nenhum documento neste grupo"
-                          description="Quando houver regulamento oficial para esta aplicacao, ele aparecera aqui."
+                          description="Quando houver regulamento oficial para esta aplicação, ele aparecerá aqui."
                         />
                       </div>
                     )}

@@ -5,14 +5,14 @@ import { PageHero } from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "Sobre",
   description:
-    "Conheca o Interclasse CEAP, a FAC e o papel do BID como portal publico de consulta.",
+    "Conheça o Interclasse CEAP, a FAC e o papel do BID como portal público de consulta.",
   alternates: {
     canonical: "/sobre",
   },
   openGraph: {
     title: "Sobre | BID Interclasse CEAP",
     description:
-      "Entenda o BID Interclasse CEAP e sua relacao com o Interclasse e a FAC.",
+      "Entenda o BID Interclasse CEAP e sua relação com o Interclasse e a FAC.",
     url: "/sobre",
   },
 };
@@ -21,27 +21,27 @@ const pillars = [
   {
     eyebrow: "O evento",
     title: "Interclasse",
-    text: "A competicao esportiva entre turmas do CEAP, organizada por divisoes, modalidades e equipes.",
+    text: "A competição esportiva entre turmas do CEAP, organizada por divisões, modalidades e equipes.",
     accentClassName: "bg-primary",
   },
   {
-    eyebrow: "A organizacao",
+    eyebrow: "A organização",
     title: "FAC",
-    text: "Federacao Atletica CEAP: a entidade que representa o esporte, a cultura e a participacao estudantil.",
+    text: "Federação Atlética CEAP: a entidade que representa o esporte, a cultura e a participação estudantil.",
     accentClassName: "bg-accent",
   },
   {
     eyebrow: "O portal",
     title: "BID",
-    text: "Boletim publico de consulta com atletas, times, modalidades e regulamentos oficiais.",
+    text: "Boletim público de consulta com atletas, times, modalidades e regulamentos oficiais.",
     accentClassName: "bg-navy",
   },
 ];
 
 const values = [
-  "Transparencia",
-  "Organizacao",
-  "Espirito esportivo",
+  "Transparência",
+  "Organização",
+  "Espírito esportivo",
   "Pertencimento",
   "Legado",
 ];
@@ -52,12 +52,12 @@ export default function SobrePage() {
       <PageHero
         eyebrow="Sobre o projeto"
         title="Uma escola. Grandes talentos. Um legado."
-        description="O BID Interclasse CEAP e a vitrine publica do esporte do CEAP, organizada pela Federacao Atletica CEAP."
+        description="O BID Interclasse CEAP é a vitrine pública do esporte do CEAP, organizada pela Federação Atlética CEAP."
       >
         <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-xl backdrop-blur">
           <p className="bid-kicker text-accent">Assinatura institucional</p>
           <p className="bid-display mt-3 text-3xl leading-none">
-            CEAP alem da sala. FAC alem do esporte.
+            CEAP além da sala. FAC além do esporte.
           </p>
         </div>
       </PageHero>
@@ -102,7 +102,7 @@ export default function SobrePage() {
         <section className="mt-6 rounded-lg border border-line bg-surface p-5 shadow-sm">
           <p className="bid-kicker text-primary">Em poucas palavras</p>
           <h2 className="bid-display mt-2 text-3xl leading-none text-ink">
-            Consulta publica, organizacao e memoria esportiva do CEAP.
+            Consulta pública, organização e memória esportiva do CEAP.
           </h2>
         </section>
       </Container>

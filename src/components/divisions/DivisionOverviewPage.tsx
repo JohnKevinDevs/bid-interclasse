@@ -75,9 +75,9 @@ export function DivisionOverviewPage({
       <Container className="py-8 sm:py-10">
         <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className={`bid-kicker ${accent.text}`}>O essencial da divisao</p>
+            <p className={`bid-kicker ${accent.text}`}>O essencial da divisão</p>
             <h2 className="bid-display mt-2 text-4xl leading-none text-ink">
-              Previa da {divisionLabel}
+              Prévia da {divisionLabel}
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
               {summary}
@@ -147,7 +147,7 @@ export function DivisionOverviewPage({
             href={`/${division}/modalidades`}
             eyebrow={`BID ${divisionLabel}`}
             title="Modalidades"
-            description="Disputas disponiveis na divisao."
+            description="Disputas disponíveis na divisão."
             meta="Consultar"
             tone={division === "ept" ? "orange" : "blue"}
           />

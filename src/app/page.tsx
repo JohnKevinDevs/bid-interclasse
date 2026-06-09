@@ -24,22 +24,22 @@ const bidStats = [
   { label: "Atletas", value: athletes.length },
   { label: "Times", value: teams.length },
   { label: "Modalidades", value: sports.length },
-  { label: "Divisoes", value: "2" },
+  { label: "Divisões", value: "2" },
 ];
 
 const accessCards = [
   {
     href: "/eci",
-    eyebrow: "Divisao",
+    eyebrow: "Divisão",
     title: "ECI",
     description: "Atletas, times e modalidades.",
     accent: "blue",
   },
   {
     href: "/ept",
-    eyebrow: "Divisao",
+    eyebrow: "Divisão",
     title: "EPT",
-    description: "Base da divisao tecnica.",
+    description: "Base da divisão técnica.",
     accent: "orange",
   },
   {
@@ -78,8 +78,8 @@ export default function Home() {
               BID <span className="text-blue-light">Interclasse</span> CEAP
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/78 sm:text-lg">
-              Consulta publica de atletas, times, modalidades e regulamentos,
-              organizada por divisao.
+              Consulta pública de atletas, times, modalidades e regulamentos,
+              organizada por divisão.
             </p>
             <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap">
               <Link
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
 
           <section className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-2xl backdrop-blur">
-            <p className="bid-kicker text-accent">BID em numeros</p>
+            <p className="bid-kicker text-accent">BID em números</p>
             <h2 className="bid-display mt-2 text-4xl leading-none">
               Base de consulta
             </h2>
@@ -128,9 +128,9 @@ export default function Home() {
       <section className="bg-paper">
         <Container className="py-8 sm:py-10">
           <div className="mb-6">
-            <p className="bid-kicker text-primary">Escolha por onde comecar</p>
+            <p className="bid-kicker text-primary">Escolha por onde começar</p>
             <h2 className="bid-display mt-2 text-4xl leading-none text-ink">
-              Divisoes e documentos
+              Divisões e documentos
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

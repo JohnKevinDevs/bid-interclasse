@@ -18,7 +18,7 @@ export default function EciAtletasPage() {
       <PageHero
         eyebrow="BID ECI"
         title="Atletas"
-        description="Atletas cadastrados na divisao ECI."
+        description="Atletas cadastrados na divisão ECI."
       >
         <StatCard
           dark
@@ -32,7 +32,7 @@ export default function EciAtletasPage() {
         <ListHeader
           eyebrow="Consulta"
           title="Elenco ECI"
-          description="Fichas publicas com nome, turma, divisao e modalidades."
+          description="Fichas públicas com nome, turma, divisão e modalidades."
           meta={`${divisionAthletes.length} atletas`}
         />
 

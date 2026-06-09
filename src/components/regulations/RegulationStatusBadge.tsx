@@ -12,11 +12,11 @@ const statusMap: Record<
   }
 > = {
   disponivel: {
-    label: "Disponivel",
+    label: "Disponível",
     className: "border-green/25 bg-green/15 text-[#2f6f18]",
   },
   em_revisao: {
-    label: "Em revisao",
+    label: "Em revisão",
     className: "border-accent/25 bg-accent/15 text-[#7a4f00]",
   },
   em_breve: {

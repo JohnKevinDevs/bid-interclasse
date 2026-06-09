@@ -18,7 +18,7 @@ export default function EptAtletasPage() {
       <PageHero
         eyebrow="BID EPT"
         title="Atletas"
-        description="Atletas cadastrados na divisao EPT."
+        description="Atletas cadastrados na divisão EPT."
       >
         <StatCard
           dark
@@ -32,7 +32,7 @@ export default function EptAtletasPage() {
         <ListHeader
           eyebrow="Consulta"
           title="Elenco EPT"
-          description="Fichas publicas com nome, turma, divisao e modalidades."
+          description="Fichas públicas com nome, turma, divisão e modalidades."
           meta={`${divisionAthletes.length} atletas`}
         />
 

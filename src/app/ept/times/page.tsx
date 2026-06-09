@@ -18,7 +18,7 @@ export default function EptTimesPage() {
       <PageHero
         eyebrow="BID EPT"
         title="Times"
-        description="Times cadastrados na divisao EPT."
+        description="Times cadastrados na divisão EPT."
       >
         <StatCard
           dark

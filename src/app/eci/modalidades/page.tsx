@@ -19,7 +19,7 @@ export default function EciModalidadesPage() {
       <PageHero
         eyebrow="BID ECI"
         title="Modalidades"
-        description="Modalidades disponiveis para a divisao ECI."
+        description="Modalidades disponíveis para a divisão ECI."
       >
         <StatCard
           dark
@@ -33,7 +33,7 @@ export default function EciModalidadesPage() {
         <ListHeader
           eyebrow="Consulta"
           title="Modalidades ECI"
-          description="Modalidades, divisao e registros de participacao."
+          description="Modalidades, divisão e registros de participação."
           meta={`${divisionSports.length} modalidades`}
         />
 

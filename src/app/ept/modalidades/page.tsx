@@ -19,7 +19,7 @@ export default function EptModalidadesPage() {
       <PageHero
         eyebrow="BID EPT"
         title="Modalidades"
-        description="Modalidades disponiveis para a divisao EPT."
+        description="Modalidades disponíveis para a divisão EPT."
       >
         <StatCard
           dark
@@ -33,7 +33,7 @@ export default function EptModalidadesPage() {
         <ListHeader
           eyebrow="Consulta"
           title="Modalidades EPT"
-          description="Modalidades, divisao e registros de participacao."
+          description="Modalidades, divisão e registros de participação."
           meta={`${divisionSports.length} modalidades`}
         />
 
