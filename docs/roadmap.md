@@ -20,7 +20,8 @@
   - Sprint 3: listagens de atletas, times e modalidades com cards resilientes aos dados reais dos formularios. Status: concluida.
   - Sprint 4: Regulamentos e Sobre com composicao institucional premium, curta e escaneavel. Status: concluida.
   - Sprint 5: QA visual final, mobile, breakpoints, acessibilidade basica e preparacao para dados reais. Status: concluida.
-- Fase 12: Dados reais, deploy Vercel e validacao publica. Status: planejada.
+- Preparacao de dados reais via Forms exportado para JSON local. Status: concluida.
+- Fase 12: Conversao final dos dados reais, deploy Vercel e validacao publica. Status: planejada.
 
 ## Nova Frente De Reformulacao
 
@@ -35,6 +36,7 @@ Prioridades da nova frente:
 - Melhorar hierarquia, densidade visual e responsividade.
 - Preparar SEO, metadata e configuracoes finais para deploy futuro.
 - Revisar dados reais, conteudo final e publicacao do portal.
+- Converter exportacoes dos formularios em JSON local validado.
 - Executar deploy na Vercel e validar a URL publica.
 - Manter a versao publica atual front-end only com dados locais em JSON.
 

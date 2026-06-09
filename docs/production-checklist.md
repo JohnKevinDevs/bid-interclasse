@@ -23,6 +23,8 @@ O projeto ja possui:
 - Build validado.
 - Redesign basico premium concluido.
 - QA visual final validado em mobile, tablet e desktop.
+- Mapeamento de dados dos formularios documentado em `docs/forms-data-mapping.md`.
+- Validacao local de dados disponivel via `npm.cmd run validate:data`.
 
 ## Auditoria Dos Dados Locais
 
@@ -50,21 +52,18 @@ Atletas:
 - Confirmar nomes reais.
 - Confirmar divisao: ECI ou EPT.
 - Confirmar turma.
-- Confirmar curso, quando existir.
-- Confirmar time vinculado.
 - Confirmar modalidades vinculadas.
-- Confirmar status: `ativo` ou `inativo`.
-- Revisar `shortBio` para remover textos genericos.
-- Revisar `position` para refletir a modalidade real.
+- Confirmar foto ou manter placeholder aprovado.
+- Confirmar time vinculado, se ja houver dados de times.
 
 Times:
 
-- Confirmar nomes oficiais dos times.
 - Confirmar divisao.
+- Confirmar turma.
+- Confirmar curso, quando existir na planilha.
 - Confirmar modalidades vinculadas.
 - Confirmar lista de atletas por time.
-- Substituir descricoes genericas por descricoes oficiais.
-- Confirmar cores de apoio, se houver identidade definida.
+- Confirmar nome gerado do time, quando nao houver nome criativo.
 
 Modalidades:
 
@@ -131,6 +130,7 @@ Criterio:
 
 - Rodar `npm.cmd run lint`.
 - Rodar `npm.cmd run build`.
+- Rodar `npm.cmd run validate:data`.
 - Conferir `/`.
 - Conferir `/eci`.
 - Conferir `/ept`.
@@ -150,6 +150,7 @@ Criterio:
 - Conferir se nao ha dados sensiveis no repositorio.
 - Conferir se nao ha overflow horizontal em mobile, tablet e desktop.
 - Conferir se cards continuam bons com dados reais minimos dos formularios.
+- Conferir `docs/forms-data-mapping.md` antes de converter planilhas.
 
 ## Checklist Vercel
 
@@ -178,4 +179,4 @@ Criterio:
 
 ## Decisao De Publicacao
 
-O portal esta tecnicamente preparado para publicacao, mas a publicacao oficial deve aguardar a substituicao ou aprovacao dos dados mockados, imagens placeholders e conteudos finais.
+O portal esta tecnicamente preparado para publicacao, mas a publicacao oficial deve aguardar a conversao validada dos dados reais, aprovacao de imagens e revisao final dos conteudos.

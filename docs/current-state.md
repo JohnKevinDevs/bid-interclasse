@@ -179,7 +179,9 @@ Situacao para publicacao:
 - A Sprint 3 redesenhou os cards e listagens de atletas, times e modalidades como catalogo oficial de BID, com placeholders intencionais e fallbacks para dados reais minimos dos formularios.
 - A Sprint 4 refinou `/regulamentos` e `/sobre` com composicao institucional curta, documentos agrupados por aplicacao, cards oficiais de regulamento, assinatura FAC/CEAP e valores escaneaveis.
 - A Sprint 5 concluiu o QA visual do frontend basico premium em todas as rotas principais, incluindo mobile, tablet, desktop, menu mobile, sitemap, robots e manifest.
+- Os mocks locais foram ajustados para simular melhor os dados reais dos formularios, com atletas e times usando campos minimos e fallbacks visuais.
+- Foi criada documentacao de mapeamento Forms -> JSON e validacao local de consistencia dos dados, sem integracao com Google API.
 
 ## Proxima Fase Planejada
 
-Substituicao dos mocks por dados reais e imagens reais, seguida de deploy/preview publico na Vercel.
+Converter exportacoes dos formularios para JSON local, revisar dados reais e gerar deploy/preview publico na Vercel.

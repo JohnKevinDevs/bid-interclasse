@@ -37,6 +37,16 @@ Campos opcionais ativos:
 - `photoUrl`: caminho publico para foto ou placeholder do atleta.
 - `shortBio`: resumo institucional curto para cards e futuras paginas ricas.
 - `position`: posicao, funcao ou papel esportivo quando fizer sentido.
+- `course`, `teamId` e `status`: mantidos por compatibilidade, mas o card nao depende deles.
+
+Campos minimos esperados dos formularios:
+
+- `id`
+- `name`
+- `division`
+- `className`
+- `sports`
+- `photoUrl`, quando houver foto aprovada
 
 ## Team
 
@@ -59,6 +69,16 @@ Campos opcionais ativos:
 - `imageUrl`: caminho publico para imagem ou placeholder do time.
 - `color`: cor de apoio para identidade visual do time.
 
+Campos minimos esperados apos converter a planilha:
+
+- `id`
+- `name`
+- `division`
+- `sportIds`
+- `athleteIds`
+
+Observacao: o formulario tera turma e curso, mas o tipo atual de `Team` nao possui `className` nem `course`. Na conversao atual, esses dados devem alimentar o `name` gerado ou ajudar a revisao manual.
+
 ## Sport
 
 ```ts
@@ -77,6 +97,8 @@ Campos opcionais ativos:
 - `description`: resumo da modalidade.
 - `imageUrl`: caminho publico para imagem ou placeholder da modalidade.
 - `category`: categoria editorial, como `coletivo`, `individual` ou `recreativo`.
+
+As modalidades continuam controladas manualmente pela FAC e servem como base para mapear respostas de atletas e times.
 
 ## Regulation
 
@@ -136,3 +158,13 @@ Modalidades devem funcionar apenas com:
 - divisao
 
 Campos como descricao, foto, cor, bio, posicao, time confirmado e imagem sao complementares. A interface nao deve depender deles para parecer completa.
+
+## Validacao Local
+
+Antes de substituir os JSONs por dados reais, rode:
+
+```bash
+npm.cmd run validate:data
+```
+
+Essa validacao checa IDs, divisao, modalidades referenciadas e vinculos entre atletas e times.

@@ -1,80 +1,58 @@
 [
   {
-    "id": "ath-ana-silva",
+    "id": "atleta-ana-silva",
     "name": "Ana Silva",
     "division": "eci",
     "className": "1A",
-    "course": "Ensino Medio",
-    "teamId": "team-eci-futsal-a",
+    "teamId": "time-1a-futsal",
     "sports": ["sport-futsal"],
     "status": "ativo",
-    "photoUrl": "/images/athletes/placeholder-athlete.svg",
-    "shortBio": "Atleta da ECI cadastrada para representar sua turma no Interclasse CEAP.",
-    "position": "Linha"
+    "photoUrl": "/images/athletes/placeholder-athlete.svg"
   },
   {
-    "id": "ath-lucas-almeida",
+    "id": "atleta-lucas-almeida",
     "name": "Lucas Almeida",
     "division": "eci",
-    "className": "2B",
-    "course": "Ensino Medio",
-    "teamId": "team-eci-futsal-a",
+    "className": "1A",
+    "teamId": "time-1a-futsal",
     "sports": ["sport-futsal", "sport-xadrez"],
-    "status": "ativo",
-    "photoUrl": "/images/athletes/placeholder-athlete.svg",
-    "shortBio": "Participante da ECI com presenca em modalidades coletivas e individuais.",
-    "position": "Linha"
+    "photoUrl": "/images/athletes/placeholder-athlete.svg"
   },
   {
-    "id": "ath-marina-rocha",
+    "id": "atleta-marina-rocha",
     "name": "Marina Rocha",
     "division": "eci",
     "className": "3A",
-    "course": "Ensino Medio",
-    "teamId": "team-eci-xadrez",
+    "teamId": "time-3a-xadrez",
     "sports": ["sport-xadrez"],
-    "status": "inativo",
-    "photoUrl": "/images/athletes/placeholder-athlete.svg",
-    "shortBio": "Representante da ECI em modalidade de estrategia e concentracao.",
-    "position": "Enxadrista"
+    "status": "ativo"
   },
   {
-    "id": "ath-bruno-costa",
+    "id": "atleta-bruno-costa",
     "name": "Bruno Costa",
     "division": "ept",
     "className": "2INFO",
-    "course": "Informatica",
-    "teamId": "team-ept-volei-a",
+    "teamId": "time-2info-volei",
     "sports": ["sport-volei"],
     "status": "ativo",
-    "photoUrl": "/images/athletes/placeholder-athlete.svg",
-    "shortBio": "Atleta da EPT vinculado ao volei e ao espirito competitivo da turma.",
-    "position": "Ponta"
+    "photoUrl": "/images/athletes/placeholder-athlete.svg"
   },
   {
-    "id": "ath-carla-mendes",
+    "id": "atleta-carla-mendes",
     "name": "Carla Mendes",
     "division": "ept",
-    "className": "3ADM",
-    "course": "Administracao",
-    "teamId": "team-ept-volei-a",
-    "sports": ["sport-volei"],
-    "status": "ativo",
-    "photoUrl": "/images/athletes/placeholder-athlete.svg",
-    "shortBio": "Participante da EPT cadastrada para fortalecer a equipe de volei.",
-    "position": "Levantadora"
+    "className": "2INFO",
+    "teamId": "time-2info-volei",
+    "sports": ["sport-volei"]
   },
   {
-    "id": "ath-diego-santos",
+    "id": "atleta-diego-santos",
     "name": "Diego Santos",
     "division": "ept",
     "className": "1LOG",
-    "course": "Logistica",
-    "teamId": "team-ept-handebol",
+    "teamId": "time-1log-handebol",
     "sports": ["sport-handebol"],
     "status": "ativo",
-    "photoUrl": "/images/athletes/placeholder-athlete.svg",
-    "shortBio": "Atleta da EPT inscrito em modalidade coletiva de ritmo intenso.",
-    "position": "Armador"
+    "photoUrl": "/images/athletes/placeholder-athlete.svg"
   }
 ]
