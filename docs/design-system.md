@@ -61,6 +61,7 @@ Diretrizes:
 - Centrais ECI/EPT com destaque por cor, estatisticas no hero, previa real da divisao e atalhos principais.
 - Cards de atletas, times e modalidades preparados para poucos dados reais, usando placeholders intencionais com monograma, contexto e linhas diagonais.
 - Estados vazios e contadores de zero registros devem parecer informativos, nao erro visual.
+- Paginas institucionais devem ser curtas e escaneaveis: Regulamentos como area oficial de documentos; Sobre como sintese de Interclasse, FAC e BID.
 
 ## Evitar
 

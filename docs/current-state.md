@@ -177,7 +177,8 @@ Situacao para publicacao:
 - A interface passou a evitar linguagem de versao inicial visivel, assumindo direcao de versao publica pronta para uso apos chegada dos dados reais.
 - A Sprint 2 do redesign basico premium reformulou a Home e as centrais `ECI`/`EPT`, integrando numeros no hero, acessos principais mais fortes e previews reais de atleta, time e modalidade por divisao.
 - A Sprint 3 redesenhou os cards e listagens de atletas, times e modalidades como catalogo oficial de BID, com placeholders intencionais e fallbacks para dados reais minimos dos formularios.
+- A Sprint 4 refinou `/regulamentos` e `/sobre` com composicao institucional curta, documentos agrupados por aplicacao, cards oficiais de regulamento, assinatura FAC/CEAP e valores escaneaveis.
 
 ## Proxima Fase Planejada
 
-Continuidade do redesign basico premium por sprints, com foco em Regulamentos, Sobre e revisao final de publicacao.
+Revisao final de publicacao, dados reais e deploy Vercel.

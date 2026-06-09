@@ -19,35 +19,45 @@ export const metadata: Metadata = {
 
 const pillars = [
   {
-    title: "Interclasse CEAP",
-    text: "Competicao entre turmas, com atletas, times e modalidades organizadas.",
+    eyebrow: "O evento",
+    title: "Interclasse",
+    text: "A competicao esportiva entre turmas do CEAP, organizada por divisoes, modalidades e equipes.",
+    accentClassName: "bg-primary",
   },
   {
+    eyebrow: "A organizacao",
     title: "FAC",
-    text: "A frente que fortalece a cultura esportiva e a identidade do evento.",
+    text: "Federacao Atletica CEAP: a entidade que representa o esporte, a cultura e a participacao estudantil.",
+    accentClassName: "bg-accent",
   },
   {
+    eyebrow: "O portal",
     title: "BID",
-    text: "O portal publico para consultar participantes, equipes e regras.",
+    text: "Boletim publico de consulta com atletas, times, modalidades e regulamentos oficiais.",
+    accentClassName: "bg-navy",
   },
 ];
 
-const values = ["Transparencia", "Organizacao", "Espirito esportivo"];
+const values = [
+  "Transparencia",
+  "Organizacao",
+  "Espirito esportivo",
+  "Pertencimento",
+  "Legado",
+];
 
 export default function SobrePage() {
   return (
     <main>
       <PageHero
-        eyebrow="Sobre"
-        title="Interclasse, FAC e BID em um so lugar"
-        description="O BID Interclasse CEAP existe para deixar a competicao mais clara, bonita e facil de consultar."
+        eyebrow="Sobre o projeto"
+        title="Uma escola. Grandes talentos. Um legado."
+        description="O BID Interclasse CEAP e a vitrine publica do esporte do CEAP, organizada pela Federacao Atletica CEAP."
       >
         <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-xl backdrop-blur">
-          <p className="text-xs font-semibold uppercase text-accent">
-            Essencial
-          </p>
-          <p className="mt-4 text-3xl font-semibold tracking-tight">
-            Quem joga, por qual time e em qual modalidade.
+          <p className="bid-kicker text-accent">Assinatura institucional</p>
+          <p className="bid-display mt-3 text-3xl leading-none">
+            CEAP alem da sala. FAC alem do esporte.
           </p>
         </div>
       </PageHero>
@@ -57,39 +67,43 @@ export default function SobrePage() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="relative overflow-hidden rounded-lg border border-slate-200 bg-white p-5 shadow-sm"
+              className="relative overflow-hidden rounded-lg border border-line bg-surface p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/5"
             >
-              <span className="absolute inset-x-0 top-0 h-1 bg-primary" />
-              <p className="text-xs font-semibold uppercase text-primary">
-                Projeto
-              </p>
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground">
+              <span
+                className={`absolute inset-x-0 top-0 h-1 ${pillar.accentClassName}`}
+              />
+              <p className="bid-kicker text-primary">{pillar.eyebrow}</p>
+              <h2 className="bid-display mt-3 text-4xl leading-none text-ink">
                 {pillar.title}
               </h2>
-              <p className="mt-3 text-sm leading-6 text-slate-700">
+              <p className="mt-4 text-sm leading-6 text-slate-600">
                 {pillar.text}
               </p>
             </article>
           ))}
         </section>
 
-        <section className="mt-6 rounded-lg bg-foreground p-6 text-white">
-          <p className="text-xs font-semibold uppercase text-accent">
-            Valores
-          </p>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-            Um portal oficial, simples e confiavel.
-          </h2>
-          <div className="mt-5 grid gap-2 sm:grid-cols-3">
-            {values.map((value) => (
-              <span
-                key={value}
-                className="rounded-lg border border-white/15 bg-white/10 px-4 py-3 text-xs font-semibold uppercase text-white/82"
-              >
-                {value}
-              </span>
-            ))}
+        <section className="mt-6 overflow-hidden rounded-lg bg-navy text-white shadow-sm">
+          <div className="bg-[linear-gradient(118deg,rgba(45,168,255,.16),transparent_42%),linear-gradient(105deg,transparent_0,transparent_62%,rgba(245,157,26,.12)_62%,transparent_78%),repeating-linear-gradient(115deg,rgba(255,255,255,.045)_0,rgba(255,255,255,.045)_1px,transparent_1px,transparent_36px)] p-6 sm:p-7">
+            <p className="bid-kicker text-accent">Valores do projeto</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+              {values.map((value) => (
+                <span
+                  key={value}
+                  className="bid-kicker rounded-lg border border-white/15 bg-white/10 px-4 py-4 text-center text-white"
+                >
+                  {value}
+                </span>
+              ))}
+            </div>
           </div>
+        </section>
+
+        <section className="mt-6 rounded-lg border border-line bg-surface p-5 shadow-sm">
+          <p className="bid-kicker text-primary">Em poucas palavras</p>
+          <h2 className="bid-display mt-2 text-3xl leading-none text-ink">
+            Consulta publica, organizacao e memoria esportiva do CEAP.
+          </h2>
         </section>
       </Container>
     </main>

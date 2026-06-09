@@ -18,7 +18,7 @@
   - Sprint 1: fundacao visual global, tokens, header, menu mobile, footer e heros. Status: concluida.
   - Sprint 2: Home e centrais ECI/EPT com entrada oficial, numeros integrados, cards de acesso e previews reais. Status: concluida.
   - Sprint 3: listagens de atletas, times e modalidades com cards resilientes aos dados reais dos formularios. Status: concluida.
-  - Sprint 4: Regulamentos, Sobre e revisao visual final. Status: planejada.
+  - Sprint 4: Regulamentos e Sobre com composicao institucional premium, curta e escaneavel. Status: concluida.
 - Fase 12: Deploy Vercel e validacao publica. Status: planejada.
 
 ## Nova Frente De Reformulacao
