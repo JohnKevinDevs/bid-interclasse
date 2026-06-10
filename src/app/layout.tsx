@@ -63,10 +63,9 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/images/brand/fac-logo-oficial.png", type: "image/png" }],
+    apple: [{ url: "/images/brand/fac-logo-oficial.png", type: "image/png" }],
+    shortcut: ["/images/brand/fac-logo-oficial.png"],
   },
 };
 
