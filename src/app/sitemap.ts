@@ -4,7 +4,6 @@ import { siteUrl } from "@/lib/seo";
 const routes = [
   "",
   "/eci",
-  "/eci/atletas",
   "/eci/times",
   "/eci/modalidades",
   "/ept",

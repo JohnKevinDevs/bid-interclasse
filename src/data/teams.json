@@ -1,30 +1,47 @@
 [
   {
-    "id": "time-1a-futsal",
-    "name": "1A - Futsal",
+    "id": "time-1a-futebol",
+    "name": "1A - Futebol",
     "division": "eci",
-    "sportIds": ["sport-futsal"],
-    "athleteIds": ["atleta-ana-silva", "atleta-lucas-almeida"]
+    "sportIds": ["sport-futebol"],
+    "athleteIds": ["atleta-ana-silva", "atleta-lucas-almeida"],
+    "description": "Equipe da turma 1A cadastrada para a disputa de futebol.",
+    "imageUrl": "/images/teams/placeholder-team.svg"
   },
   {
     "id": "time-3a-xadrez",
     "name": "3A - Xadrez",
     "division": "eci",
     "sportIds": ["sport-xadrez"],
-    "athleteIds": ["atleta-marina-rocha"]
+    "athleteIds": ["atleta-marina-rocha"],
+    "description": "Representação da turma 3A na modalidade de xadrez.",
+    "imageUrl": "/images/teams/placeholder-team.svg"
   },
   {
     "id": "time-2info-volei",
     "name": "2INFO - Vôlei",
     "division": "ept",
     "sportIds": ["sport-volei"],
-    "athleteIds": ["atleta-bruno-costa", "atleta-carla-mendes"]
+    "athleteIds": ["atleta-bruno-costa"],
+    "description": "Equipe técnica do 2INFO cadastrada para a disputa de vôlei.",
+    "imageUrl": "/images/teams/placeholder-team.svg"
   },
   {
-    "id": "time-1log-handebol",
-    "name": "1LOG - Handebol",
+    "id": "time-2info-basquete",
+    "name": "2INFO - Basquete",
     "division": "ept",
-    "sportIds": ["sport-handebol"],
-    "athleteIds": ["atleta-diego-santos"]
+    "sportIds": ["sport-basquete"],
+    "athleteIds": ["atleta-carla-mendes"],
+    "description": "Equipe técnica do 2INFO cadastrada para a disputa de basquete.",
+    "imageUrl": "/images/teams/placeholder-team.svg"
+  },
+  {
+    "id": "time-1log-tenis",
+    "name": "1LOG - Tênis",
+    "division": "ept",
+    "sportIds": ["sport-tenis"],
+    "athleteIds": ["atleta-diego-santos"],
+    "description": "Representação do 1LOG na modalidade de tênis.",
+    "imageUrl": "/images/teams/placeholder-team.svg"
   }
 ]

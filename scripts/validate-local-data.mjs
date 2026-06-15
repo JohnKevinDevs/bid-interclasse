@@ -4,6 +4,13 @@ import { join } from "node:path";
 const root = process.cwd();
 const validDivisions = new Set(["eci", "ept"]);
 const validSharedDivisions = new Set(["eci", "ept", "ambos"]);
+const officialSportIds = [
+  "sport-futebol",
+  "sport-basquete",
+  "sport-volei",
+  "sport-tenis",
+  "sport-xadrez",
+];
 
 function readJson(path) {
   return JSON.parse(readFileSync(join(root, path), "utf8"));
@@ -56,6 +63,22 @@ checkUniqueIds("regulations", regulations);
 const athleteIds = new Set(athletes.map((athlete) => athlete.id));
 const teamIds = new Set(teams.map((team) => team.id));
 const sportIds = new Set(sports.map((sport) => sport.id));
+
+if (sports.length !== officialSportIds.length) {
+  fail("A lista de modalidades precisa conter exatamente as modalidades oficiais.");
+}
+
+for (const officialSportId of officialSportIds) {
+  if (!sportIds.has(officialSportId)) {
+    fail(`Modalidade oficial ausente: ${officialSportId}.`);
+  }
+}
+
+for (const sportId of sportIds) {
+  if (!officialSportIds.includes(sportId)) {
+    fail(`Modalidade fora da lista oficial: ${sportId}.`);
+  }
+}
 
 for (const athlete of athletes) {
   if (!athlete.name) fail(`Atleta ${athlete.id ?? "(sem id)"} sem name.`);

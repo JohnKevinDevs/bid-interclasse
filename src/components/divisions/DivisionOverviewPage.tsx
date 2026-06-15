@@ -53,6 +53,7 @@ export function DivisionOverviewPage({
   const athletes = getAthletesByDivision(division);
   const teams = getTeamsByDivision(division);
   const sports = getSportsByDivision(division);
+  const showAthletes = division === "ept";
   const athletePreview = athletes[0];
   const teamPreview = teams[0];
   const sportPreview = sports[0];
@@ -65,8 +66,14 @@ export function DivisionOverviewPage({
         description={description}
         accent={division === "ept" ? "orange" : "blue"}
       >
-        <div className="grid gap-3 sm:grid-cols-3">
-          <StatCard label="Atletas" value={athletes.length} dark />
+        <div
+          className={`grid gap-3 ${
+            showAthletes ? "sm:grid-cols-3" : "sm:grid-cols-2"
+          }`}
+        >
+          {showAthletes ? (
+            <StatCard label="Atletas" value={athletes.length} dark />
+          ) : null}
           <StatCard label="Times" value={teams.length} dark />
           <StatCard label="Modalidades" value={sports.length} dark />
         </div>
@@ -84,24 +91,30 @@ export function DivisionOverviewPage({
             </p>
           </div>
           <Link
-            href={`/${division}/atletas`}
+            href={showAthletes ? `/${division}/atletas` : `/${division}/times`}
             className="inline-flex min-h-11 w-fit items-center rounded-lg border border-line bg-white px-4 py-2 text-xs font-bold uppercase text-ink transition hover:border-primary/30 hover:bg-primary hover:text-white"
           >
             Ver tudo -&gt;
           </Link>
         </div>
 
-        <section className="grid gap-4 lg:grid-cols-3">
-          {athletePreview ? (
-            <AthletePreviewCard
-              athlete={athletePreview}
-              divisionLabel={divisionLabel}
-              panelClassName={accent.panel}
-              accentTextClassName={accent.text}
-            />
-          ) : (
-            <EmptyPreview title="Atleta" text="Nenhum atleta cadastrado." />
-          )}
+        <section
+          className={`grid gap-4 ${
+            showAthletes ? "lg:grid-cols-3" : "lg:grid-cols-2"
+          }`}
+        >
+          {showAthletes ? (
+            athletePreview ? (
+              <AthletePreviewCard
+                athlete={athletePreview}
+                divisionLabel={divisionLabel}
+                panelClassName={accent.panel}
+                accentTextClassName={accent.text}
+              />
+            ) : (
+              <EmptyPreview title="Atleta" text="Nenhum atleta cadastrado." />
+            )
+          ) : null}
 
           {teamPreview ? (
             <TeamPreviewCard
@@ -126,15 +139,21 @@ export function DivisionOverviewPage({
           )}
         </section>
 
-        <section className="mt-5 grid gap-4 lg:grid-cols-3">
-          <QuickAccessCard
-            href={`/${division}/atletas`}
-            eyebrow={`BID ${divisionLabel}`}
-            title="Atletas"
-            description="Nome, turma, time, modalidades e status."
-            meta="Consultar"
-            tone={division === "ept" ? "orange" : "blue"}
-          />
+        <section
+          className={`mt-5 grid gap-4 ${
+            showAthletes ? "lg:grid-cols-3" : "lg:grid-cols-2"
+          }`}
+        >
+          {showAthletes ? (
+            <QuickAccessCard
+              href={`/${division}/atletas`}
+              eyebrow={`BID ${divisionLabel}`}
+              title="Atletas"
+              description="Nome, turma, time, modalidades e status."
+              meta="Consultar"
+              tone={division === "ept" ? "orange" : "blue"}
+            />
+          ) : null}
           <QuickAccessCard
             href={`/${division}/times`}
             eyebrow={`BID ${divisionLabel}`}

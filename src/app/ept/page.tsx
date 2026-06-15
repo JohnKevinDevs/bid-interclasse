@@ -22,7 +22,7 @@ export default function EptPage() {
       division="ept"
       title="Interclasse EPT"
       description="Atletas, times e modalidades da divisão EPT em uma consulta simples e oficial."
-      summary="Um recorte rápido da divisão técnica antes de acessar as listas completas."
+      summary="A EPT mantém a consulta pública completa com atletas, equipes e modalidades técnicas."
     />
   );
 }

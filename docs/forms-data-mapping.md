@@ -1,18 +1,30 @@
-# Mapeamento De Dados Dos Formularios
+# Mapeamento De Dados Dos Formulários
 
-Este documento define como transformar exportacoes manuais do Google Forms/Sheets em JSON local para o BID Interclasse CEAP.
+Este documento define como transformar exportações manuais do Google Forms/Sheets em JSON local para o BID Interclasse CEAP.
 
-Nao existe integracao automatica com Google Forms, Google Sheets ou API externa nesta etapa. O fluxo previsto e exportar os dados, revisar, normalizar localmente e substituir os JSONs em `src/data/`.
+Não existe integração automática com Google Forms, Google Sheets ou API externa nesta etapa. O fluxo previsto é exportar os dados como CSV, revisar, normalizar localmente e substituir os JSONs em `src/data/`.
 
-## Formulario De Atletas
+## Fluxo De Importação
+
+1. Exporte as respostas dos formulários como CSV.
+2. Coloque os arquivos em `imports/raw/`.
+3. Use os nomes `athletes.csv` e `teams.csv`.
+4. Coloque imagens aprovadas em `public/images/athletes/`, `public/images/teams/` ou `public/images/sports/`.
+5. Rode `npm.cmd run convert:forms`.
+6. Rode `npm.cmd run validate:data`.
+
+`imports/raw/` é ignorada pelo Git para evitar publicar planilhas brutas.
+
+## Formulário De Atletas
 
 Colunas esperadas:
 
-- `Divisao`
+- `Divisão`
 - `Nome`
 - `Turma`
+- `Curso`
 - `Modalidades`
-- `Foto`
+- `Foto/Imagem`
 
 Destino em `src/data/athletes.json`:
 
@@ -20,140 +32,80 @@ Destino em `src/data/athletes.json`:
 {
   "id": "atleta-ana-silva",
   "name": "Ana Silva",
-  "division": "eci",
-  "className": "1A",
-  "sports": ["sport-futsal"],
+  "division": "ept",
+  "className": "2INFO",
+  "course": "Informática",
+  "sports": ["sport-volei"],
+  "status": "ativo",
   "photoUrl": "/images/athletes/ana-silva.jpg"
 }
 ```
 
-Campos opcionais que podem continuar por compatibilidade:
+Observação importante: ECI pode existir nos dados para formar elencos de times, mas não possui página pública de atletas no frontend. A página pública de atletas fica apenas em `/ept/atletas`.
 
-- `teamId`
-- `status`
-- `photoUrl`
-- `course`
-
-Campos que nao devem ser necessarios para o layout:
-
-- `position`
-- `shortBio`
-
-## Formulario De Times
+## Formulário De Times
 
 Colunas esperadas:
 
-- `Divisao`
-- `Turma`
+- `Divisão`
+- `Nome do time ou turma`
 - `Curso`
-- `Atletas do time`
 - `Modalidades`
+- `Atletas do time`
+- `Imagem`
 
 Destino em `src/data/teams.json`:
 
 ```json
 {
-  "id": "time-1a-futsal",
-  "name": "1A - Futsal",
-  "division": "eci",
-  "sportIds": ["sport-futsal"],
-  "athleteIds": ["atleta-ana-silva", "atleta-lucas-almeida"]
+  "id": "time-2info-volei",
+  "name": "2INFO - Vôlei",
+  "division": "ept",
+  "sportIds": ["sport-volei"],
+  "athleteIds": ["atleta-ana-silva"],
+  "description": "Equipe 2INFO do curso Informática.",
+  "imageUrl": "/images/teams/2info-volei.jpg"
 }
 ```
 
-Como o tipo atual de `Team` nao possui `className` nem `course`, esses dados devem ser usados inicialmente para gerar o `name` do time ou para auxiliar a revisao manual.
+## Modalidades Oficiais
 
-Exemplos de nome gerado:
+O BID trabalha com exatamente estas modalidades:
 
-- `1A - Futsal`
-- `2INFO - Volei`
-- `1LOG - Handebol`
+- `Futebol` -> `sport-futebol`
+- `Basquete` -> `sport-basquete`
+- `Vôlei` -> `sport-volei`
+- `Tênis` -> `sport-tenis`
+- `Xadrez` -> `sport-xadrez`
 
-Campos opcionais que podem continuar por compatibilidade:
+O conversor também aceita `FUT7` e `Futsal`, mas normaliza ambos para `Futebol`.
 
-- `description`
-- `imageUrl`
-- `color`
+## Padrão De Imagens
 
-## Conversao De Divisao
+Use arquivos com nomes simples, em minúsculas e sem espaços:
 
-- `ECI` -> `eci`
-- `EPT` -> `ept`
+- `public/images/athletes/ana-silva.jpg`
+- `public/images/teams/2info-volei.jpg`
+- `public/images/sports/volei.jpg`
 
-Valores diferentes devem ser revisados manualmente antes de entrar no JSON.
+Se a coluna de imagem estiver vazia, o conversor mantém o placeholder local.
 
-## Conversao De Modalidades
-
-Modalidades podem vir separadas por virgula, ponto e virgula ou multipla escolha do Forms.
-
-Exemplo:
-
-```txt
-Futsal; Xadrez
-```
-
-Deve virar:
-
-```json
-["sport-futsal", "sport-xadrez"]
-```
-
-Cada modalidade precisa existir em `src/data/sports.json`. Se a modalidade nao existir, criar ou revisar manualmente antes de publicar.
-
-## Geracao De IDs
-
-Regra sugerida:
-
-1. Remover acentos.
-2. Converter para minusculas.
-3. Trocar espacos por hifen.
-4. Remover caracteres especiais.
-5. Adicionar prefixo do tipo de entidade.
-
-Exemplos:
-
-- `Ana Silva` -> `atleta-ana-silva`
-- `1A + Futsal` -> `time-1a-futsal`
-- `Volei` -> `sport-volei`
-
-## Fotos
-
-`photoUrl` pode ficar vazio inicialmente.
-
-Opcoes seguras:
-
-- deixar sem `photoUrl`
-- usar placeholder local
-- usar caminho local publico depois de aprovar as fotos
-
-O card de atleta nao deve quebrar por falta de foto.
-
-## Vinculo Entre Atletas E Times
-
-Fluxo recomendado:
-
-1. Normalizar nomes dos atletas.
-2. Gerar IDs de atletas.
-3. No time, converter nomes informados na coluna `Atletas do time` para `athleteIds`.
-4. Conferir se cada `athleteId` existe em `athletes.json`.
-5. Opcionalmente preencher `teamId` nos atletas.
-
-## Validacao Antes De Substituir JSONs
+## Validação Antes De Publicar
 
 Checar:
 
 - todo atleta tem `id`, `name`, `division`, `className` e `sports`
 - todo time tem `id`, `name`, `division`, `sportIds` e `athleteIds`
-- divisao e apenas `eci` ou `ept`
+- divisão é apenas `eci` ou `ept`
 - modalidades referenciadas existem em `sports.json`
+- a lista de modalidades contém apenas Futebol, Basquete, Vôlei, Tênis e Xadrez
 - `athleteIds` apontam para atletas existentes
 - `teamId`, quando existir, aponta para time existente
-- nao ha `undefined`, `null` textual ou campos vazios importantes
+- não há `undefined`, `null` textual ou campos vazios importantes
 
-Use o script local:
+Use:
 
 ```bash
-node scripts/validate-local-data.mjs
+npm.cmd run convert:forms
+npm.cmd run validate:data
 ```
-
-O script nao acessa APIs externas.

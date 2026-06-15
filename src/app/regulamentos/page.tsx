@@ -10,14 +10,14 @@ import type { Regulation, SharedDivision } from "@/types/interclasse";
 export const metadata: Metadata = {
   title: "Regulamentos",
   description:
-    "Regulamentos oficiais do Interclasse CEAP, organizados por ECI, EPT e documentos compartilhados.",
+    "Regulamentos do Interclasse CEAP com descrições das modalidades e regras principais para consulta no BID.",
   alternates: {
     canonical: "/regulamentos",
   },
   openGraph: {
     title: "Regulamentos | BID Interclasse CEAP",
     description:
-      "Consulte regras, critérios e documentos oficiais do Interclasse CEAP.",
+      "Consulte modalidades, aplicações e regras principais do Interclasse CEAP.",
     url: "/regulamentos",
   },
 };
@@ -36,8 +36,8 @@ const regulationGroups: {
     division: "eci",
     code: "ECI",
     eyebrow: "Divisão ECI",
-    title: "Regulamentos ECI",
-    description: "Documentos exclusivos da divisão ECI.",
+    title: "Regras ECI",
+    description: "Aplicações específicas da divisão ECI.",
     accentClassName: "bg-primary",
     codeClassName: "bg-primary text-white",
     sectionClassName: "border-primary/25 bg-primary/[0.03]",
@@ -46,8 +46,8 @@ const regulationGroups: {
     division: "ept",
     code: "EPT",
     eyebrow: "Divisão EPT",
-    title: "Regulamentos EPT",
-    description: "Documentos exclusivos da divisão técnica.",
+    title: "Regras EPT",
+    description: "Aplicações específicas da divisão técnica.",
     accentClassName: "bg-accent",
     codeClassName: "bg-accent text-ink",
     sectionClassName: "border-accent/30 bg-accent/[0.05]",
@@ -56,8 +56,8 @@ const regulationGroups: {
     division: "ambos",
     code: "G",
     eyebrow: "Aplicação geral",
-    title: "Regulamentos gerais",
-    description: "Documentos válidos para ECI e EPT.",
+    title: "Regras gerais",
+    description: "Modalidades e orientações válidas para ECI e EPT.",
     accentClassName: "bg-navy",
     codeClassName: "bg-navy text-white",
     sectionClassName: "border-line bg-white",
@@ -74,14 +74,14 @@ export default function RegulamentosPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Regulamentos oficiais"
-        title="Documentos do Interclasse CEAP"
-        description="Regras oficiais por divisão e modalidade. Consulte sempre o documento correspondente antes de participar."
+        eyebrow="Regulamentos"
+        title="Regras do Interclasse CEAP"
+        description="Consulte aqui o essencial sobre cada modalidade, sua aplicação e as regras principais da competição."
       >
         <div className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-xl">
-          <p className="bid-kicker text-accent">Importante</p>
+          <p className="bid-kicker text-accent">Consulta rápida</p>
           <p className="bid-display mt-3 text-3xl leading-none">
-            O documento oficial sempre prevalece.
+            Esporte, aplicação e regra no mesmo lugar.
           </p>
         </div>
       </PageHero>
@@ -91,7 +91,7 @@ export default function RegulamentosPage() {
           <div>
             <p className="bid-kicker text-primary">Consulta por aplicação</p>
             <h2 className="bid-display mt-2 text-4xl leading-none text-ink">
-              Regulamentos
+              Modalidades e regras
             </h2>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -133,12 +133,12 @@ export default function RegulamentosPage() {
                     </div>
 
                     <span className="bid-kicker w-fit rounded-full border border-line bg-white px-3 py-1 text-slate-600">
-                      {groupRegulations.length} doc
+                      {groupRegulations.length} regra
                       {groupRegulations.length === 1 ? "" : "s"}
                     </span>
                   </div>
 
-                  <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                  <div className="grid gap-4 xl:grid-cols-2">
                     {groupRegulations.length > 0 ? (
                       groupRegulations.map((regulation) => (
                         <RegulationCard
@@ -148,10 +148,10 @@ export default function RegulamentosPage() {
                         />
                       ))
                     ) : (
-                      <div className="md:col-span-2 xl:col-span-3">
+                      <div className="xl:col-span-2">
                         <EmptyState
-                          title="Nenhum documento neste grupo"
-                          description="Quando houver regulamento oficial para esta aplicação, ele aparecerá aqui."
+                          title="Nenhuma regra neste grupo"
+                          description="Quando houver regra cadastrada para esta aplicação, ela aparecerá aqui."
                         />
                       </div>
                     )}
@@ -161,13 +161,6 @@ export default function RegulamentosPage() {
             );
           })}
         </div>
-
-        <section className="mt-6 rounded-lg border border-accent/30 bg-accent/10 p-5 shadow-sm">
-          <p className="bid-kicker text-[#7a4f00]">Aviso institucional</p>
-          <h2 className="bid-display mt-2 text-2xl leading-none text-ink">
-            O regulamento oficial prevalece sobre qualquer resumo do portal.
-          </h2>
-        </section>
       </Container>
     </main>
   );

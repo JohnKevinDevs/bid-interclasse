@@ -3,63 +3,63 @@
     "id": "reg-geral",
     "title": "Interclasse CEAP 2026",
     "division": "ambos",
-    "content": "Documento oficial do evento com apresentação da FAC, calendário, espírito competitivo, modalidades e diretrizes gerais do Interclasse CEAP 2026.",
+    "content": "Organização geral do evento, divisões ECI e EPT, participação por turma, espírito esportivo, conduta dos participantes e diretrizes de consulta do BID.",
     "order": 1,
-    "description": "Documento mestre do evento e referência institucional para participantes e organização.",
+    "description": "Referência geral do Interclasse CEAP para entender a competição, suas divisões e a organização das modalidades.",
+    "status": "disponivel"
+  },
+  {
+    "id": "reg-futebol-eci",
+    "title": "Regulamento de Futebol ECI",
+    "division": "eci",
+    "content": "Equipes representam suas turmas em partidas de dois tempos de 8 minutos. A disputa prevê fase de grupos, mata-mata, shootout em caso de empate e regras especiais definidas pela organização para a divisão ECI.",
+    "order": 2,
+    "description": "Futebol da divisão ECI, com jogos curtos, ritmo intenso e regras adaptadas ao formato do Interclasse.",
+    "status": "disponivel"
+  },
+  {
+    "id": "reg-futebol-ept",
+    "title": "Regulamento de Futebol EPT",
+    "division": "ept",
+    "content": "Equipes representam seus cursos ou turmas em partidas de dois tempos de 8 minutos. O regulamento prevê fase de grupos, mata-mata, shootout, faltas coletivas e critérios de classificação da divisão EPT.",
+    "order": 3,
+    "description": "Futebol da divisão EPT, com equipes técnicas, jogos objetivos e critérios claros de disputa.",
     "status": "disponivel"
   },
   {
     "id": "reg-basquete",
-    "title": "Regulamento de Basquete 3x3",
+    "title": "Regulamento de Basquete",
     "division": "ambos",
-    "content": "Basquete 3x3 para ECI e EPT: times de 3 a 6 atletas, partida única de 10 minutos ou até 21 pontos, substituições ilimitadas em paradas de bola e torneio com fase de grupos seguida de mata-mata. O regulamento também define ataque de 12 segundos, critérios de desempate, faltas coletivas e premiações individuais.",
-    "order": 2,
-    "description": "Basquete 3x3 para ECI e EPT, com times de 3 a 6 atletas, jogos de 10 minutos, ataque de 12 segundos e encerramento aos 21 pontos.",
-    "status": "disponivel"
-  },
-  {
-    "id": "reg-fut7-eci",
-    "title": "Regulamento de FUT7 ECI",
-    "division": "eci",
-    "content": "FUT7 ECI com equipes de até 10 jogadores, 7 em campo, substituições ilimitadas e partidas em 2 tempos de 8 minutos. A disputa tem fase de grupos e mata-mata, prorrogação com gol de ouro, shootout em caso de empate e regras especiais como gol acrobático valendo 2, lançamento do dado e pênalti do presidente.",
-    "order": 3,
-    "description": "FUT7 exclusivo da ECI, com 2 tempos de 8 minutos, shootout, lançamento do dado, gol acrobático e pênalti do presidente.",
-    "status": "disponivel"
-  },
-  {
-    "id": "reg-fut7-ept",
-    "title": "Regulamento de FUT7 EPT",
-    "division": "ept",
-    "content": "FUT7 EPT com equipes de até 10 jogadores, 7 em campo, substituições ilimitadas e partidas em 2 tempos de 8 minutos. O regulamento define fase de grupos, mata-mata, gol de ouro, shootout, critérios de classificação, faltas individuais e coletivas, além de premiações e jogo especial para a equipe campeã.",
+    "content": "Disputa em formato 3x3, com times de 3 a 6 atletas, partida única de 10 minutos ou até 21 pontos, ataque de 12 segundos, substituições em paradas de bola e critérios de desempate definidos pela organização.",
     "order": 4,
-    "description": "FUT7 exclusivo da EPT, com 2 tempos de 8 minutos, shootout, faltas coletivas a partir da 5a falta e jogo especial para campeões.",
-    "status": "disponivel"
-  },
-  {
-    "id": "reg-tenis",
-    "title": "Regulamento de Tênis",
-    "division": "ambos",
-    "content": "Tênis para ECI e EPT em formato individual, ou duplas se necessário, com até 32 participantes por torneio. As partidas são em melhor de 3 sets, cada set até 6 games, tie-break em 6 a 6 e limite de 15 minutos por jogador. O regulamento também define saque, pontuação, conduta, critérios de desempate e premiação.",
-    "order": 5,
-    "description": "Tênis para ECI e EPT, com até 32 participantes, melhor de 3 sets, tie-break em 6 a 6 e limite de 15 minutos por jogador.",
+    "description": "Basquete 3x3 para ECI e EPT, com partidas rápidas, pontuação direta e equipes reduzidas.",
     "status": "disponivel"
   },
   {
     "id": "reg-volei",
     "title": "Regulamento de Vôlei",
     "division": "ambos",
-    "content": "Vôlei para ECI e EPT com equipes de até 10 atletas, 6 titulares em quadra e substituições ilimitadas respeitando a rotação. As partidas são em melhor de 3 sets: dois primeiros até 25 pontos e set decisivo até 15, sempre com diferença mínima de 2 pontos. O regulamento também define saque, rotação, três toques, critérios de desempate e premiações.",
+    "content": "Equipes de até 10 atletas, 6 titulares em quadra e substituições respeitando a rotação. As partidas são em melhor de 3 sets, com dois primeiros sets até 25 pontos e set decisivo até 15.",
+    "order": 5,
+    "description": "Vôlei para ECI e EPT, com foco em comunicação, rotação e trabalho coletivo.",
+    "status": "disponivel"
+  },
+  {
+    "id": "reg-tenis",
+    "title": "Regulamento de Tênis",
+    "division": "ambos",
+    "content": "Disputa individual, ou em duplas se a organização definir, com partidas em melhor de 3 sets. Cada set vai até 6 games, com tie-break em 6 a 6 e limite de tempo por jogador quando necessário.",
     "order": 6,
-    "description": "Vôlei para ECI e EPT, com equipes de até 10 atletas, melhor de 3 sets, pontuação até 25 e set decisivo até 15.",
+    "description": "Tênis para ECI e EPT, com disputa individual, controle de tempo e critérios de conduta.",
     "status": "disponivel"
   },
   {
     "id": "reg-xadrez",
     "title": "Regulamento de Xadrez",
     "division": "ambos",
-    "content": "Xadrez para ECI e EPT em formato individual, com cada participante representando sua turma. O torneio usa fase de grupos seguida de mata-mata, controle blitz de 15 minutos por jogador e pontuação de 1 ponto por vitória, 0,5 por empate e 0 por derrota. O regulamento também resume movimentos, regras especiais, critérios de desempate e conduta dos jogadores.",
+    "content": "Disputa individual em que cada participante representa sua turma. O torneio usa fase de grupos seguida de mata-mata, controle blitz de 15 minutos por jogador e pontuação por vitória, empate ou derrota.",
     "order": 7,
-    "description": "Xadrez individual para ECI e EPT, com fase de grupos, mata-mata e partidas de 15 minutos por jogador.",
+    "description": "Xadrez para ECI e EPT, com foco em estratégia, concentração e tomada de decisão.",
     "status": "disponivel"
   }
 ]

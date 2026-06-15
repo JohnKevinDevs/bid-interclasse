@@ -4,8 +4,8 @@
     "name": "Ana Silva",
     "division": "eci",
     "className": "1A",
-    "teamId": "time-1a-futsal",
-    "sports": ["sport-futsal"],
+    "teamId": "time-1a-futebol",
+    "sports": ["sport-futebol"],
     "status": "ativo",
     "photoUrl": "/images/athletes/placeholder-athlete.svg"
   },
@@ -14,8 +14,9 @@
     "name": "Lucas Almeida",
     "division": "eci",
     "className": "1A",
-    "teamId": "time-1a-futsal",
-    "sports": ["sport-futsal", "sport-xadrez"],
+    "teamId": "time-1a-futebol",
+    "sports": ["sport-futebol", "sport-xadrez"],
+    "status": "ativo",
     "photoUrl": "/images/athletes/placeholder-athlete.svg"
   },
   {
@@ -25,7 +26,8 @@
     "className": "3A",
     "teamId": "time-3a-xadrez",
     "sports": ["sport-xadrez"],
-    "status": "ativo"
+    "status": "ativo",
+    "photoUrl": "/images/athletes/placeholder-athlete.svg"
   },
   {
     "id": "atleta-bruno-costa",
@@ -42,16 +44,18 @@
     "name": "Carla Mendes",
     "division": "ept",
     "className": "2INFO",
-    "teamId": "time-2info-volei",
-    "sports": ["sport-volei"]
+    "teamId": "time-2info-basquete",
+    "sports": ["sport-basquete"],
+    "status": "ativo",
+    "photoUrl": "/images/athletes/placeholder-athlete.svg"
   },
   {
     "id": "atleta-diego-santos",
     "name": "Diego Santos",
     "division": "ept",
     "className": "1LOG",
-    "teamId": "time-1log-handebol",
-    "sports": ["sport-handebol"],
+    "teamId": "time-1log-tenis",
+    "sports": ["sport-tenis"],
     "status": "ativo",
     "photoUrl": "/images/athletes/placeholder-athlete.svg"
   }

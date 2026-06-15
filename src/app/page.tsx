@@ -32,14 +32,14 @@ const accessCards = [
     href: "/eci",
     eyebrow: "Divisão",
     title: "ECI",
-    description: "Atletas, times e modalidades.",
+    description: "Times e modalidades.",
     accent: "blue",
   },
   {
     href: "/ept",
     eyebrow: "Divisão",
     title: "EPT",
-    description: "Base da divisão técnica.",
+    description: "Atletas, times e modalidades.",
     accent: "orange",
   },
   {

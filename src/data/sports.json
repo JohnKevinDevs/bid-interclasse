@@ -1,9 +1,17 @@
 [
   {
-    "id": "sport-futsal",
-    "name": "Futsal",
+    "id": "sport-futebol",
+    "name": "Futebol",
     "division": "ambos",
-    "description": "Modalidade coletiva de alta intensidade, com equipes representando suas turmas em disputas rápidas.",
+    "description": "Modalidade coletiva de disputa direta, com equipes representando suas turmas em jogos de alta intensidade.",
+    "imageUrl": "/images/sports/placeholder-sport.svg",
+    "category": "coletivo"
+  },
+  {
+    "id": "sport-basquete",
+    "name": "Basquete",
+    "division": "ambos",
+    "description": "Modalidade coletiva com ritmo rápido, pontuação constante e decisões em equipe.",
     "imageUrl": "/images/sports/placeholder-sport.svg",
     "category": "coletivo"
   },
@@ -16,19 +24,19 @@
     "category": "coletivo"
   },
   {
-    "id": "sport-xadrez",
-    "name": "Xadrez",
-    "division": "eci",
-    "description": "Modalidade individual de estratégia, concentração e tomada de decisão.",
+    "id": "sport-tenis",
+    "name": "Tênis",
+    "division": "ambos",
+    "description": "Modalidade individual de precisão, resistência e tomada de decisão em cada ponto.",
     "imageUrl": "/images/sports/placeholder-sport.svg",
     "category": "individual"
   },
   {
-    "id": "sport-handebol",
-    "name": "Handebol",
-    "division": "ept",
-    "description": "Modalidade coletiva de movimentação intensa, transição rápida e finalização.",
+    "id": "sport-xadrez",
+    "name": "Xadrez",
+    "division": "ambos",
+    "description": "Modalidade individual de estratégia, concentração e leitura de jogo.",
     "imageUrl": "/images/sports/placeholder-sport.svg",
-    "category": "coletivo"
+    "category": "individual"
   }
 ]

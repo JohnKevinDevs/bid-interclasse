@@ -45,8 +45,11 @@ Campos minimos esperados dos formularios:
 - `name`
 - `division`
 - `className`
+- `course`, quando existir
 - `sports`
 - `photoUrl`, quando houver foto aprovada
+
+Observacao: atletas ECI podem existir no JSON para formar elencos e vinculos de times, mas nao existe pagina publica `/eci/atletas`. A listagem publica de atletas fica apenas em `/ept/atletas`.
 
 ## Team
 
@@ -100,6 +103,14 @@ Campos opcionais ativos:
 
 As modalidades continuam controladas manualmente pela FAC e servem como base para mapear respostas de atletas e times.
 
+Modalidades oficiais atuais:
+
+- `sport-futebol`: Futebol
+- `sport-basquete`: Basquete
+- `sport-volei`: Vôlei
+- `sport-tenis`: Tênis
+- `sport-xadrez`: Xadrez
+
 ## Regulation
 
 ```ts
@@ -144,6 +155,8 @@ Atletas devem funcionar apenas com:
 - modalidades
 - foto ou placeholder
 
+No frontend publico, atletas sao exibidos apenas para EPT. ECI usa atletas apenas como dado de apoio para compor times, quando necessario.
+
 Times devem funcionar apenas com:
 
 - divisao
@@ -158,6 +171,15 @@ Modalidades devem funcionar apenas com:
 - divisao
 
 Campos como descricao, foto, cor, bio, posicao, time confirmado e imagem sao complementares. A interface nao deve depender deles para parecer completa.
+
+## Importacao Manual
+
+Os dados reais chegam por exportacao manual do Google Forms/Sheets em CSV.
+
+- CSVs brutos entram em `imports/raw/`, pasta ignorada pelo Git.
+- Imagens aprovadas entram em `public/images/athletes/`, `public/images/teams/` e `public/images/sports/`.
+- A conversao local roda com `npm.cmd run convert:forms`.
+- A validacao local roda com `npm.cmd run validate:data`.
 
 ## Validacao Local
 

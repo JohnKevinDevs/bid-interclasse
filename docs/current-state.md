@@ -118,7 +118,7 @@ Status: concluida.
 Escopo da fase:
 
 - Reformulacao da pagina de regulamentos com hero institucional, agrupamento por ECI, EPT e ambos, cards de documento e badges de status.
-- Criacao de orientacoes para consulta dos regulamentos e aviso institucional sobre prevalencia do documento oficial.
+- Criacao de orientacoes para consulta dos regulamentos em formato institucional.
 - Reformulacao da pagina Sobre com narrativa mais forte sobre Interclasse CEAP, FAC, papel do BID e valores do projeto.
 - Criacao dos componentes reutilizaveis `RegulationCard`, `RegulationStatusBadge`, `InstitutionalBlock` e `ValueCard`.
 - Ajustes pontuais de texto na Home para reforcar FAC, Interclasse, transparencia e consulta publica.
@@ -181,7 +181,11 @@ Situacao para publicacao:
 - A Sprint 5 concluiu o QA visual do frontend basico premium em todas as rotas principais, incluindo mobile, tablet, desktop, menu mobile, sitemap, robots e manifest.
 - Os mocks locais foram ajustados para simular melhor os dados reais dos formularios, com atletas e times usando campos minimos e fallbacks visuais.
 - Foi criada documentacao de mapeamento Forms -> JSON e validacao local de consistencia dos dados, sem integracao com Google API.
+- A estrutura publica foi ajustada para o uso real: ECI exibe apenas Times e Modalidades, enquanto EPT mantem Atletas, Times e Modalidades.
+- As modalidades oficiais foram consolidadas como Futebol, Basquete, Vôlei, Tênis e Xadrez.
+- A pagina de Regulamentos passou a apresentar descricao do esporte e resumo das regras diretamente no BID, sem depender de download externo.
+- Foi criado o fluxo local `convert:forms` para converter CSVs exportados manualmente do Google Forms em JSON local, usando `imports/raw/` como area ignorada pelo Git.
 
 ## Proxima Fase Planejada
 
-Converter exportacoes dos formularios para JSON local, revisar dados reais e gerar deploy/preview publico na Vercel.
+Receber as exportacoes reais dos formularios, rodar `npm.cmd run convert:forms`, validar os dados e gerar deploy/preview publico na Vercel.

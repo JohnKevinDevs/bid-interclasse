@@ -38,8 +38,9 @@ Arquivos auditados:
 Resumo atual:
 
 - Atletas cadastrados: 6.
-- Times cadastrados: 4.
-- Modalidades cadastradas: 4.
+- Times cadastrados: 5.
+- Modalidades cadastradas: 5.
+- Modalidades oficiais atuais: Futebol, Basquete, Vôlei, Tênis e Xadrez.
 - Regulamentos cadastrados: 7.
 - Problemas de vinculo entre IDs: nenhum encontrado.
 
@@ -55,6 +56,7 @@ Atletas:
 - Confirmar modalidades vinculadas.
 - Confirmar foto ou manter placeholder aprovado.
 - Confirmar time vinculado, se ja houver dados de times.
+- Lembrar que atletas ECI nao possuem pagina publica propria; ECI aparece por times e modalidades.
 
 Times:
 
@@ -67,8 +69,8 @@ Times:
 
 Modalidades:
 
-- Confirmar lista final de modalidades oficiais.
-- Confirmar se cada modalidade e exclusiva de ECI, EPT ou de ambos.
+- Confirmar lista final de modalidades oficiais: Futebol, Basquete, Vôlei, Tênis e Xadrez.
+- Confirmar se cada modalidade permanece valida para ECI e EPT.
 - Confirmar categoria: `coletivo`, `individual` ou outra categoria oficial.
 - Revisar descricoes para refletir a comunicacao oficial do evento.
 
@@ -77,8 +79,8 @@ Modalidades:
 Atualmente todos os registros usam placeholders:
 
 - 6 atletas com `/images/athletes/placeholder-athlete.svg`.
-- 4 times com `/images/teams/placeholder-team.svg`.
-- 4 modalidades com `/images/sports/placeholder-sport.svg`.
+- 5 times com `/images/teams/placeholder-team.svg`.
+- 5 modalidades com `/images/sports/placeholder-sport.svg`.
 
 Antes de publicar, decidir uma das abordagens:
 
@@ -105,8 +107,8 @@ Pendencias:
 
 - Revisar se os resumos em `content` e `description` estao aprovados para publicacao.
 - Confirmar se o regulamento geral do Interclasse CEAP 2026 esta completo.
-- Confirmar se os regulamentos de Basquete 3x3, FUT7 ECI, FUT7 EPT, Tenis, Volei e Xadrez estao na versao final.
-- Garantir que o documento oficial prevaleca sobre qualquer resumo publicado no portal.
+- Confirmar se os regulamentos de Futebol ECI, Futebol EPT, Basquete, Vôlei, Tênis e Xadrez estao na versao final.
+- Confirmar se os resumos publicados no BID ja contem o necessario para consulta publica.
 
 ## Textos Pendentes
 
@@ -134,7 +136,6 @@ Criterio:
 - Conferir `/`.
 - Conferir `/eci`.
 - Conferir `/ept`.
-- Conferir `/eci/atletas`.
 - Conferir `/eci/times`.
 - Conferir `/eci/modalidades`.
 - Conferir `/ept/atletas`.
