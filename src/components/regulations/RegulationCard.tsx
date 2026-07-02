@@ -18,7 +18,7 @@ export function RegulationCard({
   const cardCode = code ?? getRegulationCode(sportName);
 
   return (
-    <article className="group overflow-hidden rounded-lg border border-line bg-surface shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/5">
+    <article className="group overflow-hidden rounded-xl border border-line bg-surface shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-lg hover:shadow-navy/5">
       <div className={`h-1 ${accentClassName}`} />
       <div className="grid gap-4 p-5">
         <div className="flex items-start justify-between gap-4">

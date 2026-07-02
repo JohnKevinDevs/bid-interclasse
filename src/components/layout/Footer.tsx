@@ -4,8 +4,12 @@ import { Container } from "@/components/layout/Container";
 export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-navy text-white">
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(45,168,255,.10),transparent_38%),linear-gradient(150deg,transparent_0,transparent_62%,rgba(245,157,26,.12)_62%,transparent_78%)]" />
-      <Container className="relative grid gap-6 py-8 text-sm sm:grid-cols-[1fr_auto] sm:items-end">
+      <span
+        className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-blue-light to-accent"
+        aria-hidden="true"
+      />
+      <div className="bid-pattern absolute inset-0" />
+      <Container className="relative grid gap-6 py-10 text-sm sm:grid-cols-[1fr_auto] sm:items-end">
         <div className="flex items-start gap-4">
           <span className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white/10 ring-1 ring-white/15">
             <Image

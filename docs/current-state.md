@@ -185,6 +185,7 @@ Situacao para publicacao:
 - As modalidades oficiais foram consolidadas como Futebol, Basquete, Vôlei, Tênis e Xadrez.
 - A pagina de Regulamentos passou a apresentar descricao do esporte e resumo das regras diretamente no BID, sem depender de download externo.
 - Foi criado o fluxo local `convert:forms` para converter CSVs exportados manualmente do Google Forms em JSON local, usando `imports/raw/` como area ignorada pelo Git.
+- Foi realizado um refinamento visual/redesign final sem mudanca de arquitetura, escopo ou schema: fonte de display `Oswald`, padrao institucional unico `.bid-pattern`, cards em `rounded-xl`, faixa de modalidades na Home, menu mobile com backdrop/scroll lock/Escape/estado ativo e melhorias de base (touch-action, tap highlight, reduced-motion). ECI segue sem pagina publica de atletas e `/eci/atletas` continua fora dos links e do sitemap.
 
 ## Proxima Fase Planejada
 

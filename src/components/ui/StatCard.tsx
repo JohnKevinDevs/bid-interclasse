@@ -8,9 +8,9 @@ interface StatCardProps {
 export function StatCard({ label, value, description, dark = false }: StatCardProps) {
   return (
     <div
-      className={`rounded-lg border p-4 shadow-sm sm:p-5 ${
+      className={`rounded-xl border p-4 shadow-sm sm:p-5 ${
         dark
-          ? "border-white/15 bg-white/10 text-white"
+          ? "border-white/15 bg-white/[0.07] text-white"
           : "border-line bg-surface text-ink"
       }`}
     >

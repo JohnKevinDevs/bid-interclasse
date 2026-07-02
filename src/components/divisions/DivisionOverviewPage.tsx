@@ -92,9 +92,9 @@ export function DivisionOverviewPage({
           </div>
           <Link
             href={showAthletes ? `/${division}/atletas` : `/${division}/times`}
-            className="inline-flex min-h-11 w-fit items-center rounded-lg border border-line bg-white px-4 py-2 text-xs font-bold uppercase text-ink transition hover:border-primary/30 hover:bg-primary hover:text-white"
+            className="inline-flex min-h-11 w-fit items-center gap-1 rounded-lg border border-line bg-white px-4 py-2 text-xs font-bold uppercase text-ink transition hover:border-primary/30 hover:bg-primary hover:text-white focus-visible:outline-blue-light"
           >
-            Ver tudo -&gt;
+            Ver tudo <span aria-hidden="true">→</span>
           </Link>
         </div>
 
@@ -191,7 +191,7 @@ function AthletePreviewCard({
   const initials = getInitials(athlete.name);
 
   return (
-    <article className="overflow-hidden rounded-lg border border-line bg-surface shadow-sm">
+    <article className="overflow-hidden rounded-xl border border-line bg-surface shadow-sm">
       <div className={`relative min-h-48 bg-gradient-to-br ${panelClassName} p-4 text-white`}>
         <p className="bid-display text-xl leading-none">07</p>
         <div className="grid min-h-28 place-items-center">
@@ -241,7 +241,7 @@ function TeamPreviewCard({
   const sports = getSportNamesByIds(team.sportIds);
 
   return (
-    <article className="overflow-hidden rounded-lg border border-line bg-surface shadow-sm">
+    <article className="overflow-hidden rounded-xl border border-line bg-surface shadow-sm">
       <div className={`min-h-32 bg-gradient-to-br ${panelClassName} p-4 text-white`}>
         <p className="bid-kicker rounded-lg border border-white/20 bg-white/10 px-3 py-2">
           {divisionLabel}
@@ -282,7 +282,7 @@ function SportPreviewCard({
   accentTextClassName: string;
 }) {
   return (
-    <article className="overflow-hidden rounded-lg border border-line bg-surface shadow-sm">
+    <article className="overflow-hidden rounded-xl border border-line bg-surface shadow-sm">
       <div className={`grid min-h-32 place-items-center bg-gradient-to-br ${panelClassName} p-4 text-white`}>
         <p className="bid-display text-5xl leading-none">{sport.name}</p>
       </div>
@@ -320,7 +320,7 @@ function MiniMetric({ label, value }: { label: string; value: number }) {
 
 function EmptyPreview({ title, text }: { title: string; text: string }) {
   return (
-    <article className="rounded-lg border border-dashed border-line bg-surface p-5">
+    <article className="rounded-xl border border-dashed border-line bg-surface p-5">
       <p className="bid-kicker text-slate-500">{title}</p>
       <p className="mt-3 text-sm text-slate-600">{text}</p>
     </article>

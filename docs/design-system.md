@@ -48,7 +48,8 @@ Diretrizes:
 
 - Titulo, numeros e rotulos usam hierarquia condensada, forte e uppercase.
 - Corpo de texto permanece limpo, legivel e direto.
-- Sem dependencia nova de fonte nesta etapa; a aparencia condensada e simulada com fallback seguro.
+- A familia de display usa a fonte condensada `Oswald`, carregada via `next/font/google` (sem dependencia npm nova), exposta em `--font-oswald` e aplicada na classe `.bid-display`, com fallback para Impact/Arial Narrow.
+- O corpo continua com `Geist`.
 
 ## Fundacao Visual Aplicada
 
@@ -63,6 +64,16 @@ Diretrizes:
 - Estados vazios e contadores de zero registros devem parecer informativos, nao erro visual.
 - Paginas institucionais devem ser curtas e escaneaveis: Regulamentos como area oficial de documentos; Sobre como sintese de Interclasse, FAC e BID.
 - Navegacao e CTAs devem manter area de toque confortavel, com alvo minimo proximo de 44px sempre que possivel.
+
+## Refinamento Visual Final
+
+- Fonte de display `Oswald` para reforcar a cara de BID esportivo oficial, mantendo `Geist` no corpo.
+- Padrao institucional unico `.bid-pattern` reaproveitado em heros, footer, menu mobile e faixas navy, no lugar de gradientes inline duplicados.
+- Raio de cards padronizado em `rounded-xl` e faixas de acento (barras coloridas) reforcando identidade por divisao (azul ECI, laranja EPT).
+- Home com faixa de modalidades oficiais para dar ritmo e reduzir sensacao generica, alem de barra de acento no rodape do hero.
+- Menu mobile com backdrop, bloqueio de scroll, fechamento por Escape, estado ativo por rota e botao de fechar acessivel.
+- Base global com `touch-action: manipulation`, tap highlight intencional e suporte a `prefers-reduced-motion`.
+- Setas textuais padronizadas para `→` e microtexto com pontuacao adequada.
 
 ## Evitar
 

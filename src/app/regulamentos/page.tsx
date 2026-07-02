@@ -87,7 +87,7 @@ export default function RegulamentosPage() {
       </PageHero>
 
       <Container className="py-8 sm:py-10">
-        <section className="mb-6 flex flex-col gap-4 rounded-lg border border-line bg-surface p-5 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+        <section className="mb-6 flex flex-col gap-4 rounded-xl border border-line bg-surface p-5 shadow-sm sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="bid-kicker text-primary">Consulta por aplicação</p>
             <h2 className="bid-display mt-2 text-4xl leading-none text-ink">
@@ -108,7 +108,7 @@ export default function RegulamentosPage() {
             return (
               <section
                 key={group.division}
-                className={`overflow-hidden rounded-lg border shadow-sm ${group.sectionClassName}`}
+                className={`overflow-hidden rounded-xl border shadow-sm ${group.sectionClassName}`}
               >
                 <div className={`h-1 ${group.accentClassName}`} />
                 <div className="p-5 sm:p-6">

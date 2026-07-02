@@ -11,7 +11,7 @@ interface PageHeroProps {
 export function PageHero({ eyebrow, title, description, children }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-navy bg-navy text-white">
-      <div className="absolute inset-0 bg-[linear-gradient(118deg,rgba(45,168,255,.16),transparent_42%),linear-gradient(105deg,transparent_0,transparent_55%,rgba(0,102,255,.16)_55%,transparent_75%),repeating-linear-gradient(115deg,rgba(255,255,255,.045)_0,rgba(255,255,255,.045)_1px,transparent_1px,transparent_36px)]" />
+      <div className="bid-pattern absolute inset-0" />
       <div className="absolute inset-x-0 bottom-0 h-px bg-white/10" />
       <Container className="relative py-12 sm:py-16 lg:py-20">
         <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(320px,0.7fr)] lg:items-center">

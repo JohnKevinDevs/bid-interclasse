@@ -67,10 +67,11 @@ export default function SobrePage() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="relative overflow-hidden rounded-lg border border-line bg-surface p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/5"
+              className="relative overflow-hidden rounded-xl border border-line bg-surface p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-lg hover:shadow-navy/5"
             >
               <span
                 className={`absolute inset-x-0 top-0 h-1 ${pillar.accentClassName}`}
+                aria-hidden="true"
               />
               <p className="bid-kicker text-primary">{pillar.eyebrow}</p>
               <h2 className="bid-display mt-3 text-4xl leading-none text-ink">
@@ -83,14 +84,14 @@ export default function SobrePage() {
           ))}
         </section>
 
-        <section className="mt-6 overflow-hidden rounded-lg bg-navy text-white shadow-sm">
-          <div className="bg-[linear-gradient(118deg,rgba(45,168,255,.16),transparent_42%),linear-gradient(105deg,transparent_0,transparent_62%,rgba(245,157,26,.12)_62%,transparent_78%),repeating-linear-gradient(115deg,rgba(255,255,255,.045)_0,rgba(255,255,255,.045)_1px,transparent_1px,transparent_36px)] p-6 sm:p-7">
+        <section className="relative mt-6 overflow-hidden rounded-xl bg-navy text-white shadow-sm">
+          <div className="bid-pattern relative p-6 sm:p-7">
             <p className="bid-kicker text-accent">Valores do projeto</p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
               {values.map((value) => (
                 <span
                   key={value}
-                  className="bid-kicker rounded-lg border border-white/15 bg-white/10 px-4 py-4 text-center text-white"
+                  className="bid-kicker rounded-lg border border-white/15 bg-white/[0.06] px-4 py-4 text-center text-white"
                 >
                   {value}
                 </span>
@@ -99,7 +100,7 @@ export default function SobrePage() {
           </div>
         </section>
 
-        <section className="mt-6 rounded-lg border border-line bg-surface p-5 shadow-sm">
+        <section className="mt-6 rounded-xl border border-line bg-surface p-5 shadow-sm">
           <p className="bid-kicker text-primary">Em poucas palavras</p>
           <h2 className="bid-display mt-2 text-3xl leading-none text-ink">
             Consulta pública, organização e memória esportiva do CEAP.

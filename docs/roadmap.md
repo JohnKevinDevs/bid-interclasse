@@ -22,6 +22,7 @@
   - Sprint 5: QA visual final, mobile, breakpoints, acessibilidade basica e preparacao para dados reais. Status: concluida.
 - Preparacao de dados reais via Forms exportado para JSON local. Status: concluida.
 - Adequacao funcional para dados reais: ECI sem pagina publica de atletas, modalidades oficiais e regulamentos consultaveis no BID. Status: concluida.
+- Refinamento visual/redesign final do BID (fonte de display, padrao institucional unico, cards, Home, menu mobile e base de acessibilidade), sem mudanca de arquitetura ou escopo. Status: concluida.
 - Fase 12: Conversao final dos dados reais, deploy Vercel e validacao publica. Status: planejada.
 
 ## Nova Frente De Reformulacao
