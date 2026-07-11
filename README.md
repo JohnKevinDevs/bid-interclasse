@@ -8,6 +8,10 @@ The project was designed to centralize scattered information in a cleaner, more 
 
 https://bid-interclasse.vercel.app
 
+## Screenshot
+
+![BID Interclasse CEAP home screen](docs/assets/screenshots/home.png)
+
 ## Overview
 
 | Area | Description |
