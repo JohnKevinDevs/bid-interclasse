@@ -8,9 +8,15 @@ The project was designed to centralize scattered information in a cleaner, more 
 
 https://bid-interclasse.vercel.app
 
-## Screenshot
+## Screenshots
 
-![BID Interclasse CEAP home screen](docs/assets/screenshots/home.png)
+| Home | Divisao ECI |
+| --- | --- |
+| ![BID Interclasse CEAP home screen](docs/assets/screenshots/home.png) | ![BID Interclasse ECI screen](docs/assets/screenshots/eci.png) |
+
+| Regulamentos | Sobre |
+| --- | --- |
+| ![BID Interclasse regulations screen](docs/assets/screenshots/regulamentos.png) | ![BID Interclasse about screen](docs/assets/screenshots/sobre.png) |
 
 ## Overview
 
