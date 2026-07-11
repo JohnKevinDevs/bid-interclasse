@@ -8,9 +8,9 @@ The project was designed to centralize scattered information in a cleaner, more 
 
 https://bid-interclasse.vercel.app
 
-## Screenshots
+## Capturas de tela
 
-| Home | Divisao ECI |
+| Home | Divisão ECI |
 | --- | --- |
 | ![BID Interclasse CEAP home screen](docs/assets/screenshots/home.png) | ![BID Interclasse ECI screen](docs/assets/screenshots/eci.png) |
 
@@ -20,7 +20,7 @@ https://bid-interclasse.vercel.app
 
 ## Overview
 
-| Area | Description |
+| Área | Description |
 | --- | --- |
 | Problem | Interclasse information can become scattered across messages, spreadsheets, posters, and informal communication. |
 | Solution | A public portal that organizes athletes, teams, sports, rules, institutional content, and event information. |
