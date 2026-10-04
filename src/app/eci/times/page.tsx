@@ -6,7 +6,6 @@ import { ListHeader } from "@/components/ui/ListHeader";
 import { PageHero } from "@/components/ui/PageHero";
 import { StatCard } from "@/components/ui/StatCard";
 import {
-  getAthleteNamesByIds,
   getSportNamesByIds,
   getTeamsByDivision,
 } from "@/lib/data";
@@ -15,6 +14,8 @@ import { sharedOpenGraph } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Times ECI",
   description: "Times cadastrados na divisão ECI do Interclasse CEAP, com modalidades de cada equipe.",
+  // Lista nomes de alunos: fica fora dos buscadores.
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "/eci/times",
   },
@@ -48,7 +49,7 @@ export default function EciTimesPage() {
         <ListHeader
           eyebrow="Consulta"
           title="Times ECI"
-          description="Equipes por turma, modalidades e elenco vinculado."
+          description="Equipes por turma e modalidades. Os nomes dos atletas da ECI não são divulgados."
           meta={`${divisionTeams.length} times`}
         />
 
@@ -59,7 +60,6 @@ export default function EciTimesPage() {
                 key={team.id}
                 team={team}
                 divisionLabel="ECI"
-                athleteNames={getAthleteNamesByIds(team.athleteIds)}
                 sportNames={getSportNamesByIds(team.sportIds)}
               />
             ))

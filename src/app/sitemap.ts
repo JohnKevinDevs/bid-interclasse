@@ -1,14 +1,12 @@
 import type { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/seo";
 
+// Páginas que listam nomes de alunos ficam de fora (noindex).
 const routes = [
   "",
   "/eci",
-  "/eci/times",
   "/eci/modalidades",
   "/ept",
-  "/ept/atletas",
-  "/ept/times",
   "/ept/modalidades",
   "/regulamentos",
   "/sobre",

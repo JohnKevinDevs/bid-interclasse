@@ -15,6 +15,8 @@ import { sharedOpenGraph } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Atletas EPT",
   description: "Atletas cadastrados na divisão EPT do Interclasse CEAP.",
+  // Lista nomes de alunos: fica fora dos buscadores.
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "/ept/atletas",
   },

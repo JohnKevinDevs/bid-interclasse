@@ -5,7 +5,8 @@ import type { Team } from "@/types/interclasse";
 
 interface TeamCardProps {
   team: Team;
-  athleteNames: string[];
+  /** Nomes do elenco. Não passe para a ECI: lá os atletas são menores e os nomes não são públicos. */
+  athleteNames?: string[];
   sportNames: string[];
   divisionLabel: string;
 }
@@ -19,7 +20,7 @@ export function TeamCard({
   const primarySport = sportNames[0] ?? "Modalidade";
   const displayName = team.name?.trim() || `${divisionLabel} - ${primarySport}`;
   const teamColor = team.color;
-  const rosterPreview = athleteNames.slice(0, 3);
+  const rosterPreview = athleteNames?.slice(0, 3) ?? [];
 
   return (
     <Card className="grid h-full overflow-hidden p-0">
@@ -78,10 +79,12 @@ export function TeamCard({
           <div className="min-w-0">
             <p className="bid-kicker text-slate-500">Elenco</p>
             <p className="mt-2 text-sm leading-5 text-slate-600">
-              {rosterPreview.length > 0
-                ? rosterPreview.join(", ")
-                : "Sem atletas vinculados"}
-              {athleteNames.length > rosterPreview.length
+              {athleteNames === undefined
+                ? "Nomes não divulgados nesta divisão."
+                : rosterPreview.length > 0
+                  ? rosterPreview.join(", ")
+                  : "Sem atletas vinculados"}
+              {athleteNames && athleteNames.length > rosterPreview.length
                 ? ` +${athleteNames.length - rosterPreview.length}`
                 : ""}
             </p>

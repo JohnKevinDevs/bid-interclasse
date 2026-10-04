@@ -15,6 +15,8 @@ import { sharedOpenGraph } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Times EPT",
   description: "Times cadastrados na divisão EPT do Interclasse CEAP, com modalidades e elenco.",
+  // Lista nomes de alunos: fica fora dos buscadores.
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "/ept/times",
   },
