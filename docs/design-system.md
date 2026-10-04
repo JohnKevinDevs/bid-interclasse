@@ -56,7 +56,7 @@ Diretrizes:
 - Tokens globais atualizados para a nova paleta.
 - Header com marca FAC/Interclasse mais presente e navegacao com estado ativo.
 - Menu mobile em painel navy, com itens grandes, CTA largo e area de toque confortavel.
-- Footer institucional com assinatura: "Uma escola. Grandes talentos. Um legado."
+- Footer institucional com o slogan: "Uma escola. Grandes talentos. Um legado." (a assinatura institucional e "CEAP alem da sala. FAC alem do esporte."; nunca os dois com o mesmo peso no mesmo bloco)
 - PageHero e DivisionHero preparados com fundo navy, linhas diagonais sutis e titulos mais fortes.
 - Home com numeros integrados ao hero, CTAs diretos e quatro cards de acesso com presenca de portal oficial.
 - Centrais ECI/EPT com destaque por cor, estatisticas no hero, previa real da divisao e atalhos principais.

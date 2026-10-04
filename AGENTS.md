@@ -14,7 +14,7 @@ Objetivo: portal publico institucional do Interclasse CEAP/FAC para exibicao de 
 - TypeScript
 - Tailwind CSS
 - Dados locais em JSON
-- Deploy futuro na Vercel
+- Deploy na Vercel: https://bid-interclasse.vercel.app (push em `main` publica; so com ok do John)
 
 ## Restricoes Permanentes
 

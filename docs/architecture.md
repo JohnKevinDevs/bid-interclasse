@@ -8,7 +8,7 @@
 - A tipagem central fica em `src/types/`.
 - Funcoes de leitura, formatacao e filtros simples ficam em `src/lib/`.
 - Componentes reutilizaveis ficam em `src/components/`.
-- O deploy futuro sera feito na Vercel.
+- O deploy e feito na Vercel (https://bid-interclasse.vercel.app). Push em `main` publica.
 
 ## Fora Da Arquitetura Atual
 

@@ -14,7 +14,7 @@
 - Fase 10: SEO, metadata e preparacao para deploy. Status: concluida.
 - Fase 11: revisao final com dados reais e preparacao de publicacao. Status: concluida.
 - Polimento frontend basico premium. Status: concluido.
-- Redesign basico premium por sprints. Status: em andamento.
+- Redesign basico premium por sprints. Status: concluido.
   - Sprint 1: fundacao visual global, tokens, header, menu mobile, footer e heros. Status: concluida.
   - Sprint 2: Home e centrais ECI/EPT com entrada oficial, numeros integrados, cards de acesso e previews reais. Status: concluida.
   - Sprint 3: listagens de atletas, times e modalidades com cards resilientes aos dados reais dos formularios. Status: concluida.
@@ -23,7 +23,7 @@
 - Preparacao de dados reais via Forms exportado para JSON local. Status: concluida.
 - Adequacao funcional para dados reais: ECI sem pagina publica de atletas, modalidades oficiais e regulamentos consultaveis no BID. Status: concluida.
 - Refinamento visual/redesign final do BID (fonte de display, padrao institucional unico, cards, Home, menu mobile e base de acessibilidade), sem mudanca de arquitetura ou escopo. Status: concluida.
-- Fase 12: Conversao final dos dados reais, deploy Vercel e validacao publica. Status: planejada.
+- Fase 12: Conversao final dos dados reais, deploy Vercel e validacao publica. Status: em andamento (deploy feito; dados reais, imagens autorizadas e `NEXT_PUBLIC_SITE_URL` na Vercel pendentes).
 
 ## Nova Frente De Reformulacao
 

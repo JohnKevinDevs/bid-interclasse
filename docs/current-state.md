@@ -164,8 +164,8 @@ Escopo da fase:
 
 Situacao para publicacao:
 
-- O projeto esta tecnicamente pronto para deploy.
-- A publicacao oficial ainda depende de dados reais, imagens autorizadas e revisao final dos regulamentos pendentes.
+- O site esta publicado em https://bid-interclasse.vercel.app.
+- Ainda depende de dados reais, imagens autorizadas, revisao final dos regulamentos e da variavel `NEXT_PUBLIC_SITE_URL` configurada na Vercel.
 
 ## Refinamentos Recentes
 
@@ -187,6 +187,17 @@ Situacao para publicacao:
 - Foi criado o fluxo local `convert:forms` para converter CSVs exportados manualmente do Google Forms em JSON local, usando `imports/raw/` como area ignorada pelo Git.
 - Foi realizado um refinamento visual/redesign final sem mudanca de arquitetura, escopo ou schema: fonte de display `Oswald`, padrao institucional unico `.bid-pattern`, cards em `rounded-xl`, faixa de modalidades na Home, menu mobile com backdrop/scroll lock/Escape/estado ativo e melhorias de base (touch-action, tap highlight, reduced-motion). ECI segue sem pagina publica de atletas e `/eci/atletas` continua fora dos links e do sitemap.
 
+## Revisao de 04/10/2026
+
+- Dominio do SEO corrigido para `bid-interclasse.vercel.app` (o fallback antigo dava 404); canonical, titulo e Open Graph proprios em todas as listagens.
+- Imagem de compartilhamento em PNG 1200x630 (SVG nao aparece em WhatsApp/Facebook/X) e icones com o escudo da FAC no lugar do favicon padrao do Next.
+- Menu mobile: overlay cobre a tela inteira, fecha ao trocar de rota e ao passar do breakpoint, e devolve o foco.
+- Iniciais dos cards, camisa "07" fixa, contraste do laranja sobre branco e acentos corrigidos.
+- Privacidade: `/eci/times` nao mostra nomes (atletas da ECI sao menores); paginas com nomes de alunos ficam com `noindex` e fora do sitemap.
+- Atletas e times ficticios removidos de `src/data` (o portal estava no ar com nomes inventados). Regulamento geral ancorado no documento real do evento.
+
+Pendentes desta revisao (precisam de decisao da FAC): fontes oficiais (Bebas Neue + Montserrat no lugar de Oswald/Geist), uso do laranja so como acento, formato de nome publico dos alunos e autorizacao de imagem, repositorio publico com dados de alunos, correcoes do `convert:forms` (duplicatas, homonimos, `teamId`, deteccao ECI/EPT) e validador mais rigoroso.
+
 ## Proxima Fase Planejada
 
-Receber as exportacoes reais dos formularios, rodar `npm.cmd run convert:forms`, validar os dados e gerar deploy/preview publico na Vercel.
+Configurar `NEXT_PUBLIC_SITE_URL` na Vercel, corrigir o `convert:forms`, receber as exportacoes reais dos formularios, converter, validar e publicar com ok do John.
