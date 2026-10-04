@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Oswald } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { ogImage, siteDescription, siteName, siteUrl } from "@/lib/seo";
+import { siteDescription, siteName, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,35 +44,19 @@ export const metadata: Metadata = {
   publisher: "FAC - Federação Atlética CEAP",
   applicationName: siteName,
   category: "sports",
-  alternates: {
-    canonical: "/",
-  },
+  // Canonical fica em cada página. Imagem de compartilhamento e ícones vêm dos arquivos
+  // opengraph-image.png, twitter-image.png, icon.png, apple-icon.png e favicon.ico em src/app.
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "/",
     siteName,
     title: siteName,
     description: siteDescription,
-    images: [
-      {
-        url: ogImage,
-        width: 1200,
-        height: 630,
-        alt: "BID Interclasse CEAP",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
-    images: [ogImage],
-  },
-  icons: {
-    icon: [{ url: "/images/brand/fac-logo-oficial.png", type: "image/png" }],
-    apple: [{ url: "/images/brand/fac-logo-oficial.png", type: "image/png" }],
-    shortcut: ["/images/brand/fac-logo-oficial.png"],
   },
 };
 

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { SportCard } from "@/components/sports/SportCard";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -10,6 +11,21 @@ import {
   getTeamCountForSport,
 } from "@/lib/data";
 import { formatDivisionLabel } from "@/lib/formatters";
+import { sharedOpenGraph } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Modalidades EPT",
+  description: "Modalidades disputadas pela divisão EPT no Interclasse CEAP.",
+  alternates: {
+    canonical: "/ept/modalidades",
+  },
+  openGraph: {
+    ...sharedOpenGraph,
+    title: "Modalidades EPT | BID Interclasse CEAP",
+    description: "Modalidades disputadas pela divisão EPT no Interclasse CEAP.",
+    url: "/ept/modalidades",
+  },
+};
 
 export default function EptModalidadesPage() {
   const divisionSports = getSportsByDivision("ept");

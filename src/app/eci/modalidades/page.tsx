@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { SportCard } from "@/components/sports/SportCard";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -10,6 +11,21 @@ import {
   getTeamCountForSport,
 } from "@/lib/data";
 import { formatDivisionLabel } from "@/lib/formatters";
+import { sharedOpenGraph } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Modalidades ECI",
+  description: "Modalidades disputadas pela divisão ECI no Interclasse CEAP.",
+  alternates: {
+    canonical: "/eci/modalidades",
+  },
+  openGraph: {
+    ...sharedOpenGraph,
+    title: "Modalidades ECI | BID Interclasse CEAP",
+    description: "Modalidades disputadas pela divisão ECI no Interclasse CEAP.",
+    url: "/eci/modalidades",
+  },
+};
 
 export default function EciModalidadesPage() {
   const divisionSports = getSportsByDivision("eci");

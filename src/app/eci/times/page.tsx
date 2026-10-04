@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { TeamCard } from "@/components/teams/TeamCard";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -9,6 +10,21 @@ import {
   getSportNamesByIds,
   getTeamsByDivision,
 } from "@/lib/data";
+import { sharedOpenGraph } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Times ECI",
+  description: "Times cadastrados na divisão ECI do Interclasse CEAP, com modalidades de cada equipe.",
+  alternates: {
+    canonical: "/eci/times",
+  },
+  openGraph: {
+    ...sharedOpenGraph,
+    title: "Times ECI | BID Interclasse CEAP",
+    description: "Times cadastrados na divisão ECI do Interclasse CEAP, com modalidades de cada equipe.",
+    url: "/eci/times",
+  },
+};
 
 export default function EciTimesPage() {
   const divisionTeams = getTeamsByDivision("eci");

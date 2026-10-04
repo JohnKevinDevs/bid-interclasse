@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { TeamCard } from "@/components/teams/TeamCard";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -9,6 +10,21 @@ import {
   getSportNamesByIds,
   getTeamsByDivision,
 } from "@/lib/data";
+import { sharedOpenGraph } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Times EPT",
+  description: "Times cadastrados na divisão EPT do Interclasse CEAP, com modalidades e elenco.",
+  alternates: {
+    canonical: "/ept/times",
+  },
+  openGraph: {
+    ...sharedOpenGraph,
+    title: "Times EPT | BID Interclasse CEAP",
+    description: "Times cadastrados na divisão EPT do Interclasse CEAP, com modalidades e elenco.",
+    url: "/ept/times",
+  },
+};
 
 export default function EptTimesPage() {
   const divisionTeams = getTeamsByDivision("ept");

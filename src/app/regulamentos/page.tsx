@@ -6,6 +6,7 @@ import { EmptyState } from "@/components/ui/EmptyState";
 import { PageHero } from "@/components/ui/PageHero";
 import { orderedRegulations } from "@/lib/data";
 import type { Regulation, SharedDivision } from "@/types/interclasse";
+import { sharedOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Regulamentos",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     canonical: "/regulamentos",
   },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Regulamentos | BID Interclasse CEAP",
     description:
       "Consulte modalidades, aplicações e regras principais do Interclasse CEAP.",

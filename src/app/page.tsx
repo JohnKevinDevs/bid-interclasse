@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { athletes, sports, teams } from "@/lib/data";
-import { ogImage, siteName } from "@/lib/seo";
+import { sharedOpenGraph, siteName } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: siteName,
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
+    ...sharedOpenGraph,
     title: siteName,
     description:
       "Consulte o BID Interclasse CEAP com atletas, equipes, modalidades e regulamentos oficiais.",
     url: "/",
-    images: [ogImage],
   },
 };
 

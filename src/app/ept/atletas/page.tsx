@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AthleteCard } from "@/components/athletes/AthleteCard";
 import { Container } from "@/components/layout/Container";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -9,6 +10,21 @@ import {
   getSportsForAthlete,
   getTeamById,
 } from "@/lib/data";
+import { sharedOpenGraph } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Atletas EPT",
+  description: "Atletas cadastrados na divisão EPT do Interclasse CEAP.",
+  alternates: {
+    canonical: "/ept/atletas",
+  },
+  openGraph: {
+    ...sharedOpenGraph,
+    title: "Atletas EPT | BID Interclasse CEAP",
+    description: "Atletas cadastrados na divisão EPT do Interclasse CEAP.",
+    url: "/ept/atletas",
+  },
+};
 
 export default function EptAtletasPage() {
   const divisionAthletes = getAthletesByDivision("ept");

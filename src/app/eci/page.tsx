@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DivisionOverviewPage } from "@/components/divisions/DivisionOverviewPage";
+import { sharedOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Interclasse ECI",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "/eci",
   },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Interclasse ECI | BID Interclasse CEAP",
     description:
       "Consulte equipes e modalidades da divisão ECI no portal oficial do Interclasse CEAP.",

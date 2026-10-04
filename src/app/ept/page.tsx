@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DivisionOverviewPage } from "@/components/divisions/DivisionOverviewPage";
+import { sharedOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Interclasse EPT",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "/ept",
   },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Interclasse EPT | BID Interclasse CEAP",
     description:
       "Consulte atletas, equipes e modalidades da divisão EPT no portal oficial do Interclasse CEAP.",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { PageHero } from "@/components/ui/PageHero";
+import { sharedOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Sobre",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     canonical: "/sobre",
   },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Sobre | BID Interclasse CEAP",
     description:
       "Entenda o BID Interclasse CEAP e sua relação com o Interclasse e a FAC.",
