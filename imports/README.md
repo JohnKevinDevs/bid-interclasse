@@ -21,3 +21,5 @@ npm.cmd run validate:data
 ```
 
 `imports/raw/` e ignorada pelo Git para evitar publicar dados brutos por acidente.
+
+O `convert:forms` termina com uma lista de avisos (respostas repetidas, homonimos, nomes do elenco que nao existem no formulario de atletas). Revise cada um antes de publicar: o conversor nao adivinha qual aluno e qual.

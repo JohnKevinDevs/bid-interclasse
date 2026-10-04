@@ -7,6 +7,9 @@ const athletesCsvPath = join(rawDir, "athletes.csv");
 const teamsCsvPath = join(rawDir, "teams.csv");
 const sportsPath = join(root, "src", "data", "sports.json");
 
+// Avisos que não param a conversão, mas precisam de revisão humana antes de publicar.
+const warnings = [];
+
 const officialSportAliases = new Map([
   ["futebol", "sport-futebol"],
   ["fut7", "sport-futebol"],
@@ -106,12 +109,23 @@ function getValue(row, aliases) {
 function parseDivision(value) {
   const normalized = normalize(value);
 
-  if (normalized === "eci" || normalized.includes("ensino medio")) {
-    return "eci";
+  // EPT primeiro: "EPT - Ensino Medio Tecnico" contem "ensino medio" e caia na ECI.
+  if (
+    normalized === "ept" ||
+    normalized.startsWith("ept ") ||
+    normalized.includes("tecnico") ||
+    normalized.includes("profissionalizante")
+  ) {
+    return "ept";
   }
 
-  if (normalized === "ept" || normalized.includes("tecnico")) {
-    return "ept";
+  if (
+    normalized === "eci" ||
+    normalized.startsWith("eci ") ||
+    normalized.includes("complementar") ||
+    normalized.includes("ensino medio")
+  ) {
+    return "eci";
   }
 
   throw new Error(`Divisao invalida: ${value}`);
@@ -178,8 +192,11 @@ function writeJson(path, value) {
 function convertAthletes() {
   const rows = readCsv(athletesCsvPath);
   const usedIds = new Set();
+  // Resposta repetida no Forms (mesmo nome e turma) vira um atleta so; as modalidades somam.
+  const byNameAndClass = new Map();
+  const athletes = [];
 
-  return rows.map((row) => {
+  for (const row of rows) {
     const name = getValue(row, ["Nome", "Nome completo", "Atleta"]);
     const division = parseDivision(getValue(row, ["Divisao", "Divisão"]));
     const className = getValue(row, ["Turma", "Sala"]);
@@ -195,7 +212,17 @@ function convertAthletes() {
       throw new Error(`Atleta com dados obrigatorios incompletos: ${name}`);
     }
 
-    return {
+    const key = `${normalize(name)}|${normalize(className)}`;
+    const existing = byNameAndClass.get(key);
+    if (existing) {
+      existing.sports = [...new Set([...existing.sports, ...sports])];
+      warnings.push(
+        `Resposta repetida de ${name} (${className}): mantido um cadastro, modalidades somadas.`,
+      );
+      continue;
+    }
+
+    const athlete = {
       id: uniqueId(`atleta-${slugify(name)}`, usedIds),
       name,
       division,
@@ -205,15 +232,22 @@ function convertAthletes() {
       status: "ativo",
       photoUrl,
     };
-  });
+    byNameAndClass.set(key, athlete);
+    athletes.push(athlete);
+  }
+
+  return athletes;
 }
 
 function convertTeams(athletes) {
   const rows = readCsv(teamsCsvPath);
   const usedIds = new Set();
-  const athleteIdsByName = new Map(
-    athletes.map((athlete) => [normalize(athlete.name), athlete.id]),
-  );
+  // Homonimos existem (mesmo nome em turmas diferentes): guardar todos os candidatos.
+  const athletesByName = new Map();
+  for (const athlete of athletes) {
+    const key = normalize(athlete.name);
+    athletesByName.set(key, [...(athletesByName.get(key) ?? []), athlete]);
+  }
 
   return rows.map((row) => {
     const division = parseDivision(getValue(row, ["Divisao", "Divisão"]));
@@ -225,9 +259,29 @@ function convertTeams(athletes) {
     ]);
     const course = getValue(row, ["Curso"]);
     const sportIds = parseSports(getValue(row, ["Modalidades", "Modalidade"]));
-    const athleteIds = parseList(getValue(row, ["Atletas do time", "Atletas"]))
-      .map((athleteName) => athleteIdsByName.get(normalize(athleteName)))
-      .filter(Boolean);
+    const athleteIds = [];
+    for (const athleteName of parseList(getValue(row, ["Atletas do time", "Atletas"]))) {
+      const candidates = (athletesByName.get(normalize(athleteName)) ?? []).filter(
+        (athlete) => athlete.division === division,
+      );
+      // Com homonimos, desempata pela turma quando o time leva o nome da turma.
+      const sameClass = candidates.filter(
+        (athlete) => normalize(athlete.className) === normalize(teamLabel),
+      );
+      const match = candidates.length === 1 ? candidates[0] : sameClass.length === 1 ? sameClass[0] : null;
+
+      if (match) {
+        athleteIds.push(match.id);
+      } else if (candidates.length === 0) {
+        warnings.push(
+          `Time ${teamLabel}: "${athleteName}" nao aparece no formulario de atletas da divisao ${division.toUpperCase()}; ficou fora do elenco.`,
+        );
+      } else {
+        warnings.push(
+          `Time ${teamLabel}: "${athleteName}" tem ${candidates.length} homonimos na divisao ${division.toUpperCase()}; ficou fora do elenco ate alguem decidir qual e.`,
+        );
+      }
+    }
     const imageUrl = imagePath(
       getValue(row, ["Imagem", "Foto", "Foto/Imagem"]),
       "teams",
@@ -271,6 +325,24 @@ if (!existsSync(athletesCsvPath) || !existsSync(teamsCsvPath)) {
 const athletes = convertAthletes();
 const teams = convertTeams(athletes);
 
+// teamId do atleta = primeiro time em que aparece (o modelo ainda guarda um time so).
+const teamsByAthlete = new Map();
+for (const team of teams) {
+  for (const athleteId of team.athleteIds) {
+    teamsByAthlete.set(athleteId, [...(teamsByAthlete.get(athleteId) ?? []), team.id]);
+  }
+}
+let multiTeam = 0;
+for (const athlete of athletes) {
+  const teamIds = teamsByAthlete.get(athlete.id) ?? [];
+  if (teamIds.length > 0) {
+    athlete.teamId = teamIds[0];
+  }
+  if (teamIds.length > 1) {
+    multiTeam += 1;
+  }
+}
+
 writeJson(join(root, "src", "data", "athletes.json"), athletes);
 writeJson(join(root, "src", "data", "teams.json"), teams);
 
@@ -280,8 +352,18 @@ console.log(
     {
       athletes: athletes.length,
       teams: teams.length,
+      athletesWithoutTeam: athletes.filter((athlete) => !athlete.teamId).length,
+      athletesInMoreThanOneTeam: multiTeam,
     },
     null,
     2,
   ),
 );
+
+if (warnings.length > 0) {
+  console.warn(`
+ATENCAO: ${warnings.length} aviso(s) para revisar antes de publicar:`);
+  for (const warning of warnings) {
+    console.warn(`- ${warning}`);
+  }
+}

@@ -196,8 +196,10 @@ Situacao para publicacao:
 - Privacidade: `/eci/times` nao mostra nomes (atletas da ECI sao menores); paginas com nomes de alunos ficam com `noindex` e fora do sitemap.
 - Atletas e times ficticios removidos de `src/data` (o portal estava no ar com nomes inventados). Regulamento geral ancorado no documento real do evento.
 
-Pendentes desta revisao (precisam de decisao da FAC): fontes oficiais (Bebas Neue + Montserrat no lugar de Oswald/Geist), uso do laranja so como acento, formato de nome publico dos alunos e autorizacao de imagem, repositorio publico com dados de alunos, correcoes do `convert:forms` (duplicatas, homonimos, `teamId`, deteccao ECI/EPT) e validador mais rigoroso.
+Pendentes desta revisao (precisam de decisao da FAC): fontes oficiais (Bebas Neue + Montserrat no lugar de Oswald/Geist), uso do laranja so como acento, formato de nome publico dos alunos e autorizacao de imagem, repositorio publico com dados de alunos, modelo de dados com `teamIds[]` (atleta em mais de um time) e validador mais rigoroso.
+
+- `convert:forms` corrigido: respostas repetidas (mesmo nome e turma) viram um cadastro com modalidades somadas; homonimos sao desempatados pela turma ou avisados; nomes do elenco que nao existem no formulario de atletas sao avisados em vez de sumir; `teamId` e preenchido com o primeiro time do atleta; "EPT - Ensino Medio Tecnico" nao cai mais na ECI. Os avisos saem no fim da conversao e precisam de revisao antes de publicar.
 
 ## Proxima Fase Planejada
 
-Configurar `NEXT_PUBLIC_SITE_URL` na Vercel, corrigir o `convert:forms`, receber as exportacoes reais dos formularios, converter, validar e publicar com ok do John.
+Configurar `NEXT_PUBLIC_SITE_URL` na Vercel, receber as exportacoes reais dos formularios, converter, revisar os avisos do `convert:forms`, validar e publicar com ok do John.
