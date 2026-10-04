@@ -61,7 +61,7 @@ const accessCards = [
 
 const cardAccent = {
   blue: { bar: "bg-primary", text: "text-primary" },
-  orange: { bar: "bg-accent", text: "text-accent" },
+  orange: { bar: "bg-accent", text: "text-[#7a4f00]" },
   neutral: { bar: "bg-navy", text: "text-slate-600" },
 };
 

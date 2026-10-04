@@ -41,7 +41,7 @@ export default function EciModalidadesPage() {
           dark
           label="Modalidades ECI"
           value={divisionSports.length}
-          description="Disponiveis para consulta."
+          description="Disponíveis para consulta."
         />
       </PageHero>
 

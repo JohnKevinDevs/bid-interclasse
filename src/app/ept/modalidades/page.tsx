@@ -41,7 +41,7 @@ export default function EptModalidadesPage() {
           dark
           label="Modalidades EPT"
           value={divisionSports.length}
-          description="Disponiveis para consulta."
+          description="Disponíveis para consulta."
         />
       </PageHero>
 

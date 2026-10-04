@@ -23,7 +23,7 @@ export function SportCard({
       <div className="p-3 pb-0">
         <EntityVisual
           src={sport.imageUrl}
-          alt={`Identificacao visual da modalidade ${sport.name}`}
+          alt={`Identificação visual da modalidade ${sport.name}`}
           title={sport.name}
           label="Modalidade"
           context={sport.category ?? divisionLabel}

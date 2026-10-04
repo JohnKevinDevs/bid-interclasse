@@ -21,7 +21,7 @@ export function QuickAccessCard({
     tone === "orange"
       ? {
           bar: "bg-accent",
-          text: "text-accent",
+          text: "text-[#7a4f00]",
           hover: "hover:border-accent/40 hover:ring-accent/10",
           meta:
             "group-hover:border-accent/25 group-hover:bg-accent/15 group-hover:text-[#7a4f00]",

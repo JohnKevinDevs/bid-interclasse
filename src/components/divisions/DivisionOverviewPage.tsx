@@ -15,6 +15,7 @@ import {
   getTeamsByDivision,
 } from "@/lib/data";
 import type { Athlete, Division, Sport, Team } from "@/types/interclasse";
+import { getInitials } from "@/components/ui/EntityVisual";
 
 interface DivisionOverviewPageProps {
   division: Division;
@@ -33,7 +34,7 @@ const accentStyles = {
       "from-navy via-navy-700 to-primary",
   },
   ept: {
-    text: "text-accent",
+    text: "text-[#7a4f00]",
     bg: "bg-accent",
     soft: "bg-accent/15",
     border: "border-accent/40",
@@ -193,7 +194,6 @@ function AthletePreviewCard({
   return (
     <article className="overflow-hidden rounded-xl border border-line bg-surface shadow-sm">
       <div className={`relative min-h-48 bg-gradient-to-br ${panelClassName} p-4 text-white`}>
-        <p className="bid-display text-xl leading-none">07</p>
         <div className="grid min-h-28 place-items-center">
           <p className="bid-display text-5xl leading-none">{initials}</p>
         </div>
@@ -325,14 +325,4 @@ function EmptyPreview({ title, text }: { title: string; text: string }) {
       <p className="mt-3 text-sm text-slate-600">{text}</p>
     </article>
   );
-}
-
-function getInitials(value: string) {
-  return value
-    .split(" ")
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join("")
-    .toUpperCase();
 }

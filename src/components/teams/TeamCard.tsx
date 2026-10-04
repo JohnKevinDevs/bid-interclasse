@@ -26,7 +26,7 @@ export function TeamCard({
       <div className="p-3 pb-0">
         <EntityVisual
           src={team.imageUrl}
-          alt={`Identificacao visual do time ${displayName}`}
+          alt={`Identificação visual do time ${displayName}`}
           title={displayName}
           label={`Equipe ${divisionLabel}`}
           context={primarySport}
