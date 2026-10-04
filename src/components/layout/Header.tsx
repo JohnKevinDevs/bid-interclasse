@@ -5,8 +5,10 @@ import { Navbar } from "@/components/navigation/Navbar";
 import { Container } from "@/components/layout/Container";
 
 export function Header() {
+  // Sem backdrop-blur: backdrop-filter vira bloco de contenção e prende o overlay
+  // `fixed` do menu mobile na altura do header.
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white/95 shadow-sm backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-white shadow-sm">
       <Container className="flex min-h-16 items-center justify-between gap-3 py-3">
         <Link
           href="/"

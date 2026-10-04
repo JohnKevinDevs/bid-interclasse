@@ -3,32 +3,55 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { navItems } from "@/components/navigation/Navbar";
 
 export function MobileMenu() {
-  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  // Guarda a rota em que o menu foi aberto: ao trocar de página ele fecha sozinho.
+  const [openPath, setOpenPath] = useState<string | null>(null);
+  const isOpen = openPath === pathname;
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  const close = useCallback((returnFocus: boolean) => {
+    setOpenPath(null);
+    if (returnFocus) {
+      toggleRef.current?.focus();
+    }
+  }, []);
 
   useEffect(() => {
     if (!isOpen) {
       return;
     }
 
+    closeRef.current?.focus();
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setIsOpen(false);
+        close(true);
+      }
+    };
+
+    // Acima do breakpoint md o menu some por CSS; fecha para liberar o scroll do body.
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const handleDesktop = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        close(false);
       }
     };
 
     document.addEventListener("keydown", handleKeyDown);
+    desktop.addEventListener("change", handleDesktop);
     document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      desktop.removeEventListener("change", handleDesktop);
       document.body.style.overflow = "";
     };
-  }, [isOpen]);
+  }, [isOpen, close]);
 
   return (
     <div className="md:hidden">
@@ -38,7 +61,8 @@ export function MobileMenu() {
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         aria-label={isOpen ? "Fechar menu principal" : "Abrir menu principal"}
-        onClick={() => setIsOpen((current) => !current)}
+        ref={toggleRef}
+        onClick={() => (isOpen ? close(true) : setOpenPath(pathname))}
       >
         <span className="grid gap-1" aria-hidden="true">
           <span className="h-0.5 w-5 rounded-full bg-ink" />
@@ -54,7 +78,7 @@ export function MobileMenu() {
             className="fixed inset-0 z-40 bg-navy/60 backdrop-blur-sm"
             aria-label="Fechar menu principal"
             tabIndex={-1}
-            onClick={() => setIsOpen(false)}
+            onClick={() => close(true)}
           />
           <nav
             id="mobile-menu"
@@ -87,7 +111,8 @@ export function MobileMenu() {
                   type="button"
                   className="grid h-11 w-11 place-items-center rounded-lg border border-white/15 text-2xl leading-none text-white transition hover:bg-white/10 focus-visible:outline-blue-light"
                   aria-label="Fechar menu principal"
-                  onClick={() => setIsOpen(false)}
+                  ref={closeRef}
+                  onClick={() => close(true)}
                 >
                   <span aria-hidden="true">×</span>
                 </button>
@@ -108,7 +133,7 @@ export function MobileMenu() {
                       className={`bid-display flex items-center justify-between border-b border-white/10 py-4 text-3xl leading-none transition hover:text-blue-light focus-visible:outline-blue-light ${
                         isActive ? "text-blue-light" : "text-white"
                       }`}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => close(false)}
                     >
                       {item.label}
                       {isActive ? (
@@ -125,7 +150,7 @@ export function MobileMenu() {
               <Link
                 href="/eci"
                 className="mt-6 flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-bold uppercase text-white shadow-lg shadow-primary/25 transition hover:bg-blue-light focus-visible:outline-blue-light"
-                onClick={() => setIsOpen(false)}
+                onClick={() => close(false)}
               >
                 Consultar o BID <span aria-hidden="true">→</span>
               </Link>
